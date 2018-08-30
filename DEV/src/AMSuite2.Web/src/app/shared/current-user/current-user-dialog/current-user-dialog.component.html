@@ -1,0 +1,18 @@
+<div id="AccountInfo-Container" [style.display]="accountInfoDisplay" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <div class="AccountInfo-Section">
+    <div class="menu-left">
+      <div class="menu-user text">{{ fullName }}</div>
+      <div class="menu-email text">{{ email }}</div>
+      <am-current-user-accounts [accounts]="accounts" [activeId]="account.id" (changeAccount)="changeAccount($event)"></am-current-user-accounts>
+    </div>
+    <div class="menu-right">
+      <a mat-raised-button color="primary" class="btn-sm" id="MyProfile" [routerLink]="profileLink">Edit Profile</a>
+      <a mat-raised-button color="primary" class="btn-sm" id="RevertToAdmin" [hidden]="!isImpersonating" (click)="onRevertToAdmin()" *ngIf="user.authenticated">Revert To Admin</a>
+    </div>
+  </div>
+  <div class="AccountInfo-Section-bottom">
+    <a class="link" id="Support" href="https://caiu.zendesk.com/hc/en-us/requests/new">Contact Support</a>
+    <a class="link" id="Manual" href="assets/files/AgendaMan-2-0-User Guide-ver-1-1.pdf">User Manual</a>
+    <a mat-raised-button color="accent" class="btn-sm" id="LogOut" (click)="onLogout()">Log Out</a>
+  </div>
+</div>

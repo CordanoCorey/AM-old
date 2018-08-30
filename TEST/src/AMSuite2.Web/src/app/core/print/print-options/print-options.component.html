@@ -1,0 +1,43 @@
+<div id="print-buttons">
+  <button md-raised-button color="accent">
+        <md-icon>add</md-icon>
+        <span class="icon-text">Descriptions</span>
+   </button>
+  <button md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="icon-text">Attachments</span>
+   </button>
+  <button md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="icon-text">Notes</span>
+   </button>
+  <button md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="icon-text">Minutes</span>
+   </button>
+  <button md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="icon-text">Attendance</span>
+   </button>
+  <button md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="icon-text">Voting</span>
+   </button>
+  <span class="export" *ngIf="export">
+    <button class="btn-right" md-raised-button color="primary">
+      <md-icon class="print-icon">print</md-icon>
+      <span class="icon-text">Print</span>
+  </button>
+  <button class="btn-right" md-raised-button color="primary">
+   <span class="fileicon wordbutton doc"></span>
+   <span class="icon-text">Word</span>
+   </button>
+  <button class="btn-right" md-raised-button color="primary">
+   <span class="fileicon pdfbutton pdf"></span> 
+   <span class="icon-text pdf-text">PDF</span>
+   </button>
+  </span>
+</div>
+<div class="embed">
+  <md-checkbox>Append attachments within pdf when possible (Otherwise attachments are embedded in original format)</md-checkbox>
+</div>

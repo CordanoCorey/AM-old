@@ -1,0 +1,73 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" uiForm>
+    <md-card class="group info-group">
+        <div class="control">
+            <md-input-container>
+                <input mdInput placeholder="First Name" value="" maxlength="50" formControlName="firstName">
+            </md-input-container>
+        </div>
+        <div class="control">
+            <md-input-container>
+                <input mdInput placeholder="Last Name" value="" maxlength="50" formControlName="lastName">
+            </md-input-container>
+        </div>
+        <div class="control">
+            <md-input-container>
+                <input mdInput placeholder="Email/Username" value="" maxlength="100" formControlName="emailAddress">
+            </md-input-container>
+        </div>
+        <div class="control">
+            <md-input-container>
+                <input mdInput placeholder="Title" value="" maxlength="100" formControlName="userTitle">
+            </md-input-container>
+        </div>
+    </md-card>
+    <div class="editor-control">
+        <label for="txtGeneralInfo" class="control-label">General Information:</label>
+        <iu-editor type="basic" class="basic-editor" formControlName="generalInfo"></iu-editor>
+    </div>
+    <md-card class="group">
+        <div class="control">
+            <md-select placeholder="Default Group Filter" formControlName="groupId">
+                <md-option [value]="0">All Groups</md-option>
+                <md-option *ngFor="let group of groups" [value]="group.id">{{group.name}}</md-option>
+            </md-select>
+        </div>
+        <div class="control">
+            <md-select placeholder="Default Meeting Filter" formControlName="agendaDateRangeId">
+                <md-option *ngFor="let dateRange of dateRanges.values" [value]="dateRange.id">{{dateRange.name}}</md-option>
+            </md-select>
+        </div>
+        <div class="control" *ngIf="showSettings">
+            <md-checkbox formControlName="warnOnDirty">Enable unsaved changes warning</md-checkbox>
+            <div class="note"> When enabled, you will be prompted to save changes before navigating away from unsaved changes within Agendas,
+                Items, Notes and Minutes.
+            </div>
+        </div>
+        <div class="control" *ngIf="showSettings">
+            <md-checkbox formControlName="autoSaveEnabled">Enable Auto Save Feature</md-checkbox>
+            <div class="note"> When enabled, your text in Rich Text boxes will be auto saved for later retrieval when entering edit mode in
+                that screen.
+            </div>
+        </div>
+    </md-card>
+    <md-card class="password-wrapper">
+        <h3 class="view-subtitle control-label">Change Password?</h3>
+        <hr />
+        <div class="control">
+            <md-input-container>
+                <input type="password" mdInput placeholder="New Password" maxlength="20" formControlName="newPassword">
+            </md-input-container>
+        </div>
+        <div class="control">
+            <md-input-container>
+                <input type="password" mdInput placeholder="Confirm New Password" maxlength="20" formControlName="confirmPassword">
+            </md-input-container>
+        </div>
+    </md-card>
+    <div class="actions">
+        <button class="btn-save" (click)="onSubmit()" md-raised-button color="accent">Update My Profile</button>
+        <span class="or">or</span>
+        <a id="Cancel" class="btn-cancel" routerLink="{{ '/' + accountUrl + '/dashboard' }}">Cancel</a>
+        <p id="message" class="required" *ngIf="showMessage"></p>
+    </div>
+</form>

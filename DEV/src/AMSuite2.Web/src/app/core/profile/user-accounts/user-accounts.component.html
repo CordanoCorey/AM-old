@@ -1,0 +1,20 @@
+<am-panel-blue>
+
+  <am-panel-blue-header>
+    My Primary Account
+  </am-panel-blue-header>
+
+  <am-panel-blue-content>
+    <ul id="profile-accounts" class="read-list">
+      <li *ngIf="primaryAccount">
+        <input checked="checked" name="youraccounts" class="account-usergroup" data-id="6" type="radio">
+        <span>{{ primaryAccount.name }}</span>
+      </li>
+    </ul>
+    <div class="join-account-wrapper">
+      <a id="JoinAccount" class="join-account-toggle" (click)="toggleJoinAccount()"> {{ joinAccountText }}</a>
+    </div>
+    <am-join-account [toggle]="showJoinAccount" [accounts]="accounts" [user]="user" (join)="onJoinAccount($event)"></am-join-account>
+  </am-panel-blue-content>
+
+</am-panel-blue>

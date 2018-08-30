@@ -1,0 +1,6 @@
+<div class="announcement-edit">
+    <div class="message message-top" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+    <am-announcement-form [announcement]="announcement$ | async" [groups]="groups$ | async" [cancelLink]="cancelLink$ | async"
+        (add)="addAnnouncement($event)" (preview)="preview($event)" (update)="updateAnnouncement($event)"></am-announcement-form>
+    <div class="message message-bottom" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+</div>

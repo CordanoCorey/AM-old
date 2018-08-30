@@ -1,0 +1,29 @@
+<form [formGroup]="form" id="meetings-filter" [class.widget]="widget">
+  <div class="dropdown-filters filter-row">
+    <div id="group-container">
+      <span class="ddl-label">Show meetings for:</span>
+      <md-select class="ddl-groups" placeholder="Select Group..." formControlName="groupId">
+        <md-option selected="selected" value="0">All Groups\UnGrouped</md-option>
+        <md-option *ngFor="let group of groups" [value]="group?.id">{{ group.name }}</md-option>
+      </md-select>
+    </div>
+    <div class="daterange-control">
+      <span class="ddl-label">Date Range:</span>
+      <md-select placeholder="Select Date Range..." formControlName="dateRangeId">
+        <md-option *ngFor="let dateRange of dateRanges?.values" [value]="dateRange?.id">{{ dateRange?.name }}</md-option>
+      </md-select>
+    </div>
+  </div>
+
+  <div id="daterange-filter" class="filter-row" *ngIf="!widget">
+    <span id="csvStartDate" class="validate" *ngIf="showDaterangeMessage">
+        Please enter both a Start Date and an End Date. Start Date must occur before End Date.</span>
+    <div class="daterange">
+      <iu-daterange [inline]="true" formControlName="dateRange"></iu-daterange>
+    </div>
+    <div class="submit">
+      <button id="btnGo" md-raised-button color="accent" (click)="filter()">GO</button>
+      <div id="message" class="required"></div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,57 @@
+<div [style.display]="show">
+  <b class="didyouknow">Did you know?</b> &nbsp; You can refine or broaden search results at your command.<br />
+  <span class="help-tips">In the examples, matches are colored green, non-matches are red.</span>
+  <br /><br />
+  <p id="Tip1" class="hiddentip">
+    <strong>Tip #1:</strong> &nbsp; Placing double quotes around a phrase will search for results that match that phrase
+    exactly. &nbsp; Example: "relevant search"; <span class="tipmatch">"I want relevant search results."</span> | <span class="tipnonmatch">"Search results aren't always relevant."</span>
+  </p><br /><br />
+  <p id="Tip2" class="hiddentip">
+    <strong>Tip #2:</strong> &nbsp; Typing the operator AND between two words or phrases ensures that your search results
+    will include only matches that have both search terms in them.
+    <br/> Example: "This AND That";
+    <span class="tipmatch">"This agenda belongs to that meeting."</span> | <span class="tipnonmatch">"Just this meeting."</span>    | <span class="tipnonmatch">"Just that agenda."</span>
+  </p><br /><br />
+  <p id="Tip3" class="hiddentip">
+    <strong>Tip #3:</strong> &nbsp; Use the NOT operator when you wish to narrow your results by excluding a given search
+    term.
+    <br/> Example: "2010 NOT May"; <span class="tipmatch">"June 2010 Board Meeting"</span> | <span class="tipnonmatch">"May 2010 Board Meeting."</span>    | <span class="tipnonmatch">"In 2010 we may..."</span>
+  </p><br /><br />
+  <p id="Tip4" class="hiddentip">
+    <strong>Tip #4:</strong> &nbsp; The OR operator allows you to broaden your search results by requesting matches that
+    include on search term OR another.
+    <br/> Example: "This OR That"; <span class="tipmatch">"This meeting."</span> | <span class="tipmatch">"That meeting."</span>    | <span class="tipnonmatch">"June Board Meeting."</span>
+  </p><br /><br />
+  <p id="Tip5" class="hiddentip">
+    <strong>Tip #5:</strong> &nbsp; The NEAR operator helps narrow search results by including results that have your search
+    term NEAR another term. If you can remember two keywords that appeared near each other, you can be well on your way to
+    finding the appropriate search result.
+    <br/> Example: "Meeting NEAR Manager"; <span class="tipmatch">"...meeting about the new manager."</span> | <span class="tipnonmatch">"...meeting about the building.</span>
+  </p><br /><br />
+  <p id="Tip6" class="hiddentip">
+    <strong>Tip #6:</strong> &nbsp; Using the WORDS operator can be similar to OR; however, it is a way for you to tell your
+    search query that two words can be used in place of one another. This would be of great use if you were looking for results
+    that could include someone by the name of Mike or Michael.
+    <br/> Example: "WORDS(TV, Television)"; <br/> <span class="tipmatch">"The A/V room TV is broken."</span> | <span class="tipmatch">"The A/V room Television is broken."</span>    | <span class="tipnonmatch">"The A/V room T.V. is broken."</span>
+  </p><br /><br />
+  <p id="Tip7" class="hiddentip">
+    <strong>Tip #7:</strong> &nbsp; The Wildcard operator is simply the asterisk(*) character. This operator is a great tool
+    to help broaden your results when you know the beginning of a keyword, but not the remainder.
+    <br/> Example: "Key*"; <span class="tipmatch">"Keys."</span> | <span class="tipmatch">"Keywords."</span> | <span class="tipnonmatch">"Kentucky."</span>
+  </p><br /><br />
+  <p id="Tip8" class="hiddentip">
+    <strong>Tip #8:</strong> &nbsp; The Inclusion operator is simply the "+" symbol. Enter it before a search term or phrase
+    to ensure that results will only include results that match that search term.
+    <br/> Example: "+Meeting"; <span class="tipmatch">"This meeting."</span> | <span class="tipnonmatch">"That agenda."</span>
+  </p><br /><br />
+  <p id="Tip9" class="hiddentip">
+    <strong>Tip #9:</strong> &nbsp; The Exclusion operator, the "-" symbol, works similarly to the NOT operator. Typing it
+    before a search term or phrase tells the search results not to include matches with that term.
+    <br/> Example: "-Meeting"; <span class="tipmatch">"This agenda."</span> | <span class="tipnonmatch">"That meeting's agenda."</span>    | <span class="tipnonmatch">"June Board Meeting."</span>
+  </p><br /><br />
+  <p id="Tip10" class="hiddentip">
+    <strong>Tip #10:</strong> &nbsp; New agendas and changes to existing agendas may not be reflected immediately in your
+    search results. &nbsp;Please keep in mind that you are searching previously indexed content just as you would on a Web
+    search engine. Content is indexed periodically throughout the day.
+  </p>
+</div>

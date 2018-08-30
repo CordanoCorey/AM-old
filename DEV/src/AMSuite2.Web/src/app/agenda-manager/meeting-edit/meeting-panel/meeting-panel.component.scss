@@ -1,0 +1,65 @@
+@import '../../../../common';
+#meeting-container h2,
+#agenda-container h2 {
+    font-weight: bold;
+    margin: 6px 0;
+}
+
+#meeting-container a,
+#agenda-container a {
+    color: #000;
+    line-height: 16px;
+}
+
+#meeting-container a:hover,
+#agenda-container a:hover {
+    color: $accent-color;
+}
+
+.meeting-panel {
+    padding: 6px 0 6px 5%;
+    width: 95%;
+    font-size: 16px;
+}
+
+.agenda-sideheader {
+    font-weight: bold;
+}
+
+.button .tinyicon {
+    padding: 1px 4px 0 2px;
+    margin-right: 1px;
+    margin-bottom: 6px;
+    font-size: 12px !important;
+}
+
+.action-controls {
+    font-size: 12px;
+}
+
+.controls-divider {
+    border-top: 1px solid $primary-color;
+    width: 100%;
+}
+
+.item-detail {
+    font-size: 16px;
+}
+
+.item-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.item-link {
+    font-size: 13px;
+}
+
+.mat-raised-button.mat-primary.btn-sm {
+    margin: 3px 0;
+    padding: 2px 8px;
+    .btn-label {
+        top: 0px;
+        right: 4px;
+    }
+}

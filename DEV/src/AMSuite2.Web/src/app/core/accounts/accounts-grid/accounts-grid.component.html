@@ -1,0 +1,30 @@
+<iu-grid [model]="grid" pageSize="30" [filterable]="false" [sort]="sort" height="600">
+
+  <iu-grid-column [model]="actionsColumn" [templateRef]="actionsTemplate" [filterable]="false" width="440">
+
+    <ng-template #actionsTemplate let-accountUrl="accountUrl">
+      <a class="action" [routerLink]="'/' + accountUrl + '/members'" mat-raised-button color="primary">
+        <mat-icon>group</mat-icon>
+        <span class="button-text">View Members</span>
+      </a>
+
+      <a class="action" [routerLink]="'/' + accountUrl + '/members/import'" mat-raised-button color="primary">
+        <mat-icon>group_add</mat-icon>
+        <span class="button-text">Import Members</span>
+      </a>
+
+      <a class="action edit-action" [routerLink]="'/' + accountUrl + '/edit'" mat-raised-button color="primary">
+        <mat-icon>mode_edit</mat-icon>
+        <span class="button-text">Edit</span>
+      </a>
+    </ng-template>
+
+  </iu-grid-column>
+
+  <iu-grid-column [model]="nameColumn" width="440"></iu-grid-column>
+
+  <iu-grid-column [model]="urlColumn" width="240"></iu-grid-column>
+
+  <iu-grid-column [model]="statusColumn" width="240"></iu-grid-column>
+
+</iu-grid>

@@ -1,0 +1,28 @@
+#Stage {
+    min-width: 1400px;
+}
+
+#main-content {
+    float: left;
+    width: 66%;
+    padding: 8px 1% !important;
+    margin: 8px 0;
+    position: relative;
+}
+
+#right-content {
+    float: right;
+    max-width: 30%;
+    min-width: 400px;
+}
+
+.view-header h2 {
+    float: left;
+}
+
+.access-message {
+    margin: 10px 0 0 8px;
+    line-height: 24px;
+    display: block;
+    float: left;
+}

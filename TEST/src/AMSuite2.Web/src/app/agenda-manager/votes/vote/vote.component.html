@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" iuForm>
+  <h2 class="item-header">{{ heading }}</h2>
+  <input type="radio" value="1" formControlName="voteAnswerId" />Yea
+  <input type="radio" value="2" formControlName="voteAnswerId" />Nay
+  <input type="radio" value="3" formControlName="voteAnswerId" />Abstain
+  <button id="btnVote" class="button tinyicon" (click)="onSubmit($event)">
+      <span class="icon-container">
+      <span class="icon ui-icon-checkmark"></span>
+      <span class="icon-text">Place Vote</span>
+      </span>
+    </button>&nbsp;
+  <div class="required vote-message"></div>
+</form>

@@ -1,0 +1,56 @@
+<!-- Start of caiu Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","caiu.zendesk.com");/*]]>*/</script>
+<!-- End of caiu Zendesk Widget script -->
+<div id="Stage">
+   <div id="grid"></div>
+   <p><button type="button" class="k-button" id="changeData">Change data</button></p>
+   <script>
+      var sampleData = [
+          { ProductID: 1, ProductName: "foo", Introduced: (new Date(2013, 8, 10)).toString(), UnitPrice: 525, Discontinued: false, UnitsInStock: 10 },
+          { ProductID: 2, ProductName: "bar", Introduced: new Date(2014, 2, 25), UnitPrice: 1425, Discontinued: false, UnitsInStock: 3 },
+          { ProductID: 3, ProductName: "baz", Introduced: new Date(2008, 10, 2), UnitPrice: 1431275, Discontinued: true, UnitsInStock: 0 }
+      ];
+      var sampleData2 = [
+          { ProductID: 4, ProductName: "foo 2 - string data", Introduced: (new Date(2014, 8, 19)).toString(), UnitPrice: 600, Discontinued: false, UnitsInStock: 11 },
+          { ProductID: 5, ProductName: "bar 2 - JS date", Introduced: new Date(2014, 8, 19), UnitPrice: 600, Discontinued: false, UnitsInStock: 11 }
+      ];
+      
+      $(document).ready(function () {
+          var dataSource = new kendo.data.DataSource({
+              transport: {
+                  read: function (e) {
+                      e.success(sampleData);
+                  }
+              },
+              schema: {
+                  model: {
+                      id: "ProductID",
+                      fields: {
+                          ProductID: { editable: false, nullable: true },
+                          ProductName: { validation: { required: true } },
+                          Introduced: { type: "date" },
+                          UnitPrice: { type: "number", validation: { required: true, min: 1 } },
+                          Discontinued: { type: "boolean" },
+                          UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+                      }
+                  }
+              }
+          });
+      
+          $("#grid").kendoGrid({
+              dataSource: dataSource,
+              columns: [
+                  { field: "ProductName", title: "Mobile Phone" },
+                  { field: "Introduced", title: "Introduced", format: "{0:yyyy/MM/dd}", width: "200px" },
+                  { field: "UnitPrice", title: "Price", format: "{0:$#,.##}", width: "120px" },
+                  { field: "UnitsInStock", title: "Units In Stock", width: "120px" },
+                  { field: "Discontinued", width: "120px" }
+              ]
+          });
+      
+          $("#changeData").click(function () {
+              $("#grid").data("kendoGrid").dataSource.data(sampleData2);
+          });
+      });
+   </script>
+</div>

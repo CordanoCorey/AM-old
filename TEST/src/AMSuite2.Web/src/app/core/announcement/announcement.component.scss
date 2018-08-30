@@ -1,0 +1,17 @@
+#announcement {
+    padding: 3vh 0;
+    height: 54vh;
+    .header {
+        .subject {
+            font-weight: bold;
+        }
+        .subtitle {}
+    }
+    .body {
+        margin: 24px 0;
+    }
+    .signature {
+        margin: 24px 0;
+    }
+    .attachments-wrapper {}
+}

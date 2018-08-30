@@ -1,0 +1,49 @@
+@import '../../../../common';
+.attendance-log {
+    width: 94%;
+    clear: both;
+    float: left;
+    margin: 1em 0;
+}
+
+.attendanceLog-header {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.5em 0 0.2em 4px;
+    width: 99%;
+    margin-bottom: 0;
+    border-left: 4px solid $primary-color;
+}
+
+.attendancelog {
+    border: 4px solid $primary-color;
+    margin-top: 0;
+    width: 99%;
+    height: 100px;
+    overflow: auto;
+    font-size: .8em;
+    background-color: #e5ecf4;
+}
+
+.attendees {
+    border-bottom: 1px solid $primary-color;
+    width: 98%;
+    padding-left: 2%;
+    overflow: hidden;
+}
+
+.attendee {
+    float: left;
+}
+
+.attendee-name {
+    width: 37%;
+}
+
+.attendee-status {
+    width: 30%;
+}
+
+.attendee-name {
+    width: 33%;
+}

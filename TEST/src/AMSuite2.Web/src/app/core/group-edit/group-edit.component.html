@@ -1,0 +1,13 @@
+<div class="box">
+    <div id="account-info" class="form has-help">
+        <am-group-form
+            [accountUrl]="accountUrl$ | async"
+            [admins]="admins$ | async"
+            [group]="group$ | async"
+            [groupMembers]="groupMembers$ | async"
+            [lkpOutlines]="lkpOutlines$ | async"
+            (add)="addGroup($event)"
+            (delete)="deleteGroup($event)"
+            (update)="updateGroup($event)"></am-group-form>
+    </div>
+</div>

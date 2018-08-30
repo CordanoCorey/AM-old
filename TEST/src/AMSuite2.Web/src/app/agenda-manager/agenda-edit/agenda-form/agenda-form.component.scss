@@ -1,0 +1,44 @@
+@import '../../../../common';
+#agenda-form {
+    .mat-checkbox {
+        float: left;
+        clear: both;
+        height: 40px;
+    }
+    .control {
+        margin: 10px 0;
+        padding: 10px 0 0 20px;
+        width: 90%;
+        clear: both;
+        position: relative;
+        display: grid;
+    }
+    .editor-control {
+        margin-bottom: 24px;
+        .control-label {
+            padding-bottom: 12px;
+        }
+    }
+    .display-minutes-control,
+    .private-control {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+    .timeframe-control {
+        margin: 0;
+        margin-bottom: 20px;
+        padding: 0;
+        padding-left: 20px;
+        label {
+            margin-bottom: 0px;
+        }
+        .mat-select {
+            padding-left: 20px;
+            width: 250px;
+        }
+    }
+    .mat-input-placeholder {
+        line-height: 18px;
+    }
+}

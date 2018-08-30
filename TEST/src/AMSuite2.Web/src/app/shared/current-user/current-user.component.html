@@ -1,0 +1,15 @@
+<div class="account-profile">
+  <div>
+    <div class="header-right">
+      <a id="home" title="AgendaManager | See general account information" class="logo" routerLink="/">
+        <span class="service-mark">AgendaManager<sup title="Service Mark">SM</sup></span>
+      </a>
+      <div id="AccountInfo">
+        <md-icon (click)="toggleDialog()" (mouseenter)="onHover()" *ngIf="authenticated">person</md-icon>
+      </div>
+      <div id="AccountName" *ngIf="hasAccount">{{ accountName }}</div>
+      <am-current-user-dialog [user]="user" [userAccounts]="userAccounts" [account]="account" [show]="showDialog" (revertToAdmin)="onRevertToAdmin()"></am-current-user-dialog>
+    </div>
+    <a class="menu-login" routerLink="/login" title="Log In" *ngIf="!authenticated">Sign In</a>
+  </div>
+</div>

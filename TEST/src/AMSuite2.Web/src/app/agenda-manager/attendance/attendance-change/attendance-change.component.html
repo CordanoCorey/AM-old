@@ -1,0 +1,23 @@
+<table id="attendance" cellspacing="0" class="grid">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="rollcallcol"><span></span><a id="all-Present" class="rollcallcol" title="Select Present for all Members">Select All</a></th>
+      <th id="otherheader"><a id="all-Absent" class="rollcallcol" title="Select Absent radios for all Members">Select All</a></th>
+      <th id="dateheader" class="changecol">Recorded On</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let attendee of attendees">
+      <th>{{ attendee.userName }}</th>
+      <td class="changecol btn-change"><button class="depart btn-attendance" (click)="onDepart(attendee.userId)">Depart</button></td>
+      <td class="changecol btn-change"><button class="join btn-attendance" (click)="onJoin(attendee.userId)">Join</button></td>
+    </tr>
+  </tbody>
+</table>
+<textarea id="txtOpenAttendance" #writeIn></textarea>
+<button id="btnTakeAttendance" md-raised-button (click)="onWriteIn(writeIn.value)">
+    <md-icon>check</md-icon>
+    <div class="btn-label">Record Open Attendance</div>
+</button>
+<span id="attendanceMessage" class="required"></span>

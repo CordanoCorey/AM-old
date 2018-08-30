@@ -1,0 +1,23 @@
+<div id="Stage">
+
+  <div class="view-header">
+    <h2>{{ heading$ | async }}</h2>
+    <span class="access-message">
+      in {{ accountName$ | async }}
+    </span>
+  </div>
+
+  <div id="main-content">
+    <div class="message message-top" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+    <am-member-form [accountUrl]="accountUrl$ | async" [member]="member$ | async" (addExisting)="onAdd($event)" (addNew)="onAdd($event)"
+      (changes)="onChanges($event)" (update)="onUpdate($event)"></am-member-form>
+    <div class="message message-bottom" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+  </div>
+
+  <div id="right-content">
+    <am-user-roles [roleId]="accountRoleId$ | async" (changeRole)="onChangeRole($event)"></am-user-roles>
+    <am-user-groups [accountUrl]="accountUrl$ | async" [groups]="groups$ | async" [userGroupIds]="userGroupIds$ | async" (updateGroups)="onUpdateGroups($event)"></am-user-groups>
+    <am-audit-info></am-audit-info>
+  </div>
+
+</div>

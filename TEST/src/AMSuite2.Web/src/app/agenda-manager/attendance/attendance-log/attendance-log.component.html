@@ -1,0 +1,10 @@
+<div class="attendance-log">
+  <h2 class="attendanceLog-header">Attendance Log</h2>
+  <div class="attendancelog">
+    <div class="attendees" *ngFor="let attendee of attendees">
+      <div class="attendee attendee-name">{{ attendee.name }}</div>
+      <div class="attendee attendee-status">{{ attendee.logStatus }}</div>
+      <div class="attendee attendee-time">{{ attendee.datetime }}</div>
+    </div>
+  </div>
+</div>

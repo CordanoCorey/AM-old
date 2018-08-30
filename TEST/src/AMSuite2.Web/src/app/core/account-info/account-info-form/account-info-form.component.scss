@@ -1,0 +1,79 @@
+.mat-card {
+    padding: 8px 1% 32px 1% !important;
+}
+
+.control {
+    margin: 10px 0;
+    padding: 10px 0 0 20px;
+    width: 90%;
+    clear: both;
+    position: relative;
+}
+
+.note-wrapper {
+    padding: 0 10px;
+    width: calc(100% - 20px);
+}
+
+#logo-upload {
+    margin: 8px 0 0 32px;
+    .note {
+        position: absolute;
+        left: 64px;
+        top: 12px;
+    }
+}
+
+#logo {
+    max-width: 250px;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.actions {
+    float: right;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 200px;
+    position: relative;
+}
+
+.or {
+    padding: 0 10px;
+}
+
+.signature-wrapper {
+    display: flex;
+    justify-content: left;
+    width: calc(100% - 0px);
+    padding: 0;
+    margin-bottom: 32px;
+}
+
+.account-request-control {
+    height: 48px;
+    padding: 16px 0 8px 32px;
+    .note {
+        position: relative;
+        bottom: 0;
+        left: 40px;
+        clear: both;
+    }
+}
+
+iu-file-upload {
+    margin-top: 40px;
+    display: block;
+}
+
+.mat-checkbox {
+    float: left;
+}
+
+.signature-control {
+    .control-label {
+        width: 230px;
+    }
+}

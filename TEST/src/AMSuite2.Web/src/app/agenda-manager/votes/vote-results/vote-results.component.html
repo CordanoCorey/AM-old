@@ -1,0 +1,37 @@
+<div class="divVoteResults">
+  <h2 class="item-header">Vote Results</h2>
+  <table>
+    <tr id="vote-yea">
+      <td class="vote-title">Yea</td>
+      <td class="vote-bar">
+        <div class="vote-border"><span [style.width.%]="(yeaCount/totalVotes) * 100" class="vote-yea"></span></div>
+      </td>
+      <td class="vote-percentage">{{ (yeaCount/totalVotes) | percent: '1.1-1' }}</td>
+      <td class="vote-count">{{ yeaCount | voteCount: totalVotes }}</td>
+    </tr>
+    <tr id="vote-nay">
+      <td class="vote-title">Nay</td>
+      <td class="vote-bar">
+        <div class="vote-border"><span [style.width.%]="(nayCount/totalVotes) * 100" class="vote-nay"></span></div>
+      </td>
+      <td class="vote-percentage">{{ (nayCount/totalVotes) | percent: '1.1-1' }}</td>
+      <td class="vote-count">{{ nayCount | voteCount: totalVotes }}</td>
+    </tr>
+    <tr id="vote-abstain">
+      <td class="vote-title">Abstain</td>
+      <td class="vote-bar">
+        <div class="vote-border"><span [style.width.%]="(abstainCount/totalVotes) * 100" class="vote-abstain"></span></div>
+      </td>
+      <td class="vote-percentage">{{ (abstainCount/totalVotes) | percent: '1.1-1' }}</td>
+      <td class="vote-count">{{ abstainCount | voteCount: totalVotes }}</td>
+    </tr>
+    <tr id="vote-notcast">
+      <td class="vote-title">Not Cast</td>
+      <td class="vote-bar">
+        <div class="vote-border"><span [style.width.%]="(notCastCount/totalVotes) * 100" class="vote-notcast"></span></div>
+      </td>
+      <td class="vote-percentage">{{ (notCastCount/totalVotes) | percent: '1.1-1' }}</td>
+      <td class="vote-count">{{ notCastCount | voteCount: totalVotes }}</td>
+    </tr>
+  </table>
+</div>

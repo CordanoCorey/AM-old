@@ -1,0 +1,21 @@
+<div id="template-manager">
+  <div id="templates-list-wrapper">
+    <am-panel>
+      <h6 class="panel-heading">Your Saved Templates:</h6>
+      <div id="saved-templates" class="panel-content">
+        <label class="preview-placeholder">You have no saved templates.</label>
+        <div class="k-loading-mask" *ngIf="loading">
+          <span class="k-loading-text">Loading...</span>
+          <div class="k-loading-image"></div>
+          <div class="k-loading-color"></div>
+        </div>
+        <span *ngIf="!loading">
+        <a class="template-link" *ngFor="let template of templates$ | async"> {{ template.name }} </a>
+      </span>
+      </div>
+    </am-panel>
+  </div>
+  <div id="template-wrapper">
+    <am-template [template]="template$ | async"></am-template>
+  </div>
+</div>

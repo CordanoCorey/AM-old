@@ -1,0 +1,37 @@
+@import '../../../../common';
+.mat-card.name-card {
+    padding-top: 10px;
+}
+
+.control {
+    overflow: hidden;
+    padding: 6px;
+    display: inline-grid;
+}
+
+#message {
+    margin-top: 5px;
+}
+
+.mat-checkbox-label {
+    color: $primary-color;
+}
+
+.control.members-control {
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+}
+
+.editor-control {
+    margin: 32px 0 8px;
+}
+
+.mat-card.bottom-controls {
+    margin-top: 16px;
+}
+
+.control.admin-control {
+    padding-top: 24px;
+}

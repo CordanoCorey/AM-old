@@ -1,0 +1,14 @@
+<am-widget>
+  <span class="widget-header">
+    Notifications<span id="announcement-count"></span>
+  </span>
+  <span class="widget-content">
+    <div id="notification-content" class="widget-content scrollable">
+      <img src="/assets/images/site/loading.gif"  *ngIf="loading$ | async"/>
+      <div id="notification-message" *ngIf="empty$ | async">NO NOTIFICATIONS</div>
+      <div class="wrapper" *ngIf="!(empty$ | async)">
+        <div  *ngFor="let notification of (notifications$ | async)"></div>
+      </div>
+    </div>
+  </span>
+</am-widget>

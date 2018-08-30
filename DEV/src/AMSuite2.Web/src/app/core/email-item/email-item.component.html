@@ -1,0 +1,18 @@
+<div id="email-item-container" class="scrollable">
+    <am-email-options></am-email-options>
+    <am-email-form></am-email-form>
+    <div id="email-sent" [@toggle]="(showEmailSent$ | async) ? 'show' : 'hide'">
+        <!-- <ul style="height: 100%;">
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li><label class="message">Your message has been saved successfully.</label></li>
+            <li>&nbsp;</li>
+            <li><label class="message">Please allow a few minutes for the email processing to complete and send.</label></li>
+            <li>&nbsp;</li>
+            <li style="width: 100%; text-align: center;">
+                <input type="submit" id="btnCloseEmailItem" value="Close" class="button fat">
+            </li>
+            <li>&nbsp;</li>
+        </ul> -->
+    </div>
+</div>

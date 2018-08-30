@@ -1,0 +1,42 @@
+<div id="Stage">
+
+  <div class="view-header">
+    <a [routerLink]="groupsLink$ | async" *ngIf="editing$ | async" md-raised-button class="btn-back" color="primary">
+      <md-icon>arrow_back</md-icon>
+      <span class="icon-text">Back</span>
+    </a>
+    <h2>Groups</h2>
+    <a class="btn-add" [routerLink]="newGroupLink$ | async" *ngIf="!(editing$ | async)" md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="button-text">New Group</span>
+    </a>
+  </div>
+
+  <div class="main-content">
+    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+      <div class="box" *ngIf="!(editing$|async)">
+
+        <div class="grid-wrapper">
+          <div class="grid-heading">
+            You are an administrator in the following groups: ({{ (administratorGroups$ | async).length }})
+          </div>
+          <am-groups-grid [accountUrl]="accountUrl$ | async" [groups]="administratorGroups$ | async"></am-groups-grid>
+        </div>
+
+        <div class="grid-wrapper">
+          <div class="grid-heading">
+            You are a manager in the following groups: ({{ (managerGroups$ | async).length }})
+          </div>
+          <am-groups-grid [accountUrl]="accountUrl$ | async" [groups]="managerGroups$ | async"></am-groups-grid>
+        </div>
+
+      </div>
+    </router-outlet>
+  </div>
+
+  <div class="right-content">
+    <am-about-groups [accountUrl]="accountUrl$ | async"></am-about-groups>
+    <am-audit-info *ngIf="showAuditInfo"></am-audit-info>
+  </div>
+
+</div>

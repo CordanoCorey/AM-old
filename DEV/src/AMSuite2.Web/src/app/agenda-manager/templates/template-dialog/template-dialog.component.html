@@ -1,0 +1,10 @@
+<iu-dialog [model]="dialog">
+  <div class="content-wrapper">
+    <h2>Copy Agenda to a Template:</h2>
+    <mat-input-container>
+      <input matInput #nameInput maxlength="256" placeholder="Template Name">
+      <mat-hint align="start"><strong>This name will be used later to identify the template created from this Agenda.</strong> </mat-hint>
+      <mat-hint align="end">{{ nameInput.value.length }} / 256</mat-hint>
+    </mat-input-container>
+  </div>
+</iu-dialog>

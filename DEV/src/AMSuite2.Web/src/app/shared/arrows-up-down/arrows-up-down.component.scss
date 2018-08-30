@@ -1,0 +1,47 @@
+@import '../../../common';
+@import '~@angular/material/_theming';
+.arrows {
+    border-radius: 3px;
+    display: block;
+    float: right;
+    margin-right: 8px;
+    margin-top: 6px;
+    height: 32px;
+    width: 72px;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #fff;
+    color: $primary-color;
+    .arrow {
+        background-color: $scrollbar-color;
+        height: 32px;
+        width: 36px;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+    }
+    .up {
+        left: 0;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .down {
+        left: 36px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .arrow:hover {
+        background-color: $primary-color;
+        color: $scrollbar-color;
+    }
+    .mat-icon {
+        height: 32px;
+        width: 36px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+}

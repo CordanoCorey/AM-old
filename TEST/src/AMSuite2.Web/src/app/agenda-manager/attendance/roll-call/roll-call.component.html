@@ -1,0 +1,29 @@
+<form [formControl]="formArray" (ngSubmit)="onSubmit()">
+  <table class="attendance" cellspacing="0" class="grid">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="rollcallcol"><span></span>
+          <a id="all-Present" class="rollcallcol" title="Select Present for all Members" (click)="setAllPresent()">
+          Select All</a></th>
+        <th id="otherheader">
+          <a id="all-Absent" class="rollcallcol" title="Select Absent radios for all Members" (click)="setAllAbsent()">
+          Select All</a></th>
+        <th id="dateheader" class="changecol">Recorded On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let attendee of attendees">
+        <th>{{ attendee.userName }}</th>
+        <td class="rollcallcol"><input type="radio" value="1" formControlName="isPresent">Present</td>
+        <td class="rollcallcol"><input type="radio" value="2" formControlName="isPresent">Absent</td>
+      </tr>
+    </tbody>
+  </table>
+  <textarea id="txtOpenAttendance"></textarea>
+  <a id="btnTakeAttendance" md-raised-button>
+      <md-icon>check</md-icon>
+      <div class="btn-label">Take Roll Call</div>
+  </a>
+  <span id="attendanceMessage" class="required"></span>
+</form>

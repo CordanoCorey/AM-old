@@ -1,0 +1,48 @@
+@import '../../../../common';
+.recipient {
+    margin: 1px 0 1px 1px;
+    padding: .1em .15em .1em .4em;
+    line-height: 1.5em;
+    float: left;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    background-image: none;
+    background-position: 50% 50%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.recipient-email {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+am-icon-close {
+    background-position: -160px -80px;
+    vertical-align: middle;
+    border-color: transparent;
+    opacity: 1;
+}

@@ -1,0 +1,558 @@
+@import '../../theme';
+
+
+/* ANNOUNCEMENT DASHBOARD */
+
+.announcement {
+    overflow: hidden;
+    width: 98%;
+    font-size: .9em;
+    padding: .4em 0 .4em 2%;
+}
+
+
+/* END ANNOUNCEMENT DASHBOARD */
+
+
+/* AGENDA PREVIEW */
+
+#preview,
+.side-background {
+    background-color: $primary-color;
+}
+
+.side-background {
+    padding: .5em 0;
+}
+
+#agenda-preview {
+    width: 100%;
+    padding: 0.5em 0em;
+    color: #54544f;
+}
+
+.agenda-header {
+    border: solid 3px #c5cbcd;
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: #fff;
+    display: inline-block;
+}
+
+
+/* END AGENDA PREVIEW */
+
+.side-header {
+    width: 100%;
+    background-color: $primary-color;
+    padding: 0.2em 0em 0.7em 0em;
+}
+
+.access-message {
+    color: #000;
+    font-size: .7em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.side-title {
+    font-weight: bold;
+    font-size: 1em;
+    padding-left: 3%;
+    color: #fff;
+}
+
+.markedfordeletetrue {
+    color: red;
+}
+
+
+/* KENDO STYLES */
+
+.editor-style .k-table {
+    width: auto;
+}
+
+.k-upload-files {
+    margin: 0;
+}
+
+.k-dropdown .k-input,
+.k-dropdown .k-state-hover .k-input,
+.k-dropdown .k-state-focused .k-input {
+    color: #000;
+}
+
+.k-picker-wrap.k-state-default {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    border-bottom-width: 0;
+}
+
+.k-datepicker {
+    font-size: 0.8em;
+    border-bottom: solid 1px $primary-color;
+    border-left: solid 1px $primary-color;
+    border-right: solid 1px $primary-color;
+}
+
+.k-popup.k-group {
+    color: #fff;
+    border-color: $primary-color;
+    border-width: 1px;
+}
+
+.k-calendar .k-nav-fast.k-state-hover,
+.k-calendar .k-state-hover,
+.k-calendar .k-state-hover:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.k-calendar .k-link.k-nav-fast.k-state-hover,
+.k-calendar .k-link.k-nav-fast.k-state-hover:hover,
+.k-calendar td .k-link,
+.k-calendar .k-state-hover>.k-link {
+    color: $primary-color;
+}
+
+.k-calendar .k-link.k-nav-fast {
+    color: #fff;
+}
+
+.k-calendar .k-state-focused {
+    border: 0;
+}
+
+.k-calendar-container,
+.k-grouping-row td,
+td.k-group-cell,
+.k-resize-handle-inner,
+.k-calendar .k-header,
+.k-group {
+    background-color: $primary-color;
+}
+
+.k-calendar .k-footer .k-nav-today {
+    color: #fff;
+    text-decoration: none;
+    background-color: $primary-color;
+}
+
+.k-calendar .k-state-focused,
+.k-calendar .k-state-focused.k-state-selected {
+    border-color: #fff;
+    background-color: #e9f0f8;
+    color: $primary-color;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgb(0, 86, 140);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgb(0, 86, 140);
+    box-shadow: inset 0px 0px 0px 1px rgb(0, 86, 140);
+}
+
+.k-state-focused {
+    border-color: #fff;
+}
+
+.k-calendar th {
+    background-color: #e9f0f8;
+    color: $primary-color;
+}
+
+.k-calendar .k-footer .k-nav-today:hover {
+    background-color: #e9f0f8;
+    color: #000;
+}
+
+.k-other-month,
+.k-calendar td.k-other-month .k-link {
+    color: #c1c1c1;
+}
+
+.k-primary,
+.k-overflow-container .k-primary,
+.k-button {
+    color: #000;
+    border-color: #e9f0f8;
+    background-color: #e9f0f8;
+}
+
+.k-grouping-row td,
+.k-group-footer td,
+.k-grid-footer td {
+    color: #fff;
+    border-color: $primary-color;
+    font-weight: bold;
+}
+
+.k-grouping-header .k-group-indicator {
+    padding: 0 0 0 0;
+    border-color: #fff;
+}
+
+#detail-form {
+    background-color: #e9f0f8;
+}
+
+.k-panelbar span.k-header {
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.k-panelbar {
+    border-top: 6px solid $primary-color;
+    border-left: 6px solid $primary-color;
+}
+
+.k-panelbar>.k-icon {
+    background-position: -16px 0;
+}
+
+.k-state-selected .k-i-arrow-n {
+    background-position: -16px 0;
+}
+
+.k-link:not(.k-state-disabled):hover>.k-state-selected .k-i-arrow-n {
+    background-position: -16px 0;
+}
+
+.k-panelbar .k-state-focused.k-state-hover {
+    background-color: #e9f0f8;
+}
+
+.k-state-focused.k-state-selected {
+    -webkit-box-shadow: inset 0 0 0 1px $primary-color;
+    -moz-box-shadow: inset 0 0 0 1px $primary-color;
+    box-shadow: inset 0 0 0 1px $primary-color;
+}
+
+.k-panelbar .k-content {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+
+.k-panelbar>.k-item>.k-link {
+    border-color: $primary-color;
+}
+
+.k-panelbar>.k-item {
+    color: #000;
+    background-color: #fff;
+    border-bottom: 6px solid $primary-color;
+}
+
+.k-treeview>ul>li:not(.k-last) {
+    border-bottom: 1px solid $primary-color !important;
+    padding-bottom: 0.4em !important;
+    margin-top: 5px;
+}
+
+.k-treeview>ul>li.k-last {
+    margin-top: 5px;
+}
+
+.k-treeview .k-item {
+    padding: 0 0 0 5%;
+    width: 95%;
+    color: #000;
+    background-color: #fff;
+}
+
+.k-treeview .k-state-focused {
+    -webkit-box-shadow: inset 0 0 0 1px $accent-color;
+    -moz-box-shadow: inset 0 0 0 1px $accent-color;
+    box-shadow: inset 0 0 0 1px $accent-color;
+    color: #fff;
+    background-color: $accent-color;
+}
+
+.k-treeview .k-state-hover,
+.k-treeview .k-state-hover:hover {
+    background-color: #e9f0f8;
+    color: #000;
+}
+
+div.k-treeview {
+    white-space: normal !important;
+}
+
+.k-treeview .k-in {
+    margin: 0 0 0.2em 0;
+    padding: 0 1% 0 1%;
+    line-height: 1em!important;
+    width: 95%;
+}
+
+.k-treeview .k-icon {
+    vertical-align: top;
+    margin-left: -12px;
+    background-color: #fff;
+    margin-top: 4px;
+}
+
+.k-in {
+    width: 98%;
+    color: #000;
+}
+
+.k-drag-clue {
+    color: #000;
+}
+
+.k-panelbar>li.k-state-default>.k-link,
+.k-panelbar>li.k-state-default>.k-link.k-state-hover,
+.k-panelbar>li.k-state-default>.k-link.k-state-selected {
+    color: #000;
+}
+
+.k-panelbar li {
+    border-bottom: 2px solid $primary-color;
+}
+
+.k-tabstrip {
+    background-color: #fff;
+}
+
+.k-tabstrip-items .k-item {
+    background-color: $primary-color;
+    color: #fff;
+    border-color: $primary-color;
+}
+
+.k-tabstrip-items .k-state-active {
+    background-color: #fff;
+    background-image: none;
+    border-color: $primary-color;
+    color: $primary-color;
+}
+
+.k-tabstrip-items .k-tab-on-top .k-link {
+    color: $primary-color;
+}
+
+.k-state-active {
+    border-color: $primary-color !important;
+}
+
+#notetabstrip table,
+#agenda-form table,
+#basic-info table {
+    background-color: #fff;
+}
+
+#notetabstrip table {
+    border-width: 0;
+}
+
+.k-button-group .k-tool {
+    border-color: $primary-color;
+    background-color: #e9f0f8;
+}
+
+.k-button-group .k-tool.k-state-hover,
+.k-button-group .k-tool.k-state-selected {
+    background-color: $accent-color;
+}
+
+.k-editor-toolbar .k-dropdown-wrap.k-state-hover {
+    background-image: none;
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-splitbar-vertical-hover:hover {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-splitbar {
+    background-color: #cdcdcd;
+}
+
+.k-state-focused {
+    -webkit-box-shadow: inset 0 0 0 1px $primary-color;
+    -moz-box-shadow: inset 0 0 0 1px $primary-color;
+    box-shadow: inset 0 0 0 1px $primary-color;
+}
+
+.k-ghost-splitbar {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+#notetabstrip>.k-content {
+    margin: 0 0 0 0;
+}
+
+#new-item-bar {
+    width: 100%;
+    padding: 0 0 0.5em 0;
+    background-color: #e9f0f8;
+}
+
+.k-window {
+    border: solid 0.4em $primary-color;
+}
+
+.k-window-titlebar {
+    background-color: $primary-color;
+}
+
+.k-window-titlebar .k-window-action {
+    opacity: 1;
+    color: #fff;
+}
+
+.k-icon k-i-close {
+    font-size: 0.8em;
+}
+
+.k-window-titlebar .k-window-action.k-state-hover {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-editor-toolbar .k-button-group {
+    padding: 1px !important;
+}
+
+.k-tool-group {
+    margin-top: 0em !important;
+}
+
+.k-editor-toolbar .k-dropdown-wrap.k-state-focused {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-editor-toolbar .k-picker-wrap.k-state-focused,
+.k-editor-toolbar .k-picker-wrap.k-state-hover {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-editor-toolbar .k-picker-wrap.k-state-default {
+    border-color: $primary-color;
+    background-color: #e9f0f8;
+    border-width: 1px;
+}
+
+.k-editor-toolbar .k-picker-wrap.k-state-hover {
+    background-color: $accent-color;
+}
+
+.k-window-titlebar .k-window-action.k-state-hover {
+    background-color: #e9f0f8;
+    border-color: $primary-color;
+}
+
+.k-picker-wrap .k-input {
+    height: 1.35em;
+    line-height: 1.67em
+}
+
+.k-datepicker .k-state-default>.k-select {
+    background-color: $primary-color;
+}
+
+.k-webkit .k-combobox .k-dropdown-wrap:before,
+.k-webkit .k-picker-wrap:before,
+.k-webkit .k-numeric-wrap:before {
+    height: 1.5em;
+    padding-bottom: .3em;
+}
+
+.k-picker-wrap .k-select {
+    min-height: 1.6em;
+    line-height: 1.6em;
+}
+
+.k-input {
+    padding: 0 0;
+}
+
+.k-editor-toolbar-wrap {
+    height: 30px;
+}
+
+table.k-editor {
+    font-size: 0.8em;
+}
+
+.k-button,
+.k-button.k-upload-button {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: #fff;
+}
+
+.k-button.k-upload-button:hover {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+.k-dropzone em {
+    color: $primary-color;
+    visibility: visible;
+}
+
+.k-dropzone {
+    border: solid 1px #000;
+}
+
+.k-button.k-state-focused {
+    -webkit-box-shadow: inset 0px 0px 0px 1px $accent-color;
+    -moz-box-shadow: inset 0px 0px 0px 1px $accent-color;
+    box-shadow: inset 0px 0px 0px 1px $accent-color;
+}
+
+.k-button:hover {
+    color: #fff;
+    border-color: $accent-color;
+    background-color: $accent-color;
+}
+
+.k-grid-filter.k-state-active {
+    background-color: #fff;
+}
+
+.unsaved-cancel {
+    color: red;
+}
+
+.delete-message {
+    padding: 0.5em 0 0.8em 0;
+}
+
+.k-widget {
+    color: #000;
+}
+
+.k-numerictextbox>.k-numeric-wrap.k-state-default {
+    background-image: none;
+    background-position: 50% 50%;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+span.k-widget.k-autocomplete.k-header.k-state-default {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    height: 27px;
+}
+
+.k-autocomplete .k-input {
+    height: 19px !important;
+    line-height: 19px !important;
+    font-size: 0.94em !important;
+}
+
+#bottomcontent table.k-editor {
+    font-size: 1em;
+}
+
+
+/* END KENDO STYLES */

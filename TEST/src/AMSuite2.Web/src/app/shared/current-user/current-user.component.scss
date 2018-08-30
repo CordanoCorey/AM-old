@@ -1,0 +1,45 @@
+.header-right {
+    clear: right;
+    float: right;
+    position: relative;
+}
+
+.menu-login {
+    float: right;
+    clear: right;
+    color: #000;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+}
+
+.account-profile {
+    float: right;
+}
+
+a.logo {
+    text-decoration: none;
+    background: url(/assets/images/site/AMSuite-Logo.png) no-repeat 0 0;
+    height: 50px;
+    width: 260px;
+    float: right;
+    margin-left: 1%;
+}
+
+.service-mark {
+    display: none;
+}
+
+.mat-icon {
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+    display: block;
+    float: right;
+    margin-right: 8px;
+}
+
+.mat-icon:hover {
+    -webkit-box-shadow: 3px 3px 1px 1px rgba(201, 201, 201, 1);
+    -moz-box-shadow: 3px 3px 1px 1px rgba(201, 201, 201, 1);
+    box-shadow: 3px 3px 1px 1px rgba(201, 201, 201, 1);
+}

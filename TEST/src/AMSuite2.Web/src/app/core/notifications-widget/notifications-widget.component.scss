@@ -1,0 +1,21 @@
+am-icon-drag {
+    margin: 10px;
+}
+
+#notification-content {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#notification-message {
+    font-size: 14px;
+    padding: 40px 0;
+    text-align: center;
+    color: gray;
+}
+
+.widget-content {
+    min-height: 100px;
+    max-height: 200px;
+    overflow-y: auto;
+}

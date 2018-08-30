@@ -1,0 +1,65 @@
+<form class="form has-help" [formGroup]="form" (ngSubmit)="onSubmit($event)" iuForm>
+
+  <md-card class="name-card">
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="Group Name" value="" maxlength="199" formControlName="groupName" required>
+        <md-error>
+          <div *ngIf="groupName?.errors?.required">
+            Name is required.
+          </div>
+          <div *ngIf="groupName?.errors?.maxlength">
+            Name must be less than 150 characters long.
+          </div>
+        </md-error>
+      </md-input-container>
+    </div>
+  </md-card>
+
+  <div class="control editor-control">
+    <label for="editor" class="control-label">Description:</label>
+    <iu-editor class="basic-editor" elementId="editor" formControlName="groupDescription" height="100px"></iu-editor>
+  </div>
+
+  <div class="control members-control">
+    <am-group-members [members]="groupMembers"></am-group-members>
+  </div>
+
+  <md-card class="bottom-controls">
+    <div class="control admin-control">
+      <md-select id="ddlGroupAdministrators" placeholder="Select Group Administrator..." formControlName="groupAdminId">
+        <md-option [value]="0">Select Group Admin...</md-option>
+        <md-option *ngFor="let admin of admins" [value]="admin?.userId">{{ admin?.displayName }}</md-option>
+      </md-select>
+    </div>
+
+    <div class="control">
+      <label for="ddlOutline" class="control-label">Outline Format:</label>
+      <md-select id="ddlOutline" formControlName="outlineId">
+        <md-option *ngFor="let format of outlineFormats" [value]="format.id">{{ format.name }}</md-option>
+      </md-select>
+      <span class="note outline-note">
+          Updating the Outline Format will change the outline format on all agendas within this group moving forward. 
+          It will not change any of the formatting on prior agendas within this group.
+      </span>
+    </div>
+
+    <div class="checkbox-item control">
+      <md-checkbox formControlName="allowSuggestions">Allow Suggestions</md-checkbox>
+      <span class="note suggestions-note">
+        If checked, non-administrative members of the meeting's group can add suggestions to the agenda 
+        which are visible and can be approved by account administrators and group administrators, managers or contributors.
+      </span>
+    </div>
+  </md-card>
+
+  <div class="actions">
+    <button class="btn-save" (click)="onSubmit($event)" md-raised-button color="accent">Save</button>
+    <button *ngIf="true" class="btn-delete" (click)="onDelete()" md-raised-button color="warn">Delete</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="groupsLink">Cancel</a>
+  </div>
+
+  <div id="message" class="required"></div>
+
+</form>

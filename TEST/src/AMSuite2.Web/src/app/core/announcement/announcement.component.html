@@ -1,0 +1,11 @@
+<iu-dialog [model]="dialog">
+    <div id="announcement">
+        <div class="header">
+            <span class="subject">{{ announcement?.subject | uppercase }}</span>
+            <span class="subtitle"></span>
+        </div>
+        <div class="body" [innerHTML]="announcement?.description"></div>
+        <div class="signature"></div>
+        <div class="attachments-wrapper"></div>
+    </div>
+</iu-dialog>

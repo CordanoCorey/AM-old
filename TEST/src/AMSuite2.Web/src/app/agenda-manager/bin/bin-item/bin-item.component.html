@@ -1,0 +1,25 @@
+<div class="bincol2">
+  <am-panel-blue-mini heading="Bin Item Details:">
+    <div id="binitempreview" class="widget-assets widget-padding">
+      <div id="divBinItemName" class="item-header">
+        <b>Name: </b><span id="txtBinItemName">{{ binItemName }}</span>
+      </div>
+      <div id="divBinItemDescription" *ngIf="showDescription" class="item-header">
+        <h4>Description:</h4>
+        <span>{{ binItemDescription }}</span>
+      </div>
+      <div id="divBinItemAttachments" *ngIf="showAttachments" class="item-header">
+        <h4>Attachments:</h4>
+        <am-attachment-preview *ngFor="let attachment of attachments" [attachment]="attachment"></am-attachment-preview>
+      </div>
+      <div id="divBinItemNotes" *ngIf="showNotes" class="item-header">
+        <h4>Notes:</h4>
+        <am-notes-preview [notes]="binItemNotes"></am-notes-preview>
+      </div>
+      <div id="divBinItemMinutes" *ngIf="showMinutes" class="item-header">
+        <h4>Minutes:</h4>
+        <am-minutes-preview [minutes]="binItemMinutes"></am-minutes-preview>
+      </div>
+    </div>
+  </am-panel-blue-mini>
+</div>

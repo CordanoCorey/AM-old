@@ -1,0 +1,15 @@
+<h2 md-dialog-title>{{ dialog.title }}</h2>
+<md-dialog-content>
+  <p class='delete-message'>
+    You are about to
+    <strong>restore</strong> the selected
+    <strong>Meeting and/or Agenda</strong>, any <strong>Sub-Items</strong> beneath this Item will be restored with it. Any
+    <strong>attachments, minutes or notes</strong> will also be restored.
+    <br/><br />Continue with restore?
+  </p>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-button md-dialog-close="no">No</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button md-button md-dialog-close="yes">Yes</button>
+</md-dialog-actions>

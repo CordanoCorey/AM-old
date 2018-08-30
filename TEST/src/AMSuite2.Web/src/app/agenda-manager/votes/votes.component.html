@@ -1,0 +1,21 @@
+<div id="divVoteTable" class="item-votes">
+  <button id="btnEditVotes" class="button tinyicon">
+    <span class="icon-container">
+        <span class="icon ui-icon-checkmark"></span>
+    <span class="icon-text">Edit Votes</span>
+    </span>
+  </button>
+  <am-votes-form
+    [votes]="votes$ | async"
+    (save)="saveVotes($event)"></am-votes-form>
+</div>
+
+<div id="divVoteControl" class="item-vote">
+  <am-vote 
+    *ngIf="showVote$ | async"
+    [vote]="vote$ | async"
+    (add)="addVote($event)"
+    (update)="updateVote($event)">
+  </am-vote>
+  <am-vote-results *ngIf="showVoteResults$ | async"></am-vote-results>
+</div>

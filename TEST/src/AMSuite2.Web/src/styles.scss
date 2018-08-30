@@ -1,0 +1,386 @@
+@import './assets/styles/login';
+@import './assets/styles/default';
+@import './assets/styles/main';
+@import '~@progress/kendo-theme-default/scss/all';
+@import 'common';
+@import '~@angular/material/_theming';
+iu-editor {
+    @include editor-palette($primary-palette);
+    display: block;
+    margin: 32px 0;
+    width: 100%;
+    .editor.mat-card:not([class*=mat-elevation-z]) {
+        @include mat-elevation(8);
+    }
+}
+
+iu-editor.basic-editor {
+    margin: 8px 0;
+}
+
+#container {
+    min-height: 500px;
+    margin: 0 0 50px 1% !important;
+    width: 98% !important;
+    padding: 10px 0 20px 1%;
+    float: left;
+    clear: both;
+    width: 100%;
+    background-color: $container-color;
+    position: initial;
+    height: auto;
+    margin-bottom: 10px;
+    @include mat-elevation(2);
+}
+
+.just-loading-image {
+    background-image: url(/assets/images/site/loading.gif);
+    height: 15px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+iu-grid .grid th {
+    font-size: 1.2em;
+}
+
+.main-content {
+    padding: 8px 1% !important;
+}
+
+.main-content.mat-card {
+    float: left;
+    width: 73%;
+    padding: 8px 1% !important;
+    background-color: #fff;
+    margin: 8px 0;
+}
+
+.grid-wrapper {
+    padding: 20px 20px 40px 0;
+}
+
+.blue-text {
+    float: left;
+    color: $primary-color;
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.form label {
+    float: left;
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.blue {
+    color: $primary-color;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.required {
+    color: red;
+}
+
+.control {
+    margin: 0;
+    padding: 10px 0 0 20px;
+    width: 90%;
+    clear: both;
+    position: relative;
+}
+
+.control-label {
+    font-family: 'Roboto Slab';
+    width: 100%;
+    padding: 6px 0;
+    display: block;
+    clear: both;
+    float: left;
+    font-size: 14px; // font-weight: bold;
+    padding-bottom: 8px;
+    color: $primary-color;
+    .note {
+        color: #000;
+        float: none;
+        position: relative;
+        top: 0;
+        line-height: 14px;
+    }
+}
+
+.editor-control {
+    margin: 10px 0;
+    padding: 10px 0 0 0px;
+    width: 100%;
+    clear: both;
+    position: relative;
+}
+
+.form-group.mat-card {
+    margin: 20px;
+    padding: 20px;
+    width: calc(100% - 80px);
+    clear: both;
+    position: relative;
+}
+
+.note-wrapper {
+    padding: 0 10px;
+    width: calc(100% - 20px);
+}
+
+.note {
+    float: left;
+    position: relative;
+    top: 2px;
+    background-color: #faf8d8;
+    margin: 3px 8px 0 8px;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.select-note {
+    top: 6px;
+    margin-left: 16px;
+}
+
+.mat-input-container {
+    width: 90%;
+    margin: 0;
+}
+
+.mat-select {
+    float: left;
+}
+
+.actions {
+    float: right;
+    padding: 10px 0;
+    margin: 10px 20px 10px 0;
+    position: relative;
+}
+
+.or {
+    padding: 0 10px;
+}
+
+.btn-save {
+    color: #fff;
+}
+
+.btn-delete {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.btn-cancel {
+    color: red;
+    text-decoration: underline;
+}
+
+.btn-cancel:hover {
+    font-weight: bold;
+}
+
+#message {
+    margin: 0.5em 1em;
+    width: 100%;
+}
+
+.centered {
+    width: 100%;
+    text-align: center;
+}
+
+button.mat-raised-button.mat-accent,
+a.mat-raised-button.mat-accent {
+    color: #fff !important;
+    .mat-icon {
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+.mat-input-placeholder {
+    color: $primary-color;
+}
+
+.btn.mat-raised-button {
+    line-height: 28px;
+    padding: 4px 12px;
+    position: relative;
+}
+
+.btn-sm.mat-raised-button {
+    border-radius: 3px;
+    line-height: 24px;
+    padding: 2px 6px;
+    position: relative;
+    .mat-icon {
+        font-size: 18px;
+        line-height: 24px;
+        position: relative;
+    }
+    .btn-label {
+        font-size: 14px;
+        position: relative;
+        top: 0px;
+        right: 2px;
+    }
+}
+
+.btn.mat-raised-button.mat-primary,
+.btn-sm.mat-raised-button.mat-primary {
+    color: #fff;
+    .mat-icon {
+        color: mat-color($material-accent-color, 500);
+    }
+}
+
+.btn-sm.mat-raised-button.mat-primary:hover,
+.btn.mat-raised-button.mat-primary:hover {
+    background-color: mat-color($material-primary-color, 900) !important;
+    @include mat-elevation(6);
+    .btn-label {
+        color: $accent-color;
+    }
+    .mat-icon {
+        color: #fff;
+    }
+}
+
+.btn-add.mat-accent {
+    md-icon {
+        line-height: 24px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #000;
+    }
+}
+
+.item-header {
+    border-bottom: 1px solid #cdcdcd;
+    font-size: 18px;
+    width: 100%;
+    font-weight: bold;
+    padding: 1%;
+    margin-bottom: 12px;
+}
+
+.mat-raised-button.mat-accent:hover {
+    background-color: mat-color($mat-am-green, 700);
+    font-weight: bold;
+}
+
+.mat-raised-button.mat-primary:hover {
+    background-color: mat-color($mat-am-blue, 900);
+    font-weight: bold;
+}
+
+.view-header {
+    width: 100%;
+    border-bottom: 1px solid #c5cbcd;
+    padding: 0.5em 0 0 0;
+    overflow: hidden;
+}
+
+.view-header a {
+    float: right;
+    margin-right: 1em;
+}
+
+.view-header h2 {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.col2-normal {
+    float: right;
+    width: 33%;
+}
+
+.col1 {
+    float: left;
+    width: 75%;
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+.col2 {
+    float: right;
+    width: 25%;
+    overflow: hidden;
+    padding-top: 1em;
+}
+
+.col3 {
+    float: right;
+    width: 25%;
+    overflow: hidden;
+    padding-top: 1em;
+    height: auto;
+}
+
+label.mat-input-placeholder,
+.mat-select-placeholder {
+    font-family: 'Roboto Slab';
+    color: $primary-color;
+}
+
+.break-words {
+    word-wrap: break-word;
+}
+
+.mat-option:hover {
+    background-color: $primary-color !important;
+    color: #fff !important;
+}
+
+.mat-input-subscript-wrapper {
+    top: 0 !important;
+    right: 0px;
+    .mat-input-error {
+        float: right;
+    }
+}
+
+.mat-input-container.mat-form-field {
+    width: 100%;
+}
+
+.mat-error {
+    display: block;
+    float: right;
+    bottom: 0;
+}
+
+.message {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 20px;
+}
+
+.message-top {
+    top: 0;
+}
+
+.message-bottom {
+    bottom: 60px;
+}
+
+.message.error-message {
+    color: red;
+}
+
+.message.success-message {
+    color: green;
+}

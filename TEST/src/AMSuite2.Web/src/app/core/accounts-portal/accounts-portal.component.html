@@ -1,0 +1,21 @@
+<am-header-login></am-header-login>
+<am-panel-white>
+  <am-heading-login>AgendaManager | Sign In</am-heading-login>
+  <div id="account-list" class="login-container">
+    <div id="secondary">
+      <h2 class="login-success-message">
+        Login Successful. You have access to the following accounts:
+      </h2>
+      <ul class="user-accounts-list">
+        <li *ngFor="let member of accounts$ | async">
+          <a *ngIf="true" class='account-link boldlink' (click)="onAccountClick(member.account)"> {{ member?.account?.name }} </a>
+          <div *ngIf="false" class='boldlink boldlink-error'>value.AccountName ( value.AccountError )</div>
+        </li>
+      </ul>
+    </div>
+    <div id="login-logout">
+      <button id="logout" (click)="logout()" md-raised-button color="accent">Log Out</button>
+    </div>
+  </div>
+</am-panel-white>
+<am-footer-login></am-footer-login>

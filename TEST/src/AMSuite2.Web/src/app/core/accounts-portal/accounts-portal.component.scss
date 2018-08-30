@@ -1,0 +1,23 @@
+@import '../../../assets/styles/login';
+@import '../../../common';
+h2.login-success-message {
+    border-bottom: 1px solid $primary-color;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+}
+
+ul.user-accounts-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+#logout {
+    float: right;
+    line-height: 16px;
+    padding: 8px 4px;
+    border-radius: 4px;
+}
+
+.boldlink-error {
+    text-decoration: none;
+}

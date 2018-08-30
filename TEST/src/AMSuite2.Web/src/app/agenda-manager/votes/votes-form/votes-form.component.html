@@ -1,0 +1,40 @@
+<div id="vote-table">
+  <h2 class="view-subtitle">Votes</h2>
+  <div class="view-section">
+    <table id="votes" cellspacing="0" class="grid">
+      <thead>
+        <tr>
+          <th><span class="note">Members must have the "Voter" role to appear here.</span></th>
+          <th><a id="all-Yea" title="Select Yea radios for all Members" (click)="selectAllYea($event)">Select All</a></th>
+          <th><a id="all-Nay" title="Select Nay radios for all Members" (click)="selectAllNay($event)">Select All</a></th>
+          <th class="all-abstain"><a id="all-Abstain" title="Select Abstain radios for all Members" (click)="selectAllAbstain($event)">Select All</a></th>
+          <th class="all-notcast"><a id="all-NotCast" title="Select Not Cast radios for all Members" (click)="selectAllNotCast($event)">Select All</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="vote-form" *ngFor="let vote of formArray.controls" [formGroup]="vote">
+          <th>{{ vote?.value?.voterName }}</th>
+          <td><input [attr.enabled]="true" type="radio" value="1" [checked]="vote?.value?.voteAnswerId == 1" formControlName="voteAnswerId">Yea</td>
+          <td><input [attr.enabled]="true" type="radio" value="2" [checked]="vote?.value?.voteAnswerId == 2" formControlName="voteAnswerId">Nay</td>
+          <td><input [attr.enabled]="true" type="radio" value="3" [checked]="vote?.value?.voteAnswerId == 3" formControlName="voteAnswerId">Abstain</td>
+          <td><input type="radio" value="4" [checked]="vote?.value?.voteAnswerId == 4" formControlName="voteAnswerId">{{ vote?.value | notCastText }}</td>
+        </tr>
+        <tr class="tally">
+          <th scope="row"><em>Total</em></th>
+          <td id="yeatotal">{{ totalYea }}</td>
+          <td id="naytotal">{{ totalNay }}</td>
+          <td id="abstaintotal">{{ totalAbstain }}</td>
+          <td id="notcasttotal">{{ totalNotCast }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="submit" id="btnSaveVotes" class="button tinyicon" (click)="onSubmit()">
+      <span class="icon-container">
+        <span class="icon ui-icon-save"></span>
+        <span class="icon-text">Save Votes</span>
+      </span>
+    </button>
+
+    <span id="voteTableMessage" class="required"></span>
+  </div>
+</div>

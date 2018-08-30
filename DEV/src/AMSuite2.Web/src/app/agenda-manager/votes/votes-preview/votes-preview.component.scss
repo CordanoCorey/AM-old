@@ -1,0 +1,38 @@
+.votes-preview {
+    margin: 1em 0 0 0;
+}
+
+table {
+    font-family: calibri;
+    color: #000;
+    margin: 0 0 0.5em 3%;
+    padding: 0 0 0 0;
+    width: 95%;
+}
+
+.table-heading {
+    font-style: italic;
+    border-bottom: solid 1px #4e5466;
+    font-size: 0.8em;
+}
+
+.vote-answer {
+    font-weight: bold;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 0.8em;
+    width: 60px;
+    text-align: right;
+}
+
+.vote-total {
+    padding-left: 1em;
+    width: 20px;
+    font-size: 0.8em;
+}
+
+.voters {
+    padding-left: 1em;
+    font-size: 0.8em;
+    width: 380px;
+}

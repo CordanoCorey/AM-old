@@ -1,0 +1,46 @@
+@import '../../../../common';
+am-panel {
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+
+#saved-templates {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.k-loading-mask {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+#saved-templates a {
+    display: block;
+    text-decoration: none;
+    line-height: 25px;
+    font-size: 0.9em;
+    color: black;
+    padding-left: 16px;
+}
+
+#saved-templates a:hover,
+#saved-templates a.selected {
+    cursor: pointer;
+    color: #fff;
+    background-color: $accent-color;
+}
+
+.preview-placeholder {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: 60px 10%;
+}
+
+.panel-content {
+    height: 100%;
+}

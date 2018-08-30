@@ -1,0 +1,63 @@
+@import '../../../../common';
+table {
+    width: 94%;
+    font-size: .9em;
+}
+
+#dateheader {
+    color: #000;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.rollcallcol {
+    text-align: left;
+}
+
+#otherheader {
+    text-align: left;
+}
+
+.changecol {
+    text-align: center;
+}
+
+textarea {
+    width: 94%;
+    height: 3em;
+    margin-top: 1em;
+}
+
+#btnTakeAttendance {
+    float: left;
+}
+
+#attendanceMessage {
+    float: left;
+}
+
+.btn-attendance {
+    width: 18px;
+    display: block;
+    width: 46px;
+    text-align: center;
+    font-size: .9em;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #000;
+    padding: 0.2em;
+}
+
+.btn-change {
+    padding-bottom: 4px;
+    width: 20px;
+}
+
+.depart {
+    background-color: #f78181;
+}
+
+.join {
+    background-color: $accent-color;
+}

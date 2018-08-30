@@ -1,0 +1,56 @@
+<am-panel-blue>
+
+  <am-panel-blue-header>
+    The Following Items Exist...
+  </am-panel-blue-header>
+
+  <am-panel-blue-content>
+
+    <div class="meeting-panel">
+
+      <div id="meeting-container">
+        <span *ngIf="!hasId">&nbsp;...Nothing</span>
+        <span class="item-detail" *ngIf="hasId">
+          <h2>Meeting:</h2>
+					<div class="padding">
+            <div class="item-name">{{ meetingName }}</div>
+            <a class="item-link"
+              [routerLink]="'/' + accountUrl + '/meetings/' + meetingId + '/edit'">
+              Edit Meeting Details</a>
+					</div>
+        </span>
+      </div>
+
+      <div id="agenda-container" *ngIf="hasAgendas">
+        <h2 class="agenda-sideheader">Agendas:</h2>
+        <div class="padding item-link" *ngFor="let agenda of agendas">
+          <div class="item-name">{{ agenda.name }}</div>
+          <a class="item-link" [routerLink]="'/' + accountUrl + '/meetings/' + meetingId + '/edit/agendas/' + agenda.id">
+            Edit Agenda Details</a><br>
+          <a class="item-link" [routerLink]="'/' + accountUrl + '/meetings/' + meetingId + '/agendas/' + agenda.id">View Agenda</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="controls-divider"></div>
+
+    <div class="padding action-controls">
+      <div id="agenda-controls">
+        <a color="primary" class="btn-sm" [routerLink]="newAgendaLink" md-raised-button>
+          <md-icon>add</md-icon>
+          <span class="btn-label">Add New Agenda</span>
+        </a>
+      </div>
+      <div id="template-controls">
+        <a color="primary" class="btn-sm" [routerLink]="templatesLink" md-raised-button>
+          <md-icon>add</md-icon>
+          <span class="btn-label">Add Agenda From Template</span>
+        </a>
+      </div>
+    </div>
+
+  </am-panel-blue-content>
+
+</am-panel-blue>
+
+<am-audit-info></am-audit-info>

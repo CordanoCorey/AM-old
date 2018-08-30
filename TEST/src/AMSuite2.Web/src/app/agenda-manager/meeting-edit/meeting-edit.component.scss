@@ -1,0 +1,27 @@
+#Stage {
+    min-width: 1200px;
+}
+
+am-about-meetings {
+    margin-bottom: 1em;
+}
+
+.main-content {
+    float: left;
+    width: 61%;
+    min-width: 675px;
+    height: 100%;
+    padding: 8px 2% !important;
+    position: relative;
+}
+
+.form hr {
+    border-color: #dfdfdf;
+    border-style: solid;
+}
+
+.right-content {
+    float: right;
+    margin-top: 16px;
+    max-width: 33%;
+}

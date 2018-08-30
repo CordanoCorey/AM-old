@@ -1,0 +1,29 @@
+@import '../../../../common';
+a.action {
+    color: #fff;
+    margin-right: 10px;
+    line-height: 24px;
+    padding: 0 6px;
+    position: relative;
+}
+
+a.action md-icon {
+    position: relative;
+    top: 3px;
+    font-size: 18px;
+    color: mat-color($material-accent-color, 500);
+}
+
+a.action.edit-action md-icon {
+    font-size: 16px;
+    left: -5px;
+}
+
+a.action .button-text {
+    position: relative;
+    top: 0px;
+}
+
+a.action.edit-action .button-text {
+    right: 6px;
+}

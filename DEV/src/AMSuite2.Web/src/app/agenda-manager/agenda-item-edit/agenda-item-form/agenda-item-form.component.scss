@@ -1,0 +1,71 @@
+@import '~@angular/material/_theming';
+#attachments {
+    width: 97%;
+}
+
+.mat-card.name-control {
+    padding: 18px 0 6px 32px;
+}
+
+.editor-control {
+    clear: both;
+    padding: 0;
+}
+
+.attachments-control {
+    clear: both;
+    width: 97%;
+}
+
+.message-top {
+    float: left;
+    clear: left;
+}
+
+.message-bottom {
+    margin: 0.4em 0 0.4em 0.4em;
+}
+
+.private-control {
+    clear: both;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.reject-control {
+    overflow: hidden;
+}
+
+.reject-reason .field {
+    width: 95%;
+    height: 50px;
+}
+
+.votes-control {
+    clear: both;
+    height: 32px;
+}
+
+.mat-checkbox {
+    float: left;
+    padding-left: 16px;
+}
+
+.mat-card.suggestion-control {
+    margin: 20px 0 0;
+    padding: 10px 48px;
+    .suggestion-actions {
+        margin-left: 50px;
+    }
+    .mat-icon {
+        float: left;
+    }
+    .action-text {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.reject-reason-note {
+    font-weight: normal;
+}

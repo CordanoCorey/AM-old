@@ -1,0 +1,96 @@
+@import '../../../common';
+#Stage {
+    min-width: 1360px;
+    overflow-x: scroll;
+}
+
+.main-content {
+    float: left;
+    width: 73%;
+    padding: 0 !important;
+    margin: 8px 0;
+    min-width: 880px;
+}
+
+.right-content {
+    float: right;
+    overflow: hidden;
+    padding-top: 16px;
+    max-width: 25%;
+}
+
+.control {
+    display: inline-grid;
+}
+
+.k-datepicker {
+    vertical-align: middle;
+}
+
+table.k-editor {
+    background-color: #fff;
+}
+
+#txtSearch {
+    width: 100px;
+    float: right;
+}
+
+.grid-heading {
+    margin: 0.5em 0;
+}
+
+.view-header h2 {
+    float: left;
+}
+
+.view-header {
+    padding-top: 0;
+    padding-bottom: 6px;
+}
+
+.mat-raised-button.btn-back {
+    padding: 2px 8px 2px 4px;
+    line-height: 16px;
+    border-radius: 4px;
+    min-width: 64px;
+    float: left;
+}
+
+md-icon {
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+}
+
+.grid-wrapper {
+    padding: 16px 2%;
+    margin: 0;
+}
+
+.btn-add {
+    color: #fff;
+    font-weight: bold !important;
+    margin-right: 20px;
+    line-height: 28px;
+    padding: 4px 12px;
+    position: relative;
+}
+
+.btn-add md-icon {
+    position: relative;
+    top: 0;
+    left: -2px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    line-height: 14px;
+}
+
+.btn-add .button-text {
+    font-size: 16px;
+}
+
+.btn-add.edit-action .button-text {
+    right: 6px;
+}

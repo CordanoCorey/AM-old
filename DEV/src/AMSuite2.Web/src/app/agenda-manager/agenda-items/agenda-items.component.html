@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <am-agenda-item-actions
+        [agendaItem]="agendaItem$ | async"
+        [editing]="editing$ | async" 
+        [userCanEdit]="userCanEdit$ | async" 
+        [userHasBin]="userHasBin$ | async"
+        [showRight]="true"
+        (delete)="deleteAgendaItem($event)"
+        (copyToBin)="addBinItem($event)"></am-agenda-item-actions>
+    <div class="agenda-item-wrapper">
+        <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+    </div>
+    <am-agenda-item-actions *ngIf="(mode$ | async)==='edit'"
+        [agendaItem]="agendaItem$ | async"
+        [editing]="editing$ | async" 
+        [userCanEdit]="userCanEdit$ | async" 
+        [userHasBin]="userHasBin$ | async"
+        [showRight]="false"
+        (delete)="deleteAgendaItem($event)"
+        (copyToBin)="addBinItem($event)"></am-agenda-item-actions>
+
+     <div id="bottom-pane" *ngIf="showBottomPane$ | async">
+        <am-notes></am-notes>
+    </div>
+</div>

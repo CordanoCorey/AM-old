@@ -1,0 +1,113 @@
+@import '../../../../common';
+#print-buttons {
+    overflow: hidden;
+}
+
+.embed {
+    margin-top: 2px;
+}
+
+#chkConvert {
+    float: left;
+}
+
+.embed-description {
+    margin-top: 2px;
+    display: inline-block;
+}
+
+button.mat-raised-button.mat-accent {
+    display: inline-flex;
+    border-radius: 3px;
+    padding: 2px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 14px;
+    min-width: 36px;
+    .mat-icon {
+        font-size: 16px;
+        line-height: 14px;
+        position: relative;
+        top: 3px;
+        left: 0;
+        float: left;
+    }
+    .icon-text {
+        float: left;
+        position: relative;
+        top: 3px;
+        padding-right: 8px;
+    }
+}
+
+.btn-right {
+    float: right;
+    padding: 0;
+    height: 24px;
+    font-weight: bold;
+    margin-right: 2px;
+    border-radius: 2px;
+    .mat-icon,
+    .fileicon {
+        float: left;
+        font-size: 16px;
+        line-height: 14px;
+        position: relative;
+    }
+    .mat-icon {
+        top: 4px;
+        left: 10px;
+    }
+    .fileicon {
+        top: 0;
+        left: 14px;
+    }
+    .icon-text {
+        float: left;
+        position: absolute;
+        top: 2px;
+        left: 36px;
+        color: #fff;
+        line-height: 18px;
+        font-weight: normal;
+    }
+    .icon-text.pdf-text {
+        left: 42px;
+    }
+}
+
+.attachments.pdf,
+.pdfbutton.pdf,
+.attachment-sprite.pdf {
+    background-position: -200px -46px;
+}
+
+.attachments.doc,
+.attachments.docx,
+.file.docx,
+.wordbutton.doc,
+.attachment-sprite.doc,
+.attachment-sprite.docx {
+    background-position: -200px -92px;
+}
+
+.wordbutton {
+    background: transparent url(/assets/images/site/icon-sprite.png) no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 17px;
+}
+
+.pdfbutton {
+    background: transparent url(/assets/images/site/icon-sprite.png) no-repeat;
+    display: inline-block;
+    height: 16px;
+    width: 17px;
+    left: 18px !important;
+}
+
+.print-icon {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 1px;
+}

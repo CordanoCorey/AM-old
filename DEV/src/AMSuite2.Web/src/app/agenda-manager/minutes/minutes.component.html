@@ -1,0 +1,10 @@
+<div id="minutes-container">
+    <p id="minutes-header">
+        {{ agendaName$ | async }} - 
+        <i style="font-weight: normal">In this view saving is automatic when you tab out of a field.</i>
+    </p>
+    <div *ngFor="let item of agendaItems" class="minutes-content">
+        <span class="control-label bold">{{ getTitle(item) }}</span>
+        <am-minutes-form [agendaItem]="item"></am-minutes-form>
+    </div>
+</div>

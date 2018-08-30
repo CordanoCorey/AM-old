@@ -1,0 +1,5 @@
+<div id="content-wrapper">
+  <am-meeting-filters [dateRanges]="dateRanges$ | async" [groups]="groups$ | async" (changes)="filter($event)" [search]="search"
+    [widget]="true"></am-meeting-filters>
+  <am-meetings-grid [accountUrl]="accountUrl$ | async" [meetings]="meetings$ | async" height="320" [widget]="true"></am-meetings-grid>
+</div>

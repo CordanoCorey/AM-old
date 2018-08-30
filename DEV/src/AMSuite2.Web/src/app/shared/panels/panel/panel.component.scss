@@ -1,0 +1,29 @@
+@import '../../../../common';
+mat-card {
+    padding: 0;
+    height: calc(100% - 2px);
+}
+
+.panel-heading-wrapper {
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    overflow: hidden;
+    height: 18px;
+    line-height: 18px;
+    font-size: 16px;
+    width: calc(100% - 12px);
+    padding: 3px 6px;
+}
+
+.panel-content-wrapper {
+    padding: 6px;
+    height: calc(100% - 36px);
+    border-right: solid 2px $primary-color;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: solid 2px $primary-color;
+    border-bottom: solid 2px $primary-color;
+    margin-bottom: 1em;
+}

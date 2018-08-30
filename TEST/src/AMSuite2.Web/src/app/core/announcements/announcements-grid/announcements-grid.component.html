@@ -1,0 +1,24 @@
+<iu-grid [model]="grid" height="420"  [sort]="sort">
+    <iu-grid-column [model]="subjectColumn" [templateRef]="subjectTemplate" width="360">
+        <ng-template #subjectTemplate let-subject="subject" let-announcementId="announcementId">
+            <a class="grid-link" [routerLink]="'/' + accountUrl + '/announcements/' + announcementId + '/edit'">
+                {{ subject }}
+            </a>
+        </ng-template>
+    </iu-grid-column>
+    <iu-grid-column [model]="startDateColumn" filter="date" format="{0:d}" [templateRef]="startDateTemplate" width="192">
+        <ng-template #startDateTemplate let-startDate="startDate">
+            <div class="centered">{{ startDate | date:'shortDate' }}</div>
+        </ng-template>
+    </iu-grid-column>
+    <iu-grid-column [model]="endDateColumn" filter="date" format="{0:d}" [templateRef]="endDateTemplate" width="192">
+        <ng-template #endDateTemplate let-endDate="endDate">
+            <div class="centered">{{ endDate | date:'shortDate' }}</div>
+        </ng-template>
+    </iu-grid-column>
+    <iu-grid-column [model]="typeColumn" [templateRef]="typeTemplate" [filterable]="false" width="200">
+        <ng-template #typeTemplate let-type="type">
+            <span class="red">{{ type }}</span>
+        </ng-template>
+    </iu-grid-column>
+</iu-grid>

@@ -1,0 +1,27 @@
+<am-panel>
+  <div class="panel-heading">
+    Agenda Preview:
+    <a id="btnDeleteTemplate" class="button tinyicon" *ngIf="showDeleteButton">
+      <span class="icon-container">
+        <span class="icon ui-icon-trash"></span>
+        <span class="icon-text">Delete</span>
+      </span>
+    </a>
+    <a id="btnAddThisTemplate" class="button tinyicon" *ngIf="showAddButton">
+      <span class="icon-container">
+        <span class="icon ui-icon-plusthick"></span>
+        <span class="icon-text">Add This Template</span>
+      </span>
+    </a>
+  </div>
+  <div class="panel-content">
+    <div id="template" *ngIf="active">
+      <div id="templatemessage" class="widget-padding" *ngIf="showError">
+        This is a test error message
+      </div>
+      <div id="selected-template">
+      </div>
+    </div>
+    <label *ngIf="!active" class="preview-placeholder">Select an agenda template to preview within this area.</label>
+  </div>
+</am-panel>

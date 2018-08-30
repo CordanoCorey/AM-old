@@ -1,0 +1,36 @@
+#edit-bar {
+    overflow: hidden;
+    padding: 1%;
+    width: 98%;
+}
+
+.actions {
+    float: left;
+    padding: 0;
+    margin: 0;
+    .btn-cancel {
+        text-decoration: underline;
+    }
+}
+
+.normal-view {
+    float: right;
+    padding-top: 6px;
+}
+
+.btn-email {
+    .btn-label {
+        left: 10px;
+    }
+    .mat-icon {
+        position: absolute;
+        left: 12px;
+        top: 3px;
+    }
+}
+
+.btn-delete {
+    .btn-label {
+        right: 5px;
+    }
+}

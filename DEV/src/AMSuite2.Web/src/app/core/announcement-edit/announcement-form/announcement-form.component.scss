@@ -1,0 +1,98 @@
+#files {
+    width: 97%;
+}
+
+#message {
+    margin: 1em 0;
+}
+
+.editor-wrapper {
+    padding-left: 0px;
+}
+
+.editor-control {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#description-container.editor-control {
+    margin-top: 10px;
+}
+
+.signature-wrapper {
+    display: flex;
+    justify-content: left;
+    width: calc(100% - 0px);
+    padding: 10px 0;
+    padding-top: 0;
+}
+
+.note {
+    float: left;
+    margin-left: 0.5em;
+}
+
+.type-control {
+    .control-label {
+        margin-bottom: 12px;
+    }
+}
+
+.mat-radio-group {
+    padding: 0 16px;
+}
+
+.mat-radio-button {
+    padding: 0 8px;
+}
+
+.group-control {
+    label {
+        margin-bottom: 0px;
+    }
+    .mat-select {
+        float: left;
+        width: 320px;
+    }
+}
+
+.subject-control {
+    padding-top: 20px;
+}
+
+.start-date {
+    margin-right: 18px;
+}
+
+iu-datepicker {
+    margin-bottom: 10px;
+    .mat-input-element {
+        width: 195px !important;
+        border: 2px inset #eeeeee;
+    }
+}
+
+label.lbl-date {
+    font-weight: normal;
+}
+
+.actions {
+    padding: 20px 0;
+}
+
+.btn-save {
+    margin: 0 10px;
+}
+
+.form-group.mat-card {
+    width: 88%;
+}
+
+.form-group.mat-card:first-child {
+    padding: 16px 0 32px 32px;
+}
+
+.form-group.mat-card:last-child {
+    padding-bottom: 0;
+}

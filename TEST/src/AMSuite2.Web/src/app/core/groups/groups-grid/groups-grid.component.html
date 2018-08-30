@@ -1,0 +1,17 @@
+<iu-grid [model]="grid" [filterable]="false" height="300">
+
+    <iu-grid-column [model]="groupNameColumn" width="300" [templateRef]="groupNameTemplate">
+        <ng-template #groupNameTemplate let-groupName="groupName" let-groupLink="groupLink">
+            <a class="group-link" [routerLink]="groupLink">{{ groupName }}</a>
+        </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="membersColumn" width="120" [templateRef]="membersTemplate">
+        <ng-template #membersTemplate let-members="members">
+            <div class="member-count">{{ members }}</div>
+        </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="createdByColumn" width="240"></iu-grid-column>
+
+</iu-grid>

@@ -1,0 +1,22 @@
+<div id="Stage">
+
+  <div class="view-header">
+    <h2 id="form-header">{{ heading$ | async }}</h2>
+  </div>
+
+  <md-card class="main-content">
+    <div class="message message-top" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+    <am-meeting-form *ngIf="showMeeting$ | async" [accountUrl]="accountUrl$ | async" [meeting]="meeting$ | async" [groups]="groups$ | async"
+      [groupMembers]="groupMembers$ | async" [lookupHours]="lookupHours$ | async" [lookupMinutesBy5]="lookupMinutesBy5$ | async"
+      [lookupMinutesBy15]="lookupMinutesBy15$ | async" (changeGroup)="changeGroup($event)" (add)="addMeeting($event)" (delete)="deleteMeeting($event)"
+      (update)="updateMeeting($event)"></am-meeting-form>
+    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+    <div class="message message-bottom" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+  </md-card>
+
+  <div class="col2-normal">
+    <am-about-meetings></am-about-meetings>
+    <am-meeting-panel [meeting]="meeting$ | async" [accountUrl]="accountUrl$ | async"></am-meeting-panel>
+  </div>
+
+</div>

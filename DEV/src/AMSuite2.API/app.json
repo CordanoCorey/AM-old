@@ -1,0 +1,1380 @@
+﻿{
+  "components": {
+    "core/accounts": {
+      "routes": false,
+      "di": true,
+      "api": true,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        "admin/accounts"
+      ]
+    },
+    "core/accounts-add": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "accounts/add"
+      ]
+    },
+    "core/accounts-detail": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        ":account/account"
+      ]
+    },
+    "core/accounts-edit": {
+      "routes": false,
+      "di": true,
+      "api": true,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        ":account/account"
+      ]
+    },
+    "core/accounts-portal": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "",
+        "accounts-portal"
+      ]
+    },
+    "core/announcements": {
+      "routes": false,
+      "di": true,
+      "api": false,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        "admin/announcements",
+        ":account/announcements"
+      ]
+    },
+    "core/announcement-detail": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/announcement-edit": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/announcement-preview": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/dashboard": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "",
+        "dashboard"
+      ]
+    },
+    "core/dashboard/announcements-widget": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/dashboard/meetings-widget": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/dashboard/message-widget": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/dashboard/notifications-widget": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/email": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/email/email-item": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/groups": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "admin/groups",
+        ":account/groups"
+      ]
+    },
+    "core/help": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/help/help-widget": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/login": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        "",
+        "login"
+      ]
+    },
+    "core/members": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/members-edit": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/members-import": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/not-found": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "**",
+        "not-found"
+      ]
+    },
+    "core/notifications": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/print": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "core/profile": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "profile"
+      ]
+    },
+    "core/reset-password": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        "reset-password"
+      ]
+    },
+    "core/restore": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": true,
+      "style": true,
+      "script": false,
+      "url": [
+        "admin/restore"
+      ]
+    },
+    "core/search": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "search",
+        ":account/search"
+      ]
+    },
+    "core/users": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": [
+        "admin/users"
+      ]
+    },
+    "agenda-manager/agenda-items": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/agendas": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/meeting": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/meeting-edit": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/meetings": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/minutes": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/notes": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/templates": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/templates-add": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/templates-preview": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/vote": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "agenda-manager/votes": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "document-manager/attachments": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    },
+    "document-manager/files": {
+      "routes": false,
+      "di": false,
+      "api": false,
+      "template": false,
+      "style": false,
+      "script": false,
+      "url": []
+    }
+  },
+  "endpoints": {
+    "AccountMembers": "AccountMemberModel",
+    "AddAnnouncement": "AnnouncementSubsetModel",
+    "AddAttendance": "AttendanceModel",
+    "AddGroup": "GroupSubsetModel",
+    "AgendaEdit": "AgendaEditModel",
+    "Announcements": "AnnouncementSubsetModel",
+    "BasicInfo": "AccountBasicInfoModel",
+    "ConvertTemplateToAgenda": "AgendaEditModel",
+    "CopyFromBin": "AddBinItemModel",
+    "CopyToBin": "int agendaItemId",
+    "DeleteAgendaItem": "{ int agendaItemId, string rejectReason }",
+    "DeleteAnnouncement": "int",
+    "DeleteGroup": "int",
+    "DeleteMinutes": "int agendaItemId",
+    "DeleteNotes": "int agendaItemId",
+    "DeleteTemplate": "int templateId",
+    "DownloadCalendarMeeting": "HttpResponse",
+    "GeBinItems": "BinAgendaItemModel",
+    "GetAccountGroupsById": "UserGroupsModel",
+    "GetAccountGroupsByUrl": "UserGroupsModel",
+    "GetAccountInfo": "EditAccountModel",
+    "GetAccountLogo": "AccountBasicInfoModel",
+    "GetAccountMembersByUrl": "AccountMemberModel",
+    "GetAccountNameDropDownOptions": "string",
+    "GetAccountStatuses": "AccountStatusModel",
+    "GetAccounts": "AccountListModel",
+    "GetAgenda": "MeetingDataModel",
+    "GetAgendaAttachments": "AgendaChildItemAttachmentsModel",
+    "GetAgendaAttendance": "AgendaAttendanceModel",
+    "GetAgendaAttendanceLog": "UsersWithAttendance",
+    "GetAgendaDescriptions": "AgendaItemDescriptionModel",
+    "GetAgendaLatestAttendance": "UsersWithAttendance",
+    "GetAgendaMinutes": "AgendaItemMinutesModel",
+    "GetAgendaNotes": "AgendaItemNotesModel",
+    "GetAgendaVoting": "AgendaItemVotesModel",
+    "GetAgendaItem": "AgendaItemModel",
+    "GetAgendaItemAttachments": "AgendaItemAttachmentsModel",
+    "GetAgendaItemDescriptions": "AgendaItemDescriptionModel",
+    "GetAgendaItemMinutes": "AgendaItemMinutes",
+    "GetAgendaItemNotes": "AgendaItemNotesModel",
+    "GetAgendaItemOptions": "AgendaItemOptionsModel",
+    "GetAgendaItemVoting": "AgendaItemVotesModel",
+    "GetAgendaTreeView": "MeetingFragmentModel",
+    "GetAllUsers": "UserMemberModel",
+    "GetAllVoteResults": "MemberVoteModel",
+    "GetAnnouncementAttachments": "AnnouncementAttachmentModel",
+    "GetBinItemForPreview": "BinAgendaItemFragmentModel",
+    "GetDashboardAgenda": "DashboardAgendaModel",
+    "GetDashboardNotifications": "NotificationModel",
+    "GetDefaultSignature": "ReturnStringModel",
+    "GetDeletedMeetings": "MeetingDeletedModel",
+    "GetExistingUsers": "MemberExtendedModel",
+    "GetGroupAdministrators": "MemberModel",
+    "GetGroupMembers": "GroupMemberInfoModel",
+    "GetJustMeetingList": "ReturnDashboardMeetingModel<DisplayMeetingModel>",
+    "GetLastAttachmentId": "long agendaItemId",
+    "GetLastTempAttachmentId": "guid agendaItemId",
+    "GetMeeting": "MeetingDataModel",
+    "GetMeetingDetailsEmail": "MeetingDetailsEmailModel",
+    "GetMeetingGroups": "UserGroupsModel",
+    "GetMeetingList": "ReturnDashboardMeetingModel<DisplayMeetingModel>",
+    "GetMeetingTreeView": "MeetingFragmentModel",
+    "GetMemberWithRoleById": "MemberInfoModel",
+    "GetMinutes": "string minutes",
+    "GetNotes": "string notes",
+    "GetOutlineFormats": "OutlineModel",
+    "GetOwnerAnnouncements": "AnnouncementSubsetModel",
+    "GetPdf": "void",
+    "GetSearchResults": [
+      "SearchFiltersModel",
+      "SearchResults"
+    ],
+    "GetSysAdminAnnouncement": "SysAdminAnnouncementModel",
+    "GetTemplateTreeView": "AgendaTreeDescriptionModel",
+    "GetUserTemplates": "IEnumerable<UserTemplates>",
+    "GetVoteResults": "VoteResultsModel",
+    "GetWordDoc": "void",
+    "GroupAdministratorGroups": "UserGroupsModel",
+    "GroupAttendees": "MemberExtendedModel",
+    "GroupMembers": "GroupMemberModel",
+    "Groups": "GroupListsModel",
+    "GroupsFilter": "GroupFilter",
+    "HandleAccountRequest": "MemberEditModel",
+    "ImpersonateUser": "UserInfoModel",
+    "MarkAgendaForDelete": "ReturnStringModel",
+    "MarkMeetingForDelete": "ReturnStringModel",
+    "MeetingEdit": "MeetingEditModel",
+    "MemberEditById": "MemberEditModel",
+    "MemberWithRole": "MemberInfoModel",
+    "MoveAnnouncementAttachmentDown": "int",
+    "MoveAnnouncementAttachmentUp": "int",
+    "MoveTempAnnouncementAttachmentDown": "int",
+    "MoveTempAnnouncementAttachmentUp": "int",
+    "MoveAttachmentDown": "int",
+    "MoveAttachmentUp": "int",
+    "MoveTempAttachmentDown": "int",
+    "MoveTempAttachmentUp": "int",
+    "NewAccountRequest": "{ int accountId, string reason }",
+    "OpenAttachment": "HttpResponseMessage",
+    "OpenBinAttachment": "long attachmentId",
+    "PlaceAllVotes": "MemberVoteModel[]",
+    "Profile": "UserUpdateProfile",
+    "RecoverPassword": "string",
+    "RemoveAnnouncementAttachment": "int",
+    "RemoveAttachment": "int attachmentId",
+    "RemoveTempAttachment": "int tempAttachmentId",
+    "RemoveFromBin": "int binItemId",
+    "RemoveTempAnnouncementAttachment": "int",
+    "ReOrderAgendaItemBeforeAfter": "{ int agendaItemId, int parentId, int order }",
+    "ReOrderAgendaItemOver": "{ int agendaItemId, int parentId, int order }",
+    "ResendUserInvite": "int userId",
+    "RestoreDeletedItem": "{ int meetingId, int agendaId }",
+    "RevertToAdmin": "UserInfoModel",
+    "SaveAgendaItem": "AgendaItemModel",
+    "SaveAnnouncementAttachment": "guid announcementId",
+    "SaveAttachment": "int agendaItemId",
+    "SaveBasicInfo": "EditAccountModel",
+    "SaveEmailItem": "MailItemModel",
+    "SaveMeetingDetailsEmail": "MailModel",
+    "SaveMinutes": "{ int agendaItemId, string minutes }",
+    "SaveNotes": "string notes",
+    "SaveTempAnnouncementAttachment": "Guid",
+    "SaveTempAttachment": "guid tempAgendaItemId",
+    "SaveTemplate": "int agendaId",
+    "SetAttachmentPrivate": "long attachmentId",
+    "SetTempAttachmentPrivate": "long attachmentId",
+    "TakeRollCall": "AttendanceModel[]",
+    "UpdateAccount": "EditAccountModel",
+    "UpdateSysAdminAnnouncement": "SysAdminAnnouncementModel",
+    "UsersGroupsWithRoles": "UserGroupsModel",
+    "UserGroupsWithAllGroups": "UserGroupsMembershipModel",
+    "UserGroupsWithAllGroupsById": "UserGroupsMembershipModel",
+    "UserRoles": "UserRolesModel"
+  },
+  "scripts": {
+    "account-edit": {
+      "id": 1,
+      "path": "core/account-add",
+      "url": [
+        ""
+      ],
+      "routes": [
+        "admin/accounts/add"
+      ],
+      "template": true,
+      "style": true,
+      "script": false,
+      "type": [],
+      "api": {
+        "GetExistingUsers": "MemberExtendedModel",
+        "GetAccountInfo": "EditAccountModel",
+        "UpdateAccount": "EditAccountModel"
+      },
+      "components": [
+        "kendo-auto-complete"
+      ]
+    },
+    "accounts": {
+      "id": 2,
+      "path": "core/accounts",
+      "url": [
+        ""
+      ],
+      "routes": [
+        "admin/accounts"
+      ],
+      "template": true,
+      "style": true,
+      "script": false,
+      "type": [],
+      "api": {
+        "GetAccountStatuses": "AccountStatusModel",
+        "GetAccounts": "AccountListModel"
+      },
+      "components": [
+        "kendo-grid",
+        "kendo-dropdown-list"
+      ]
+    },
+    "announcement-signature": {
+      "id": 4,
+      "path": "core/announcements/announcement-window",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": [
+        "kendo-window"
+      ]
+    },
+    "announcement-window": {
+      "id": 30,
+      "path": "core/announcements/announcement-window",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "announcements": {
+      "id": 3,
+      "path": "core/announcements",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "GroupAdministratorGroups": "UserGroupsModel",
+        "DeleteAnnouncement": "int announcementId",
+        "GetOwnerAnnouncements": "AnnouncementSubsetModel",
+        "AddAnnouncement": "AnnouncementSubsetModel",
+        "GetDefaultSignature": "ReturnStringModel",
+        "GetAnnouncementAttachments": "AnnouncementAttachmentModel",
+        "SaveTempAnnouncementAttachment": "Guid tempAnnouncementId",
+        "SaveAnnouncementAttachment": "guid announcementId",
+        "MoveTempAnnouncementAttachmentUp": "int tempAnnouncementId",
+        "MoveAnnouncementAttachmentUp": "int announcementId",
+        "MoveTempAnnouncementAttachmentDown": "int tempAnnouncementId",
+        "MoveAnnouncementAttachmentDown": "int announcementId",
+        "RemoveTempAnnouncementAttachment": "int",
+        "RemoveAnnouncementAttachement": "int",
+        "UpdateSysAdminAnnouncement": "SysAdminAnnouncementModel",
+        "GetSysAdminAnnouncement": "SysAdminAnnouncementModel"
+      },
+      "components": [
+        "kendo-grid",
+        "kendo-window",
+        "kendo-datepicker",
+        "kendo-datepicker",
+        "kendo-window",
+        "kendo-upload",
+        "kendo-window"
+      ]
+    },
+    "attachments": {
+      "id": 31,
+      "path": "document-manager/attachments",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "SaveAgendaItem": "AgendaItemModel",
+        "OpenAttachment": "HttpResponseMessage",
+        "SaveAttachment": "int agendaItemId"
+      },
+      "components": [
+        "kendo-upload"
+      ]
+    },
+    "auth": {
+      "id": 5,
+      "path": "core/recover-password",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "ResetPassword": "ResetPasswordModel"
+      },
+      "components": []
+    },
+    "basicinfo": {
+      "id": 6,
+      "path": "core/account-edit",
+      "url": [
+        ""
+      ],
+      "routes": [
+        "admin/edit-account",
+        "${account}/edit-account"
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "BasicInfo": "AccountBasicInfoModel",
+        "SaveBasicInfo": "EditAccountModel"
+      },
+      "components": [
+        "kendo-standard-editor",
+        "kendo-basic-editor"
+      ]
+    },
+    "contact": {
+      "id": 32,
+      "path": "core/help/help-widget",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": [
+        "kendo-grid"
+      ]
+    },
+    "dashboard": {
+      "id": 7,
+      "path": "core/dashboard",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "GetSysAdminAnnouncement": "SysAdminAnnouncementModel"
+      },
+      "components": [
+        "kendo-drop-target-area",
+        "kendo-draggable",
+        "kendo-window"
+      ]
+    },
+    "email-item": {
+      "id": 8,
+      "path": "core/email/email-item",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "SaveEmailItem": "MailItemModel",
+        "GetAgendaItemOptions": "AgendaItemOptionsModel",
+        "GetAgendaItemDescriptions": "AgendaItemDescriptionModel",
+        "GetAgendaItemAttachments": "AgendaItemAttachmentsModel",
+        "GetAgendaItemNotes": "AgendaItemNotesModel",
+        "GetAgendaItemMinutes": "AgendaItemMinutesModel",
+        "GetAgendaItemVoting": "AgendaItemVotesModel"
+      },
+      "components": []
+    },
+    "emailtemplates": {
+      "id": 33,
+      "path": "",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "expand-editor": {
+      "id": 34,
+      "path": "shared/editor/editor-window",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "groups": {
+      "id": 9,
+      "path": "core/groups",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "Groups": "GroupListsModel",
+        "DeleteGroup": "in groupId",
+        "AddGroup": "GroupSubsetModel",
+        "GroupMembers": "GroupMemberModel",
+        "GetGroupAdministrators": "MemberModel",
+        "GetOutlineFormats": "OutlineModel"
+      },
+      "components": [
+        "kendo-grid",
+        "kendo-grid"
+      ]
+    },
+    "home": {
+      "id": 10,
+      "path": "agenda-manager",
+      "url": [
+        "login",
+        "accounts-portal"
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "RecoverPassword": "string emailAddress"
+      },
+      "components": []
+    },
+    "import-members": {
+      "id": 35,
+      "path": "core/members-import",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "meeting-edit": {
+      "id": 11,
+      "path": "agenda-manager/meeting-edit",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": {
+        "MarkMeetingForDelete": "int meetingId",
+        "MarkAgendaForDelete": "int agendaId",
+        "GetGroupMembers": "GroupMemberInfoModel",
+        "GetMeetingGroups": "UserGroupsModel",
+        "GetAgenda": "MeetingDataModel",
+        "GetMeeting": "MeetingDataModel",
+        "AgendaEdit": "AgendaEditModel",
+        "MeetingEdit": "MeetingEditModel",
+        "GetUserTemplates": "IEnumerable<UserTemplates>"
+      },
+      "components": [
+        "kendo-datepicker",
+        "kendo-window",
+        "kendo-window"
+      ]
+    },
+    "meeting-view": {
+      "id": 12,
+      "path": "agenda-manager/meeting",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "TakeRollCall",
+        "AddAttendance",
+        "GetAgendaTreeView",
+        "GetMeetingTreeView",
+        "SaveAgendaItem",
+        "GetAgendaItem",
+        "GetNotes",
+        "GetMinutes",
+        "SaveNotes",
+        "SaveMinutes",
+        "GroupAttendees",
+        "GetAgendaLatestAttendance",
+        "GetAgendaAttendanceLog",
+        "GetMeetingDetailsEmail",
+        "SaveMeetingDetailsEmail",
+        "CopyToBin",
+        "GetBinItemForPreview",
+        "CopyFromBin",
+        "GeBinItems",
+        "RemoveFromBin",
+        "DeleteAgendaItem",
+        "DeleteNotes",
+        "DeleteMinutes",
+        "SaveAttachment",
+        "SaveTempAttachment",
+        "RemoveAttachment",
+        "RemoveTempAttachment",
+        "GetLastAttachmentId",
+        "GetLastTempAttachmentId",
+        "MoveAttachmentUp",
+        "MoveTempAttachmentUp",
+        "MoveAttachmentDown",
+        "MoveTempAttachmentDown",
+        "SetAttachmentPrivate",
+        "SetTempAttachmentPrivate",
+        "OpenBinAttachment",
+        "ReOrderAgendaItemOver",
+        "ReOrderAgendaItemBeforeAfter"
+      ],
+      "components": [
+        "kendo-window",
+        "kendo-window",
+        "kendo-splitter",
+        "kendo-tab-strip",
+        "kendo-editor",
+        "kendo-editor",
+        "kendo-tab-strip",
+        "kendo-panel-bar",
+        "kendo-muli-select",
+        "kendo-window",
+        "kendo-window",
+        "kendo-window",
+        "kendo-window",
+        "kendo-window",
+        "kendo-tree-view",
+        "kendo-upload",
+        "kendo-tree-view",
+        "kendo-tree-view"
+      ]
+    },
+    "meetings": {
+      "id": 13,
+      "path": "agenda-manager/meetings",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "DownloadCalendarMeeting",
+        "GetMeetingList",
+        "GetJustMeetingList"
+      ],
+      "components": [
+        "kendo-grid",
+        "kendo-datepicker",
+        "kendo-datepicker"
+      ]
+    },
+    "members": {
+      "id": 14,
+      "path": "core/members",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "AccountMembers",
+        "GetAccountMembersByUrl",
+        "GetAccounts",
+        "GetAccountGroupsById",
+        "UserRoles",
+        "ResendUserInvite",
+        "ImpersonateUser",
+        "GetAccountGroupsByUrl",
+        "GetAllUsers"
+      ],
+      "components": [
+        "kendo-dropdown-list",
+        "kendo-grid"
+      ]
+    },
+    "members-edit": {
+      "id": 15,
+      "path": "core/members-edit",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "HandleAccountRequest",
+        "MemberEditById",
+        "MemberEdit",
+        "UserGroupsWithAllGroups",
+        "UserGroupsWithAllGroupsById",
+        "GetMemberWithRoleById",
+        "MemberWithRole",
+        "GetAccountGroupsByUrl",
+        "GetAccountGroupsById"
+      ],
+      "components": []
+    },
+    "minutes-view": {
+      "id": 16,
+      "path": "agenda-manager/minutes",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "SaveMinutes",
+        "DeleteMinutes",
+        "GetAgendaMinutes"
+      ],
+      "components": [
+        "kendo-editor"
+      ]
+    },
+    "new-template": {
+      "id": 17,
+      "path": "agenda-manager/templates-add",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "SaveTemplate"
+      ],
+      "components": []
+    },
+    "print": {
+      "id": 18,
+      "path": "core/print",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetWordDoc",
+        "GetPdf",
+        "GetAgendaDescriptions",
+        "GetAgendaAttachments",
+        "GetAgendaNotes",
+        "GetAgendaMinutes",
+        "GetAgendaAttendance",
+        "GetAgendaVoting"
+      ],
+      "components": []
+    },
+    "profile": {
+      "id": 19,
+      "path": "core/profile",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetAccountNameDropDownOptions",
+        "NewAccountRequest",
+        "UsersGroupsWithRoles",
+        "Profile"
+      ],
+      "components": []
+    },
+    "public": {
+      "id": 20,
+      "path": "",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "OpenAttachment"
+      ],
+      "components": [
+        "kendo-window",
+        "kendo-tab-strip",
+        "kendo-panelbar",
+        "kendo-tree-view",
+        "kendo-datepicker",
+        "kendo-datepicker",
+        "kendo-list-view",
+        "kendo-multi-select",
+        "kendo-pager"
+      ]
+    },
+    "restore": {
+      "id": 21,
+      "path": "core/restore",
+      "url": [
+        ""
+      ],
+      "routes": [
+        "admin/restore"
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "RestoreDeletedItem",
+        "GetDeletedMeetings"
+      ],
+      "components": [
+        "kendo-window",
+        "kendo-grid"
+      ]
+    },
+    "search": {
+      "id": 22,
+      "path": "core/search",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "GroupsFilter",
+        "GetSearchResults"
+      ],
+      "components": [
+        "kendo-datepicker",
+        "kendo-datepicker",
+        "kendo-list-view",
+        "kendo-multi-select",
+        "kendo-pager"
+      ]
+    },
+    "status-bar": {
+      "id": 36,
+      "path": "shared/header",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "support": {
+      "id": 37,
+      "path": "core/help",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "template-preview": {
+      "id": 23,
+      "path": "agenda-manager/templates-preview",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetUserTemplates",
+        "GetTemplateTreeView",
+        "ConvertTemplateToAgenda",
+        "DeleteTemplate"
+      ],
+      "components": [
+        "kendo-tree-view",
+        "kendo-window"
+      ]
+    },
+    "templates": {
+      "id": 38,
+      "path": "agenda-manager/templates",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "two-columns": {
+      "id": 39,
+      "path": "N/A",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "users": {
+      "id": 40,
+      "path": "core/users",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [],
+      "components": []
+    },
+    "vote-control": {
+      "id": 24,
+      "path": "agenda-manager/vote",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetVoteResults"
+      ],
+      "components": []
+    },
+    "vote-table": {
+      "id": 25,
+      "path": "agenda-manager/votes",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "PlaceAllVotes",
+        "GetAllVoteResults"
+      ],
+      "components": []
+    },
+    "website-header": {
+      "id": 26,
+      "path": "shared/header",
+      "url": [
+        ""
+      ],
+      "template": false,
+      "style": false,
+      "script": false,
+      "type": [],
+      "api": [
+        "RevertToAdmin",
+        "GetAccountLogo"
+      ],
+      "components": []
+    },
+    "widget-announcements": {
+      "id": 27,
+      "path": "dashboard/announcements-widget",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": true,
+      "script": false,
+      "type": [],
+      "api": [
+        "Announcements",
+        "GetAnnouncementAttachments"
+      ],
+      "components": [
+        "kendo-window"
+      ]
+    },
+    "widget-meetings": {
+      "id": 28,
+      "path": "dashboard/meetings-widget",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": true,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetDashboardAgenda",
+        "DownloadCalendarMeeting",
+        "GetMeetingList",
+        "GetJustMeetingList"
+      ],
+      "components": [
+        "kendo-grid"
+      ]
+    },
+    "widget-notifications": {
+      "id": 29,
+      "path": "dashboard/notifications-widget",
+      "url": [
+        ""
+      ],
+      "template": true,
+      "style": true,
+      "script": false,
+      "type": [],
+      "api": [
+        "GetDashboardNotifications"
+      ],
+      "components": []
+    }
+  }
+}

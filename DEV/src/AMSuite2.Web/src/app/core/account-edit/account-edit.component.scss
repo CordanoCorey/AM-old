@@ -1,0 +1,78 @@
+@import '../../../common';
+#Stage {
+    min-width: 1200px;
+}
+
+.main-content {
+    width: 65%;
+    min-width: 600px;
+    float: left;
+    padding: 8px 1% !important;
+    margin: 8px 0;
+}
+
+.right-content {
+    float: right;
+    max-width: 33%;
+    overflow: hidden;
+    padding-top: 16px;
+}
+
+#txtUrl {
+    width: 212px;
+    float: left;
+    clear: none;
+}
+
+#account-status {
+    float: left;
+    clear: both;
+}
+
+#ddlExistingUsers {
+    width: 80%;
+}
+
+.account-status {
+    float: left;
+    width: 80px;
+}
+
+.account-status input {
+    width: 14px;
+}
+
+.note {
+    margin-bottom: 0.3em;
+}
+
+.url {
+    float: left;
+    padding: 20px 10px;
+}
+
+.blue-text,
+.form label {
+    float: left;
+    color: $primary-color;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-bottom: 0.2em;
+}
+
+.form label,
+.faux-label {
+    padding-right: 0.5em;
+    color: #4e5466;
+}
+
+.blue {
+    color: $primary-color;
+    font-size: 0.8em;
+}
+
+.note {
+    background-color: #FAF8D8;
+    font-size: 0.8em;
+    padding: 1px 0.25em;
+}

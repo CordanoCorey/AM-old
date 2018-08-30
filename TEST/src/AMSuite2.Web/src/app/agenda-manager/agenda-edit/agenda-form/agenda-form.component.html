@@ -1,0 +1,59 @@
+<form id="agenda-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+
+  <div class="control">
+    <md-input-container>
+      <input mdInput placeholder="Agenda Name" value="" maxlength="150" formControlName="agendaName" required>
+      <md-error>
+        <div *ngIf="agendaName?.errors?.required">
+          Name is required.
+        </div>
+        <div *ngIf="agendaName?.errors?.maxlength">
+          Name must be less than 150 characters long.
+        </div>
+      </md-error>
+    </md-input-container>
+  </div>
+
+  <div class="editor-control">
+    <label class="control-label" for="editor">Description:</label>
+    <iu-editor elementId="editor" formControlName="agendaDescription" height="200"></iu-editor>
+  </div>
+
+  <div class="control display-minutes-control">
+    <div class="auto-public">
+      <md-checkbox formControlName="displayMinutes">Show Minutes</md-checkbox>
+      <span class="note">Any Minutes recorded will be visible to those with access to this Agenda.</span>
+    </div>
+  </div>
+
+  <div class="control private-control">
+    <div class="auto-public">
+      <md-checkbox formControlName="isPrivate">Private</md-checkbox>
+      <span class="note">The agenda will only be visible to those with edit permissions.</span>
+    </div>
+  </div>
+
+  <div class="control timeframe-control">
+    <div class="auto-public">
+      <label class="control-label" for="ddlAutoTime">Automatically make this Agenda public:</label>
+      <md-select placeholder="Select Option..." formControlName="timeframeId">
+        <md-option value=0 selected="selected">Never...</md-option>
+        <md-option value=1>24 hours before meeting starts</md-option>
+        <md-option value=2>36 hours before meeting starts</md-option>
+        <md-option value=3>48 hours before meeting starts</md-option>
+        <md-option value=4>72 hours before meeting starts</md-option>
+      </md-select>
+      <span class="note select-note">If this agenda is set to automatically go public, it will uncheck the private setting at the appointed time</span>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="actions">
+    <button class="btn-save" (click)="onSubmit($event)" md-raised-button color="accent">{{ submitText }}</button>
+    <button *ngIf="mode === 'edit'" class="btn-delete" (click)="onDelete()" md-raised-button color="warn">Delete</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="meetingsLink">Return To Meetings</a>
+    <div id="message" class="required"></div>
+  </div>
+</form>

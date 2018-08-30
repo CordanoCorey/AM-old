@@ -1,0 +1,38 @@
+<div class="meetings-grid">
+  <iu-grid [model]="grid" [height]="height" [class.widget]="widget" [filterable]="!widget" [sort]="sort">
+
+    <iu-grid-column [model]="meetingName" [templateRef]="meetingNameTemplate" [width]="meetingNameWidth">
+      <ng-template #meetingNameTemplate let-meetingName="meetingName" let-meetingLink="meetingLink">
+        <a class="meeting-link" [routerLink]="meetingLink">{{ meetingName }}</a>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="date" filter="date" format="{0:d}" [templateRef]="dateTemplate" [width]="dateWidth">
+      <ng-template #dateTemplate let-meetingDate="meetingDate">
+        <div class="centered">{{ meetingDate | date:'shortDate' }}</div>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="startTime" [templateRef]="startTimeTemplate" [filterable]="false" width="112">
+      <ng-template #startTimeTemplate let-startTime="startTime">
+        {{ startTime | date:'shortTime' }}
+        <a title="Add this Meeting to your calendar" class="ical iCalendarLink">Add to your calendar</a>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="location" width="192"></iu-grid-column>
+
+    <iu-grid-column [model]="agendas" [templateRef]="meetingsTemplate" [filterable]="false" width="220">
+      <ng-template #meetingsTemplate let-agendas="agendas" let-meetingId="meetingId">
+        <div class="agenda-cell" *ngFor="let agenda of agendas">
+          <span class="agenda-link">
+            <a [routerLink]="'/' + accountUrl + '/meetings/' + meetingId + '/agendas/' + agenda.id">{{ agenda.name }}</a>
+        </span>
+        </div>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column *ngIf="!widget" [model]="group" width="192"></iu-grid-column>
+
+  </iu-grid>
+</div>

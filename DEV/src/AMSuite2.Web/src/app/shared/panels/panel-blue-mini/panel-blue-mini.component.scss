@@ -1,0 +1,27 @@
+@import '../../../../common';
+mat-card {
+    padding: 0;
+}
+.panel-blue-mini-header {
+    background-color: $primary-color;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+}
+
+.panel-blue-mini-content {
+    padding: 6px;
+    border-right: solid 2px $primary-color;
+    background-color: #fff;
+    overflow: hidden;
+    border-left: solid 2px $primary-color;
+    border-bottom: solid 2px $primary-color;
+    margin-bottom: 1em;
+}
+
+.panel-blue-mini-header h6 {
+    padding: .2em .5em;
+    font-size: .9em;
+}

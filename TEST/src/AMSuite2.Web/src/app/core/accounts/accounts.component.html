@@ -1,0 +1,12 @@
+<div id="Stage2">
+  <div class="view-header">
+    <h2>Manage Accounts</h2>
+    <a md-raised-button color="accent" class="btn-add" routerLink="/admin/accounts/new">
+      <md-icon>add</md-icon>
+      <span class="button-text">New Account</span>
+    </a>
+  </div>
+  <div class="grid-wrapper">
+    <am-accounts-grid [accounts]="accounts$ | async"></am-accounts-grid>
+  </div>
+</div>

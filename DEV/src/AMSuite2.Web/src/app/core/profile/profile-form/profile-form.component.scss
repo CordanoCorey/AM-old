@@ -1,0 +1,38 @@
+.view-subtitle {
+    margin-top: 14px;
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.control {
+    display: inline-grid;
+}
+
+.password-wrapper {
+    margin-top: 20px;
+    padding: 16px 0 32px 0px;
+    .control {
+        margin-left: 20px;
+        padding-top: 0;
+    }
+}
+
+.group {
+    margin-top: 32px;
+    padding: 24px 0 24px 16px;
+}
+
+.info-group {
+    padding-bottom: 32px;
+    .control {
+        padding: 0 0 0 20px;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid #cdcdcd;
+}

@@ -1,0 +1,47 @@
+@import '../../../../common';
+.control {
+    padding: 5px 0;
+}
+
+.mat-input-container {
+    width: 100%;
+}
+
+.mat-checkbox {
+    float: left;
+    margin-left: 20px;
+}
+
+.controls {
+    width: 80%;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+.accordion-trigger {
+    margin-top: 10px;
+    .note {
+        float: left;
+    }
+}
+
+.accordion-content {
+    float: left;
+    width: 80%;
+    margin: 10px 0 10px 50px;
+    overflow: hidden;
+    height: 50px;
+}
+
+#users {
+    width: 100%;
+    clear: both;
+    .search-result {
+        cursor: pointer;
+        color: $primary-color;
+    }
+    .search-result:hover {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,17 @@
+@import '../../../common';
+.header {
+    height: 50px;
+}
+
+.k-pager-numbers .k-link {
+    background-color: $primary-color;
+}
+
+.restore-message {
+    padding: 0.5em 0 1em 0em;
+}
+
+.restore-table {
+    width: 90%;
+    margin-bottom: 1em;
+}

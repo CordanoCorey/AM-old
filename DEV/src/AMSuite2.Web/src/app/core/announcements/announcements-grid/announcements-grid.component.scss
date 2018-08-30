@@ -1,0 +1,12 @@
+@import '../../../../common';
+.red {
+    color: red;
+}
+
+.grid-link {
+    color: mat-color($material-primary-color, 500) !important;
+}
+
+.grid-link:hover {
+    font-weight: bold;
+}

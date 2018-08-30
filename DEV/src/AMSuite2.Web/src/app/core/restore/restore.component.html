@@ -1,0 +1,19 @@
+<div id="Stage2">
+    <div class="header">
+        <div class="view-header">
+            <h2>Restore</h2>
+        </div>
+        (Deleted items are shown in red)
+        <p class="restore-message">
+            <span id="message" class="required"></span>
+        </p>
+    </div>
+    <div class="grid-wrapper">
+        <am-restore-grid
+            [accountName]="accountName$ | async"
+            [agendas]="agendas$ | async"
+            [meetings]="meetings$ | async"
+            (restoreAgenda)="openAgendaDialog($event)"
+            (restoreMeeting)="openMeetingDialog($event)"></am-restore-grid>
+    </div>
+</div>

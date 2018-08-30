@@ -1,0 +1,20 @@
+<div class="agenda-item-preview">
+  <p>
+    <span class="top-item">{{ agendaItemName }}</span>
+  </p>
+  <div class="top-item-info">
+    <span class="item-description">{{ agendaItemDescription }}</span>
+    <span class="item-minutes">
+      <am-minutes-preview [minutes]="minutes"></am-minutes-preview>
+    </span>
+    <span class="item-attachments">
+      <am-attachment-preview *ngFor="let attachment of attachments" [attachment]="attachment"></am-attachment-preview>
+    </span>
+    <span class="item-votes">
+      <am-votes-preview [votes]="votes"></am-votes-preview>
+      </span>
+    <span class="item-notes">
+      <am-notes-preview [notes]="notes"></am-notes-preview>
+    </span>
+  </div>
+</div>

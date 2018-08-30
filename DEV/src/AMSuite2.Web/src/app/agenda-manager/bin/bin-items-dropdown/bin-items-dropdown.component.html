@@ -1,0 +1,5 @@
+<am-panel-blue-mini heading="Select a Bin Item:">
+  <select id="bin-items" [formControl]="control">
+    <option *ngFor="let item of binItems" [value]="item.id">{{ item.name }}</option>
+  </select>
+</am-panel-blue-mini>

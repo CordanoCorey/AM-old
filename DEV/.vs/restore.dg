@@ -1,0 +1,5 @@
+#:C:\appdev\AMSuite2\DEV\src\AMSuite2.Files\AMSuite2.Files.xproj
+#:C:\appdev\AMSuite2\DEV\src\AMSuite2.API\AMSuite2.API.xproj
+C:\appdev\AMSuite2\DEV\src\AMSuite2.API\AMSuite2.API.xproj|C:\appdev\AMSuite2\DEV\src\AMSuite2.Entities\AMSuite2.Entities.xproj
+C:\appdev\AMSuite2\DEV\src\AMSuite2.API\AMSuite2.API.xproj|C:\appdev\AMSuite2\DEV\src\AMSuite2.Files\AMSuite2.Files.xproj
+#:C:\appdev\AMSuite2\DEV\src\AMSuite2.Entities\AMSuite2.Entities.xproj

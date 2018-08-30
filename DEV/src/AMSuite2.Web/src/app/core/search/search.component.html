@@ -1,0 +1,49 @@
+<div id="search">
+
+  <div class="view-header">
+    <mat-input-container>
+      <input matInput placeholder="Enter Search Term">
+    </mat-input-container>
+    <button mat-raised-button color="accent" class="btn-search">Search</button>
+  </div>
+
+  <!-- SEARCH FILTERS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <mat-toolbar color="primary" class="accordion-trigger">
+        <mat-icon>expand_more</mat-icon>
+        <span class="toolbar-title">Show/Hide Filters</span>
+      </mat-toolbar>
+      <mat-card class="accordion-content">
+        <am-search-filters></am-search-filters>
+      </mat-card>
+    </iu-accordion>
+  </div>
+
+  <!-- SEARCH TIPS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <mat-toolbar color="primary" class="accordion-trigger">
+        <mat-icon>expand_more</mat-icon>
+        <span class="toolbar-title">Show/Hide Tips</span>
+      </mat-toolbar>
+      <mat-card class="accordion-content">
+        <am-search-tips></am-search-tips>
+      </mat-card>
+    </iu-accordion>
+  </div>
+
+  <!-- SEARCH RESULTS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <mat-toolbar color="primary" class="accordion-trigger">
+        <mat-icon>expand_more</mat-icon>
+        <span class="toolbar-title">Show/Hide Results</span>
+      </mat-toolbar>
+      <mat-card class="accordion-content">
+        <am-search-results></am-search-results>
+      </mat-card>
+    </iu-accordion>
+  </div>
+
+</div>

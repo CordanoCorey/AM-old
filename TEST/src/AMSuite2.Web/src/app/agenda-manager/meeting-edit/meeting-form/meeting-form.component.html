@@ -1,0 +1,173 @@
+<form [formGroup]="form" id="meeting-form" iuForm>
+
+  <div class="control name-control">
+    <md-input-container>
+      <input mdInput placeholder="Meeting Name" maxlength="75" formControlName="meetingName" required>
+      <md-error>
+        <div *ngIf="meetingName?.errors?.required">
+          Name is required.
+        </div>
+        <div *ngIf="meetingName?.errors?.maxlength">
+          Name must be less than 75 characters long.
+        </div>
+      </md-error>
+    </md-input-container>
+  </div>
+
+  <div class="control date-control">
+    <label class="lbl-date iu-primary bold">Meeting Date</label>
+    <iu-datepicker formControlName="meetingDate"></iu-datepicker>
+  </div>
+
+  <div class="control time-control">
+    <label class="inline-label">Start Time:</label>
+    <div id="start-time">
+      <div class="start-hour-control">
+        <md-select placeholder="Hour" formControlName="startTimeHour">
+          <md-option *ngFor="let hour of lookupHoursNoZero" [value]="hour.value">{{ hour.name }}</md-option>
+        </md-select>
+      </div>
+      <label for="ddlStartMinutes" class="inline"> : </label>
+      <div class="start-minutes-control">
+        <md-select placeholder="Minutes" formControlName="startTimeMinutes">
+          <md-option *ngFor="let minute of lookupMinutesBy5" [value]="minute.value">{{ minute.name }}</md-option>
+        </md-select>
+      </div>
+      <div class="start-meridian-control">
+        <md-select placeholder="AM/PM" formControlName="startTimeMeridian">
+          <md-option value="AM">AM</md-option>
+          <md-option selected="selected" value="PM">PM</md-option>
+        </md-select>
+      </div>
+      <span id="time-hint"></span>
+    </div>
+  </div>
+
+  <div class="control duration-control">
+    <label class="inline-label">Duration:</label>
+    <div id="duration">
+      <div class="duration-hours-control">
+        <md-select placeholder="Hours" formControlName="durationHours">
+          <md-option *ngFor="let hour of lookupHours" [value]="hour.value">{{ hour.name }}</md-option>
+        </md-select>
+      </div>
+      <label for="ddlStartMinutes" class="inline"> : </label>
+      <div class="duration-minutes-control">
+        <md-select placeholder="Minutes" formControlName="durationMinutes">
+          <md-option *ngFor="let minute of lookupMinutesBy15" [value]="minute.value">{{ minute.name }}</md-option>
+        </md-select>
+      </div>
+    </div>
+    <div class="duration-results">
+      <span id="end-time" class="note">Ends at {{ endTime | date:'shortTime' }}</span>
+    </div>
+  </div>
+
+  <div class="control location-control">
+    <md-input-container>
+      <input mdInput placeholder="Location (Optional)" value="" maxlength="100" formControlName="meetingLocation">
+    </md-input-container>
+  </div>
+
+  <div class="control groups-control">
+    <label class="control-label bold">Group:</label>
+    <md-select placeholder="Select Group..." formControlName="groupId">
+      <md-option selected="selected" value="0">UnGrouped</md-option>
+      <md-option *ngFor="let group of groups" [value]="group.id">{{ group.name }}</md-option>
+    </md-select>
+    <span class="note float-text-up">Select a group for this meeting.</span>
+  </div>
+
+  <div class="control roles-control">
+    <img id="loading" src="/assets/images/site/loading.gif" *ngIf="loadingTakers" />
+    <div id="takers">
+      <div class="taker minute-taker">
+        <div class="minute-taker-label"><label for="ddlMinuteTaker">Minute Taker:</label></div>
+        <div class="minute-taker-control">
+          <md-select [@toggle]="hasGroup? 'show' : 'hide'" placeholder="Select Minute Taker..." formControlName="minuteTakerSelect">
+            <md-option selected="selected" value="0">None Set...</md-option>
+            <md-option *ngFor="let member of groupMembers" [value]="member.userId">{{ member.name }}</md-option>
+          </md-select>
+          <md-input-container [@toggle]="!hasGroup? 'show' : 'hide'">
+            <input mdInput placeholder="Search Users..." formControlName="minuteTakerInput" />
+          </md-input-container>
+          <input type="hidden" formControlName="minuteTakerId">
+        </div>
+        <div *ngIf="!hasGroup" class="users">
+          <div *ngFor="let user of minuteTakerResults" class="search-result" (click)="selectMinuteTaker(user)">{{ user.displayName }}</div>
+        </div>
+      </div>
+      <div class="taker attendance-taker">
+        <div class="attendance-taker-label"><label for="ddlAttendanceTaker">Attendance Taker:</label></div>
+        <div class="attendance-taker-control">
+          <md-select [@toggle]="hasGroup? 'show' : 'hide'" placeholder="Select Attendance Taker..." formControlName="attendanceTakerSelect">
+            <md-option selected="selected" value="0">None Set...</md-option>
+            <md-option *ngFor="let member of groupMembers" [value]="member.userId">{{ member.name }}</md-option>
+          </md-select>
+          <md-input-container [@toggle]="!hasGroup? 'show' : 'hide'">
+            <input mdInput placeholder="Search Users..." formControlName="attendanceTakerInput" />
+          </md-input-container>
+          <input type="hidden" formControlName="attendanceTakerId">
+        </div>
+        <div *ngIf="!hasGroup" class="users">
+          <div *ngFor="let user of attendanceTakerResults" class="search-result" (click)="selectAttendanceTaker(user)">{{ user.displayName }}</div>
+        </div>
+      </div>
+      <div class="taker vote-taker">
+        <div class="vote-taker-label"><label for="ddlVoteTaker">Vote Taker:</label></div>
+        <div class="vote-taker-control">
+          <md-select [@toggle]="hasGroup? 'show' : 'hide'" placeholder="Select Vote Taker..." formControlName="voteTakerSelect">
+            <md-option selected="selected" value="0">None Set...</md-option>
+            <md-option *ngFor="let member of groupMembers" [value]="member.userId">{{ member.name }}</md-option>
+          </md-select>
+          <md-input-container [@toggle]="!hasGroup? 'show' : 'hide'">
+            <input mdInput placeholder="Search Users..." formControlName="voteTakerInput" />
+          </md-input-container>
+          <input type="hidden" formControlName="voteTakerId">
+        </div>
+        <div *ngIf="!hasGroup" class="users">
+          <div *ngFor="let user of voteTakerResults" class="search-result" (click)="selectVoteTaker(user)">{{ user.displayName }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="control security-control" id="meeting-security">
+    <label class="control-label bold">Security:</label>
+    <md-radio-group formControlName="securityStatusId">
+      <div class="control">
+        <md-radio-button type="radio" value="4">Public Access</md-radio-button>
+        <span class="note">Visible to anyone, <em>including</em> the public.</span>
+      </div>
+      <div class="control">
+        <md-radio-button type="radio" value="3">Account Access</md-radio-button>
+        <span class="note">Visible to logged in members of this entire account.</span>
+      </div>
+      <div class="control">
+        <md-radio-button type="radio" value="2">Group Access</md-radio-button>
+        <span class="note">Visible <em>only</em> to selected group members.</span>
+      </div>
+      <div class="control">
+        <md-radio-button type="radio" checked="checked" value="1">Private Access</md-radio-button>
+        <span class="note">Visible <em>only</em> to yourself and administrators. (exludes from search results)</span>
+      </div>
+    </md-radio-group>
+  </div>
+
+  <div class="editor-control info-control">
+    <label class="control-label bold">General Information (Optional)</label>
+    <iu-editor type="basic" class="basic-editor" formControlName="generalInfo"></iu-editor>
+  </div>
+
+  <hr />
+
+  <div id="message" class="required message-bottom"></div>
+
+  <div class="actions">
+    <button class="btn-save" (click)="onSubmit($event)" md-raised-button color="accent">{{ submitText }}</button>
+    <button *ngIf="mode === 'edit'" class="btn-delete" (click)="onDelete()" md-raised-button color="warn">Delete</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="meetingsLink">Return To Meetings</a>
+  </div>
+
+</form>

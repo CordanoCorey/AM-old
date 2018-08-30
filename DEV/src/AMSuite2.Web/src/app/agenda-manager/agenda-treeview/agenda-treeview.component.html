@@ -1,0 +1,28 @@
+<mat-card class="treeview-container">
+    <iu-accordion [opened]="true">
+        <a class="accordion-trigger" [routerLink]="agendaLink" (click)="toggle()">
+            <span class="agenda-name">{{ agenda?.name }}</span>
+            <mat-icon [@toggle]="opened ? 'hide' : 'show'" (@toggle.start)="onStart($event)" (@toggle.done)="onDone($event)">expand_more</mat-icon>
+        </a>
+        <div class="accordion-content">
+            <am-agenda-actions (newItem)="clickNewItem()" (quickItem)="clickQuickItem()" (up)="goUp()" (down)="goDown()"></am-agenda-actions>
+            <div class="quick-item" [@toggleQuickItem]="showQuickItem ? 'show' : 'hide'">
+                <mat-input-container>
+                    <input placeholder="Add Agenda Item..." matInput type="text" maxlength="150">
+                </mat-input-container>
+                <span class="quick-buttons">
+                    <button class="btn-tiny" mat-raised-button color="accent" (click)="addQuickItem()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                    <button class="btn-tiny" mat-raised-button color="accent" (click)="clearQuickItem()">
+                        <mat-icon>clear</mat-icon>
+                    </button>
+                </span>
+            </div>
+            <div class="agenda-tree-items scrollable">
+                 <am-agenda-tree-item *ngFor="let item of items; let index=index; let odd=odd; let even=even; trackBy: trackTreeItem;"
+                    [treeItem]="item" [odd]="odd" [even]="even" [index]="index" [editing]="editing$| async"></am-agenda-tree-item> 
+            </div>
+        </div>
+    </iu-accordion>
+</mat-card>

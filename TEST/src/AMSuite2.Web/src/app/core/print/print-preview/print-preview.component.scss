@@ -1,0 +1,44 @@
+#print-content {
+    padding: .2em 1em .2em 1.5em;
+    color: #000;
+    font-family: Calibri;
+}
+
+#print-header {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: #000;
+    font-family: Calibri;
+    padding: 0 0 0 0;
+    margin: 0 0 0.2em 0;
+}
+
+#print-details {
+    border-bottom: 2px solid #000;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    font-family: Calibri;
+    font-size: 1.2em;
+    color: #000;
+}
+
+#print-agenda-title {
+    font-family: Calibri;
+    font-size: 1.2em;
+    color: #000;
+    padding: 0 0 0 0;
+    margin: 0.5em 0 0 0;
+}
+
+#print-agenda-title table {
+    font-size: .9em;
+    border-top: dashed 1px #000;
+    border-bottom: dashed 1px #000;
+    margin: 0 .5em .5em .5em;
+    padding: .5em;
+    font-family: Calibri;
+}
+
+#print-rollcall {
+    color: #000;
+}

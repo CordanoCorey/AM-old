@@ -1,0 +1,34 @@
+<iu-grid [model]="grid" [pageSize]="30" [sort]="sort" height="600">
+
+    <iu-grid-column [model]="actionsColumn" [templateRef]="restoreTemplate" [filterable]="false" width="150">
+        <ng-template #restoreTemplate let-meeting="meeting" let-agenda="agenda" let-meetingDeleted="meetingDeleted">
+            <button mat-raised-button color="accent" class="btn-match" (click)="onRestore(agenda, meetingDeleted)">
+                <mat-icon>restore</mat-icon>
+                <span class="button-text">RESTORE</span>
+            </button>
+        </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="accountColumn" width="220"></iu-grid-column>
+
+    <iu-grid-column [model]="meetingColumn" [templateRef]="meetingTemplate" width="280">
+        <ng-template #meetingTemplate let-meetingName="meetingName" let-meetingDeleted="meetingDeleted">
+            <span [class.red]="meetingDeleted">{{ meetingName }}</span>
+        </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="agendaColumn" [templateRef]="agendaTemplate" width="280">
+        <ng-template #agendaTemplate let-agendaName="agendaName" let-meetingDeleted="meetingDeleted">
+            <span [class.red]="!meetingDeleted">{{ agendaName }}</span>
+        </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="groupColumn" width="220"></iu-grid-column>
+
+    <iu-grid-column [model]="deletedOnColumn" [templateRef]="deletedOnTemplate" width="160">
+        <ng-template #deletedOnTemplate let-deletedOn="deletedOn">
+            {{ deletedOn | date:'shortDate' }}
+        </ng-template>
+    </iu-grid-column>
+
+</iu-grid>

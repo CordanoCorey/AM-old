@@ -1,0 +1,21 @@
+<div class="agenda-actions" color="primary">
+    <div class="actions-left">
+        <button class="btn-add" md-raised-button color="accent" (click)="newItem.next()">
+            <md-icon>add</md-icon>
+            <span class="icon-text">New Item</span>
+          </button>
+        <button class="btn-quick" md-raised-button color="accent" (click)="quickItem.next()">
+            <span class="icon-text">Q</span>
+          </button>
+        <a class="btn-bin" md-raised-button color="accent" [routerLink]="binLink">
+            <md-icon>archive</md-icon>
+          </a>
+    </div>
+    <div class="actions-right">
+        <a class="btn-print" md-raised-button color="accent" [routerLink]="printLink">
+            <md-icon>print</md-icon>
+            <span class="icon-text">Print</span>
+        </a>
+        <am-arrows-up-down (clickUp)="up.next()" (clickDown)="down.next()"></am-arrows-up-down>
+    </div>
+</div>

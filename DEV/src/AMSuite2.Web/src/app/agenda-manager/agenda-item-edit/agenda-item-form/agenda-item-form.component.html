@@ -1,0 +1,51 @@
+<form id="edit-form" [formGroup]="form" iuForm>
+
+  <mat-card class="control name-control">
+    <mat-input-container>
+      <input placeholder="Agenda Item Name" matInput type="text" maxlength="150" formControlName="agendaItemName" required>
+    </mat-input-container>
+  </mat-card>
+
+  <div class="control editor-control flat-control">
+    <label for="editor1" class="control-label">Description:</label>
+    <iu-editor elementId="editor1" formControlName="description" height="200"></iu-editor>
+  </div>
+
+  <mat-card class="control">
+    <div class="control-label">Options:</div>
+    <div class="private-control">
+      <mat-checkbox formControlName="isPrivate"> Withhold Item from the public</mat-checkbox>
+      <span class="note">Only applies to Agendas that are public</span>
+    </div>
+    <div class="votes-control">
+      <mat-checkbox formControlName="isVotable"> Enable Voting</mat-checkbox>
+      <span class="note">Check to allow Members with voting privileges to vote on this Item.</span>
+    </div>
+  </mat-card>
+
+  <div class="control attachments-control">
+    <label for="attachments" class="control-label">Attachments:</label>
+    <iu-file-upload id="attachments" [multiple]="true" formControlName="attachments"></iu-file-upload>
+  </div>
+
+  <mat-card class="control suggestion-control" *ngIf="isSuggestion">
+    <span class="control-label request-label">
+      <mat-icon color="warn">priority_high</mat-icon>
+      <span class="action-text">User has suggested that this item be added to the agenda:</span>
+    </span>
+    <span class="suggestion-actions">
+      <button mat-raised-button color="primary" (click)="onAccept()">Accept</button>
+      <span class="or">or</span>
+    <button mat-raised-button color="warn" (click)="onReject()">Reject</button>
+    </span>
+  </mat-card>
+
+  <div class="control" *ngIf="isSuggestion">
+    <label for="editor2" class="control-label">
+      Reject Reason:
+    <span class="note reject-reason-note">Only applies to suggested items being rejected.</span>
+    </label>
+    <iu-editor elementId="editor2" formControlName="rejectReason" type="basic" height="100"></iu-editor>
+  </div>
+
+</form>

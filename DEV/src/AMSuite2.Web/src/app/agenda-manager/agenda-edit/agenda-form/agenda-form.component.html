@@ -1,0 +1,59 @@
+<form id="agenda-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+
+  <div class="control">
+    <mat-input-container>
+      <input matInput placeholder="Agenda Name" value="" maxlength="150" formControlName="agendaName" required>
+      <mat-error>
+        <div *ngIf="agendaName?.errors?.required">
+          Name is required.
+        </div>
+        <div *ngIf="agendaName?.errors?.maxlength">
+          Name must be less than 150 characters long.
+        </div>
+      </mat-error>
+    </mat-input-container>
+  </div>
+
+  <div class="editor-control">
+    <label class="control-label" for="editor">Description:</label>
+    <iu-editor elementId="editor" formControlName="agendaDescription" height="200"></iu-editor>
+  </div>
+
+  <div class="control display-minutes-control">
+    <div class="auto-public">
+      <mat-checkbox formControlName="displayMinutes">Show Minutes</mat-checkbox>
+      <span class="note">Any Minutes recorded will be visible to those with access to this Agenda.</span>
+    </div>
+  </div>
+
+  <div class="control private-control">
+    <div class="auto-public">
+      <mat-checkbox formControlName="isPrivate">Private</mat-checkbox>
+      <span class="note">The agenda will only be visible to those with edit permissions.</span>
+    </div>
+  </div>
+
+  <div class="control timeframe-control">
+    <div class="auto-public">
+      <label class="control-label" for="ddlAutoTime">Automatically make this Agenda public:</label>
+      <mat-select placeholder="Select Option..." formControlName="timeframeId">
+        <mat-option value=0 selected="selected">Never...</mat-option>
+        <mat-option value=1>24 hours before meeting starts</mat-option>
+        <mat-option value=2>36 hours before meeting starts</mat-option>
+        <mat-option value=3>48 hours before meeting starts</mat-option>
+        <mat-option value=4>72 hours before meeting starts</mat-option>
+      </mat-select>
+      <span class="note select-note">If this agenda is set to automatically go public, it will uncheck the private setting at the appointed time</span>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="actions">
+    <button class="btn-save" (click)="onSubmit($event)" mat-raised-button color="accent">{{ submitText }}</button>
+    <button *ngIf="mode === 'edit'" class="btn-delete" (click)="onDelete()" mat-raised-button color="warn">Delete</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="meetingsLink">Return To Meetings</a>
+    <div id="message" class="required"></div>
+  </div>
+</form>

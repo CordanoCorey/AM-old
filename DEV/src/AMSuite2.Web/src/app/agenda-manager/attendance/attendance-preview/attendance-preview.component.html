@@ -1,0 +1,11 @@
+<div class="roll-call">Roll Call</div>
+<strong class="attendance-heading">Present:&nbsp;</strong> {{ present }}
+<br />
+<strong class="attendance-heading">Absent:&nbsp;</strong> {{ absent }}
+<br />
+<span class="write-in" *ngIf="hasUpdates">
+  <strong class="attendance-heading">Attendance Updates:</strong>
+  <ul class="writein-list">
+    <li *ngFor="let update of logUpdates">{{ update }}</li>
+  </ul>
+</span>

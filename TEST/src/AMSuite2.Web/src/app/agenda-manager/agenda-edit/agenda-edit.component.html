@@ -1,0 +1,5 @@
+<div class="message message-top" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>
+<am-agenda-form [accountUrl]="accountUrl$ | async" [agenda]="agenda$ | async" (add)="addAgenda($event)" (delete)="deleteAgenda($event)"
+    (update)="updateAgenda($event)">
+</am-agenda-form>
+<div class="message message-bottom" [class.success-message]="inSuccessState" [class.error-message]="inErrorState" *ngIf="showMessage">{{ message }}</div>

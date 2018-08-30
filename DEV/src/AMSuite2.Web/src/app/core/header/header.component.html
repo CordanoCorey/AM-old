@@ -1,0 +1,8 @@
+<div id="status-bar">
+  <div id="logo-container" *ngIf="hasAccount$ | async">
+    <img id="account-logo" [src]="logoSrc$ | async" />
+  </div>
+  <am-search-widget></am-search-widget>
+  <am-current-user [user]="user$ | async" [account]="account$ | async" [userAccounts]="userAccounts$ | async" (revertToAdmin)="revertToAdmin()"></am-current-user>
+</div>
+<am-tabs [model]="tabs$ | async"></am-tabs>

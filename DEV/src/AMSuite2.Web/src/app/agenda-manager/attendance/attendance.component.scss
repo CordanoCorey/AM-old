@@ -1,0 +1,86 @@
+.attendance-container {
+    margin: 1em 0;
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.attendance {
+    width: 94%;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+.attendance th {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.attendance tbody th {
+    text-indent: 0.5em;
+}
+
+.attendance td {
+    padding: 0.2em 0;
+}
+
+.attendance a {
+    color: #000;
+    font-size: 0.9em;
+}
+
+.attendance tbody td {
+    border-bottom: 1px dotted #000;
+}
+
+.attendance input {
+    margin: 0 0.5em;
+}
+
+.attendance input,
+.attendance label {
+    vertical-align: middle;
+}
+
+.attendance label {
+    font-weight: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.attendance thead th {
+    font-size: 0.9em;
+    background-color: transparent;
+    border-bottom-width: 0;
+    padding-bottom: 6px;
+}
+
+.attendance thead a {
+    padding: 0 0 4px 2.3em;
+    font-weight: normal;
+    background: url(/assets/images/site/icon-sprite.png) no-repeat 0.8em -93px;
+    white-space: nowrap;
+}
+
+.attendance .tally td {
+    padding: 0 0 0 0.65em;
+    width: 15%;
+}
+
+.attendance .tally td,
+.attendance .tally th {
+    font-size: 1.25em;
+    vertical-align: middle;
+    background-color: #EFF3FF;
+    border-bottom-width: 0;
+}
+
+.attendance tbody tr:hover {
+    background-color: #fff;
+}
+
+.attendance tbody td,
+.attendance tbody th {
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}

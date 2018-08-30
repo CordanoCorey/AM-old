@@ -1,0 +1,9 @@
+<div id="bin">
+    <div id="bin-item-container" *ngIf="hasBinItems$ | async">
+        <am-bin-items [binItems]="binItems$ | async" [activeId]="activeId$ | async" [accounts]="accounts$ | async" 
+        [binItem]="binItem$ | async" (changeAccount)="changeAccount($event)"
+            (changeBinItem)="activateBinItem($event)" (changeOptions)="changeOptions($event)"></am-bin-items>
+        <am-bin-item [binItem]="binItem$ | async" [options]="binItemOptions"></am-bin-item>
+    </div>
+    <am-bin-empty *ngIf="!(hasBinItems$ | async)"></am-bin-empty>
+</div>

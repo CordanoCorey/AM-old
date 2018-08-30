@@ -1,0 +1,35 @@
+<div id="Stage2">
+
+  <div class="view-header">
+    <h2>Members</h2>
+    <a class="btn-add" [routerLink]="newMemberLink$ | async" *ngIf="!(editing$ | async)" md-raised-button color="accent">
+      <md-icon>add</md-icon>
+      <span class="button-text">New Member</span>
+    </a>
+  </div>
+
+  <div class="colfull">
+    <form [formGroup]="form">
+      <div class="filter account-filter">
+        <span class="blue label">Within Account:</span>
+        <md-select formControlName="accountUrl">
+          <md-option value="admin">All Accounts</md-option>
+          <md-option *ngFor="let account of accounts$ | async" [value]="account.url">{{ account.name }}</md-option>
+        </md-select>
+      </div>
+      <div class="filter group-filter">
+        <span class="blue label">Within Group:</span>
+        <md-select formControlName="groupId">
+          <md-option [value]="defaultGroupId">All Groups\UnGrouped</md-option>
+          <md-option *ngFor="let group of (groups$ | async)" [value]="group.id">{{ group.name }}</md-option>
+        </md-select>
+        <md-checkbox formControlName="showInactive">Show Inactive Users</md-checkbox>
+      </div>
+    </form>
+  </div>
+
+  <div class="grid-wrapper">
+    <am-members-grid [members]="filteredMembers$ | async" [account]="account$ | async" [group]="group$ | async" (impersonate)="impersonate($event)"></am-members-grid>
+  </div>
+
+</div>

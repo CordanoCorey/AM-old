@@ -1,0 +1,10 @@
+<div class="binItemOptions">
+  <am-panel-blue-mini heading="Bin Item Preview:">
+    <div class="binpreviewtreeitem">
+      <span [class.agendaitem-child]="!isParent" [class.agendaitem-parent]="isParent">
+        <a>{{ binItemName }}</a></span>
+      <span class="ui-icon ui-icon-notes" title="Notes" *ngIf="hasNotes"></span>
+      <span class="ui-icon ui-icon-paperclip" title="Attachments" *ngIf="hasAttachments"></span>
+    </div>
+  </am-panel-blue-mini>
+</div>

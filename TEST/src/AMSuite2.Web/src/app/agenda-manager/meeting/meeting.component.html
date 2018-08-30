@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="details-wrapper">
+
+    <div class="details-header">
+      <h2>{{ (meeting$ | async).name }}</h2>
+      <button md-button class="details-toggle" (click)="toggleDetails()">{{ toggleText | async }}</button>
+      <am-view-mode (toggle)="toggleDetails()"></am-view-mode>
+    </div>
+
+    <div class="details" [@toggle]="showDetails ? 'show' : 'hide'">
+      <!-- <am-meeting-detail [meeting]="meeting$ | async" [showEdit]="showEdit$ | async" [showEmailGroup]="showEmailGroup$ | async"
+        [showSendEmail]="showSendEmail$ | async"></am-meeting-detail> -->
+    </div>
+
+  </div>
+  <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+</div>
+
+<div class="right-content">
+  <am-agenda-treeview *ngFor="let agenda of agendas$ | async" [agenda]="agenda" [activeId]="agendaId$ | async" [tree]="tree$ | async"></am-agenda-treeview>
+</div>
+
+<div id="slideshow-container" *ngIf="showSlideshow">
+  <am-slideshow-controls></am-slideshow-controls>
+</div>

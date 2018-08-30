@@ -1,0 +1,20 @@
+.meeting-detail {
+    padding: 10px;
+    width: calc(100%-20px);
+    color: #000;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.meeting-detail .normal-view {
+    float: right;
+    margin: 0 1% 4px;
+}
+
+.meeting-detail .button .tinyicon {
+    float: right;
+}
+
+#meeting-info {
+    margin: 0.5em 0;
+}

@@ -1,0 +1,13 @@
+<div class="bincol1">
+    <am-bin-accounts 
+        [accounts]="accounts" 
+        (changeAccount)="onChangeAccount($event)"></am-bin-accounts>
+    <am-bin-items-dropdown
+        [activeId]="activeId"
+        [binItems]="binItems"
+        (changeBinItem)="onChangeBinItem($event)"></am-bin-items-dropdown>
+    <am-bin-item-options 
+    [binItem]="binItem"
+    (changeOptions)="onOptionsChange($event)"></am-bin-item-options>
+    <am-bin-item-preview [binItem]="binItem"></am-bin-item-preview>
+</div>

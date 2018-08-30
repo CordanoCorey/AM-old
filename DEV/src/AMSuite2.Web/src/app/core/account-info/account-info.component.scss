@@ -1,0 +1,18 @@
+#Stage {
+    min-width: 1300px;
+}
+
+.main-content {
+    width: 65%;
+    min-width: 800px;
+    float: left;
+    margin: 8px 0;
+    padding: 16px 1% !important;
+}
+
+.right-content {
+    float: right;
+    max-width: 33%;
+    overflow: hidden;
+    padding-top: 16px;
+}

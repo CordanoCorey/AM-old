@@ -1,0 +1,36 @@
+#Stage {
+    min-width: 1200px;
+}
+
+.main-content {
+    float: left;
+    width: 73%;
+    margin: 8px 0;
+    min-width: 720px;
+}
+
+.btn-add.mat-accent {
+    color: #fff;
+    padding: 0 12px 0 8px;
+    margin: 0 12px 6px 0;
+}
+
+.btn-back.mat-raised-button {
+    padding: 2px 8px 2px 4px;
+    margin: 0px 12px 6px 12px;
+    line-height: 12px;
+    border-radius: 4px;
+    min-width: 32px;
+    float: left;
+}
+
+.view-header h2 {
+    margin: 4px 6px;
+}
+
+.right-content {
+    float: right;
+    max-width: 25%;
+    overflow: hidden;
+    padding-top: 16px;
+}

@@ -1,0 +1,60 @@
+@import '../../../common';
+#show-inactive {
+    vertical-align: bottom;
+}
+
+.filter {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 16px;
+    .label {
+        float: left;
+        font-weight: bold;
+        margin-right: 8px;
+        line-height: 32px;
+    }
+    .mat-select {
+        width: 300px;
+        padding-top: 0;
+        margin-left: 6px;
+    }
+}
+
+.memberstable {
+    width: 99%;
+    margin-bottom: 1em;
+}
+
+.btn-add {
+    position: relative;
+    top: -6px;
+    color: #fff;
+    margin-right: 40px;
+    padding: 2px 10px;
+}
+
+.btn-add md-icon {
+    line-height: 24px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.btn-add .button-text {
+    position: relative;
+    left: -3px;
+    top: 1px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.mat-checkbox {
+    margin-left: 40px;
+    padding-top: 6px;
+}
+
+.grid-wrapper {
+    padding: 20px 20px 40px 0;
+}

@@ -1,0 +1,103 @@
+@import '../../../common';
+@import '~@angular/material/_theming';
+:host {
+    display: block;
+}
+
+.agenda-tree-item {
+    padding: 0;
+    clear: both;
+    display: grid;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    padding: 2px 4px;
+    color: #000;
+    font-size: 16px;
+    min-height: 16px;
+}
+
+a.active-link,
+.agenda-tree-item:hover {
+    background-color: $accent-color;
+    @include light-green-gradient();
+    color: #000;
+    font-weight: bold;
+    .mat-icon {
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+
+.order {
+    float: left;
+    padding-right: 3px;
+    max-width: 40px;
+}
+
+.label {
+    float: left;
+    width: calc(100% - 128px);
+}
+
+.parent {
+    font-size: 14px;
+}
+
+.child {
+    font-size: 12px;
+    margin-left: 2%;
+}
+
+.suggestion {
+    color: #c35c00;
+}
+
+.icons {
+    float: right;
+    width: 80px;
+}
+
+.mat-icon {
+    float: right;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    color: $primary-color;
+}
+
+.last-item {
+    position: relative;
+    padding: 4px 0px;
+    border-bottom: 1px solid #cdcdcd;
+    width: 100%;
+}
+
+.btn-add.mat-raised-button {
+    height: 24px;
+    .btn-label {
+        position: relative;
+        top: -2px;
+        right: 0;
+    }
+    .mat-icon {
+        float: left;
+        position: relative;
+        top: -1px;
+        right: 0;
+    }
+}
+
+.btn-quick.mat-raised-button {
+    height: 24px;
+    width: 32px;
+    min-width: 32px;
+    .btn-label {
+        font-size: 18px;
+        position: relative;
+        top: -2px;
+        left: 0;
+    }
+}

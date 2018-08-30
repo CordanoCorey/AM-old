@@ -1,0 +1,18 @@
+.wrapper {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 64px;
+    position: relative;
+}
+
+.agenda-item-wrapper {
+    float: left;
+    width: 96%;
+    margin: 8px 0;
+    padding: 10px 2%;
+    min-height: 590px;
+    position: relative;
+    // background-color: #fff;
+}

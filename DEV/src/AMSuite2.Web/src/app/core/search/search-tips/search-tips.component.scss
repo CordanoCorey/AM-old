@@ -1,0 +1,28 @@
+@import '../../../../common';
+.widget-content2 {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: solid 2px $primary-color;
+    border-right: solid 2px $primary-color;
+}
+
+.hiddentip {
+    display: inline-block;
+}
+
+.tipmatch {
+    color: #579D23;
+}
+
+.tipnonmatch {
+    color: Red;
+}
+
+.didyouknow {
+    font-size: medium;
+}
+
+.help-tips {
+    font-style: italic;
+    color: Gray;
+}

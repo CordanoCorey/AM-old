@@ -1,0 +1,11 @@
+<div id="Stage">
+  <div class="view-header">
+    <h2>Basic Information</h2>
+  </div>
+  <div class="main-content">
+    <am-account-info-form [account]="account$ | async" [accountUrl]="accountUrl" (add)="addAccount($event)" (update)="updateAccount($event)"></am-account-info-form>
+  </div>
+  <div class="right-content">
+    <am-about-account-info [accountUrl]="accountUrl"></am-about-account-info>
+  </div>
+</div>

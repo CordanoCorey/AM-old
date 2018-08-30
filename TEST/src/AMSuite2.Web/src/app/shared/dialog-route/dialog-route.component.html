@@ -1,0 +1,5 @@
+<div class="wrapper">
+    <iu-dialog [model]="dialog$ | async" [showActions]="false">
+        <router-outlet name="popup" (activate)="onActivate($event)" (deactivate)="onDeactivate($event)" #outlet></router-outlet>
+    </iu-dialog>
+</div>

@@ -1,0 +1,41 @@
+@import '../../../../common';
+a.action {
+    border-radius: 3px;
+    background-color: mat-color($material-primary-color, 500);
+    color: #fff;
+    line-height: 24px;
+    padding: 0 18px;
+    position: relative;
+}
+
+a.action:hover {
+    background-color: mat-color($material-primary-color, 900);
+}
+
+a.action md-icon {
+    position: absolute;
+    font-size: 16px;
+    left: 2px;
+    top: 0px;
+    line-height: 24px;
+    color: mat-color($material-accent-color, 500);
+}
+
+a.action .button-text {
+    position: relative;
+    top: 0px;
+    left: 10px;
+}
+
+a.action.edit-action {
+    padding: 0;
+    min-width: 72px;
+    .button-text {
+        top: 0px;
+        left: 8px;
+    }
+    md-icon {
+        left: 6px;
+        top: 0px;
+    }
+}

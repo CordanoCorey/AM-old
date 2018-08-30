@@ -1,0 +1,89 @@
+@import '../../../../common';
+#special-message {
+    padding-bottom: 1em;
+    max-width: 500px;
+}
+
+#unlock-label {
+    font-weight: normal;
+    position: absolute;
+    top: 12px;
+    left: 168px;
+    color: red;
+}
+
+.control {
+    display: inline-grid;
+    .note {
+        display: inline-block;
+    }
+}
+
+label:not(.control-label):not(.mat-checkbox-label) {
+    color: $primary-color;
+}
+
+.mat-checkbox {
+    float: left;
+    label {
+        color: #000;
+    }
+}
+
+iu-accordion {
+    display: block;
+}
+
+.manage-account {
+    margin-top: 10px;
+    .note {
+        position: absolute;
+        top: 3px;
+        left: 240px;
+    }
+}
+
+.mat-card.controls-wrapper {
+    padding-top: 10px;
+    margin-top: 32px;
+    padding-left: 40px;
+    .control {
+        padding: 0;
+        margin: 0;
+        margin-top: 8px;
+    }
+    .control:first-child {
+        padding-top: 8px;
+    }
+    .note {
+        padding: 0;
+    }
+}
+
+.mat-card.account-request-action {
+    margin: 20px 0 0;
+    padding: 10px 48px;
+    .request-label {
+        // margin-left: -16px;
+    }
+}
+
+.account-request-action {
+    .mat-icon {
+        float: left;
+    }
+    .action-text {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.reject-reason-note {
+    font-weight: normal;
+}
+
+.deactivate-control {
+    .note {
+        top: 10px;
+    }
+}

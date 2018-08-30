@@ -1,0 +1,55 @@
+<form id="email-form" *ngIf="formStyle === 1" [formGroup]="form" (ngSubmit)="onSubmit()" iuForm>
+  <div class="control">
+    <label class="email-label">Email Meeting Details to Group Members</label>
+    <input type="button" id="btnSelectAll" value="Select All" class="button" />
+    <input type="button" id="btnClear" value="Clear" class="button" />
+    <span id="emailgroup-message"></span>
+    <select id="recipients-list" multiple="multiple" data-placeholder="Select recipients..." formControlName="to"></select>
+  </div>
+  <div class="control">
+    <label class="email-label">CC Recipients</label>
+    <input id="emailCC" class="field" type="text" formControlName="cc" />
+  </div>
+  <div class="control">
+    <label class="email-label">Subject</label>
+    <input id="emailSubject" class="field" type="text" formControlName="subject" />
+  </div>
+  <div class="control">
+    <label class="email-label ">Meeting Details</label>
+    <iu-editor elementId="editor1" formControlName="body"></iu-editor>
+  </div>
+</form>
+
+<form id="email-item-form" *ngIf="formStyle === 2" [formGroup]="form" (ngSubmit)="onSubmit()" iuForm>
+  <div class="control">
+    <span class="note">Separate multiple addresses with a semicolon ";"</span>
+    <mat-input-container>
+      <input matInput placeholder="TO" id="txtTO" class="field" type="text" formControlName="to" required />
+    </mat-input-container>
+  </div>
+  <div class="control">
+    <mat-input-container>
+      <input matInput placeholder="BCC" id="txtBCC" class="field" type="text" formControlName="bcc" />
+    </mat-input-container>
+  </div>
+  <div class="control">
+    <mat-input-container>
+      <input matInput placeholder="CC" id="txtCC" class="field" type="text" formControlName="cc" />
+    </mat-input-container>
+  </div>
+  <div class="control">
+    <mat-input-container>
+      <input matInput placeholder="Subject" id="txtSubject" class="field" type="text" formControlName="subject" />
+    </mat-input-container>
+  </div>
+  <div class="control editor-container">
+    <label for="txtBody" class="control-label bold">Body:</label>
+    <iu-editor elementId="editor2" formControlName="body" [expanded]="true" height="100"></iu-editor>
+  </div>
+  <div class="actions" *ngIf="showActions">
+    <button class="btn-save" mat-raised-button color="accent">Send</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" class="cancel">Cancel</a>
+    <div id="email-message" class="control required"></div>
+  </div>
+</form>

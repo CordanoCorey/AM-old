@@ -1,0 +1,28 @@
+<div id="Stage">
+    <div class="view-header">
+        <h2>{{ heading }}</h2>
+    </div>
+    <div class="main-content">
+
+        <mat-card class="form-group">
+            <am-account-form [account]="account$ | async"></am-account-form>
+        </mat-card>
+
+        <mat-card class="form-group" *ngIf="!editMode">
+            <am-account-admin-form [account]="account$ | async" (searchUsers)="getUsers($event)"></am-account-admin-form>
+        </mat-card>
+
+        <div class="actions">
+            <button class="btn-save" (click)="submit($event)" mat-raised-button color="accent">{{ btnText }}</button>
+            <span class="or">or</span>
+            <a class="btn-cancel" [routerLink]="onCancelUrl$ | async">Cancel</a>
+            <am-validation-message></am-validation-message>
+        </div>
+
+    </div>
+    <div class="right-content">
+        <br />
+        <am-about-accounts></am-about-accounts>
+        <am-audit-info></am-audit-info>
+    </div>
+</div>

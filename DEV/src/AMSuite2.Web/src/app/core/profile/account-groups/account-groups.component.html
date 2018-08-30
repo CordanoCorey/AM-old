@@ -1,0 +1,16 @@
+<am-panel-blue>
+
+  <am-panel-blue-header>
+    Your Groups
+    <span class="access-message" *ngIf="accountName"> within {{ accountName }}</span>
+  </am-panel-blue-header>
+
+  <am-panel-blue-content>
+    <ul id="group-list" class="read-list">
+      <li *ngFor="let member of accountGroups">{{ member.group?.name }}
+        <span class="group-note">{{ member.groupRole }}</span>
+      </li>
+    </ul>
+  </am-panel-blue-content>
+
+</am-panel-blue>

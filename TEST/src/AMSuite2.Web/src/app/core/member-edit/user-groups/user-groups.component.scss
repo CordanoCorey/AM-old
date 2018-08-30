@@ -1,0 +1,54 @@
+#user-groups {
+    am-panel-blue {
+        margin-top: 1em;
+    }
+    am-panel-blue-content {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    .required {
+        margin: 0.5em;
+        font-size: 0.9em;
+    }
+    #user-groups-header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+        .header-link {
+            color: #fff;
+            width: 100px;
+            float: left;
+        }
+        .title {
+            width: 100px;
+            float: left;
+        }
+    }
+    #user-groups-header .mat-input-container {
+        float: right;
+        width: 160px;
+        padding: 0 10px;
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 12px;
+    }
+    #user-groups-header .mat-input-placeholder {
+        color: #fff !important;
+        padding-top: 4px;
+    }
+    #user-groups-header .mat-input-ripple {
+        background-color: #fff;
+    }
+    #groups-list .mat-checkbox {
+        width: 100%;
+        padding: 0 0 2px 20px;
+        .mat-checkbox-label {
+            color: #000;
+            font-weight: normal;
+            font-size: 14px;
+        }
+    }
+}

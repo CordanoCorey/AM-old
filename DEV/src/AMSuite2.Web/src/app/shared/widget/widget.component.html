@@ -1,0 +1,16 @@
+<mat-card class="widget">
+  <iu-accordion [opened]="true">
+    <div class="widget-header-wrapper accordion-trigger">
+      <div class="drag-handle">
+        <mat-icon>open_with</mat-icon>
+      </div>
+      <div class="widget-header-divider"></div>
+      <div class="widget-title">
+        <ng-content select=".widget-header"></ng-content>
+      </div>
+    </div>
+    <div class="widget-content-wrapper accordion-content" [@expando]="height">
+      <ng-content select=".widget-content"></ng-content>
+    </div>
+  </iu-accordion>
+</mat-card>

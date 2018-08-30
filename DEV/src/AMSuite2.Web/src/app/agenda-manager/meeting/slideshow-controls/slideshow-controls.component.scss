@@ -1,0 +1,55 @@
+.previous {
+    width: 85px;
+    float: left;
+}
+
+#btnPrevImg {
+    cursor: pointer;
+    float: left;
+}
+
+.selected-agenda-wrapper {
+    width: 230px;
+    float: left;
+    display: inline-table;
+    display: block;
+}
+
+.selected-agenda {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.selected-agenda-label {
+    font-size: .8em;
+    display: block;
+}
+
+#ddlAgendas {
+    width: 100%;
+}
+
+.selected-index {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.next {
+    width: 85px;
+    float: right;
+}
+
+#btnNextImg {
+    cursor: pointer;
+    float: right;
+}
+
+.slideshow-controls {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}

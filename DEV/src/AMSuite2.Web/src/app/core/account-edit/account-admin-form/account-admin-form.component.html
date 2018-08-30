@@ -1,0 +1,40 @@
+<div class="view-header">
+  <h2>Add First Administrator</h2>
+</div>
+<form [formGroup]="form" iuForm>
+  <div class="accordion-trigger" (click)="toggle()">
+    <mat-checkbox formControlName="useExisting">Select an existing AgendaManager user.</mat-checkbox>
+    <span class="note">This will be the first administrator for the new account.</span>
+  </div>
+  <div class="accordion-content" [@toggle]="opened? 'show' : 'hide'">
+    <mat-input-container>
+      <input matInput placeholder="Search Users..." formControlName="ownerInput" />
+      <input type="hidden" formControlName="ownerId">
+    </mat-input-container>
+  </div>
+  <div id="users">
+    <div *ngFor="let user of searchResults" class="search-result" (click)="selectUser(user)">{{ user.displayName }}</div>
+  </div>
+  <div class="controls" [@toggle]="!opened? 'show' : 'hide'">
+    <div class="control">
+      <mat-input-container>
+        <input matInput placeholder="First Name" value="" maxlength="100" formControlName="firstName">
+      </mat-input-container>
+    </div>
+    <div class="control">
+      <mat-input-container>
+        <input matInput placeholder="Last Name" value="" maxlength="100" formControlName="lastName">
+      </mat-input-container>
+    </div>
+    <div class="control">
+      <mat-input-container>
+        <input matInput placeholder="Title" value="" maxlength="100" formControlName="title">
+      </mat-input-container>
+    </div>
+    <div class="control">
+      <mat-input-container>
+        <input matInput placeholder="Email Address" value="" maxlength="100" formControlName="emailAddress">
+      </mat-input-container>
+    </div>
+  </div>
+</form>

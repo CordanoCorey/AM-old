@@ -1,0 +1,51 @@
+<iu-grid [model]="grid" pageSize="20" height="600" [sort]="sort">
+  <iu-grid-column [model]="firstNameColumn" [width]="widths?.firstName"></iu-grid-column>
+  <iu-grid-column [model]="lastNameColumn" [width]="widths?.lastName"></iu-grid-column>
+
+  <iu-grid-column [model]="emailColumn" [width]="widths?.email" [templateRef]="emailAddressTemplate">
+    <ng-template #emailAddressTemplate let-emailAddress="emailAddress">
+      <span class="break-words">{{ emailAddress }}</span>
+    </ng-template>
+  </iu-grid-column>
+
+  <iu-grid-column [model]="titleColumn" [width]="widths?.title" [templateRef]="titleTemplate">
+    <ng-template #titleTemplate let-title="userTitle">
+      <span class="break-words">{{ title }}</span>
+    </ng-template>
+  </iu-grid-column>
+
+  <iu-grid-column [model]="roleColumn" [width]="widths?.role" [filterable]="false"></iu-grid-column>
+
+  <iu-grid-column [model]="lockedColumn" [width]="widths?.locked" [filterable]="false" [templateRef]="lockedTemplate">
+    <ng-template #lockedTemplate let-locked="locked">
+      <div class="centered">{{ locked }}</div>
+    </ng-template>
+  </iu-grid-column>
+
+  <iu-grid-column [model]="accountActiveColumn" [width]="widths?.active" [filterable]="false" [templateRef]="accountActiveTemplate">
+    <ng-template #accountActiveTemplate let-accountActive="accountActive">
+      <div class="centered">{{ accountActive }}</div>
+    </ng-template>
+  </iu-grid-column>
+
+  <iu-grid-column [model]="actionsColumn" [templateRef]="actionsTemplate" [width]="widths?.actions" [filterable]="false">
+    <ng-template #actionsTemplate let-user="user" let-userId="userId" let-memberLink="memberLink">
+
+      <a class="action edit-action" [routerLink]="memberLink" mat-raised-button>
+        <mat-icon>edit</mat-icon>
+        <span class="button-text">Edit</span>
+      </a>
+
+      <a class="action" (click)="onInvite(userId)" mat-raised-button>
+        <mat-icon>send</mat-icon>
+        <span class="button-text">Resend Invite</span>
+      </a>
+
+      <a *ngIf="canImpersonate" class="action" (click)="onImpersonate(user)" mat-raised-button>
+        <mat-icon>person</mat-icon>
+        <span class="button-text">Impersonate</span>
+      </a>
+
+    </ng-template>
+  </iu-grid-column>
+</iu-grid>

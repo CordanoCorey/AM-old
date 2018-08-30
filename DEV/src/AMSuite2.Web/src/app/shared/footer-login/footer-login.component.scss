@@ -1,0 +1,22 @@
+footer {
+    padding: 1em;
+    font-size: 0.8em;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.developed-by {
+    float: right;
+}
+
+@media only screen and (max-width: 420px) {
+    @-ms-viewport {
+        width: device-width;
+    }
+    .developed-by {
+        float: left;
+        padding-top: 1em;
+        clear: left;
+    }
+}

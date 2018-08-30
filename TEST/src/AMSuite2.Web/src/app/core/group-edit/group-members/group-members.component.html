@@ -1,0 +1,66 @@
+<div id="group-members">
+
+  <div class="members-label">
+    <label for="editor" class="control-label">Group Members:</label>
+    <span class="note members-note">Click a header to select/deselect all checkboxes</span>
+    <div class="members-search">
+      <md-input-container>
+        <input mdInput placeholder="Search account members..." maxlength="199">
+      </md-input-container>
+    </div>
+  </div>
+
+  <iu-grid [model]="grid" [height]="320" [filterable]="false">
+
+    <iu-grid-column [model]="nameColumn" [width]="columnWidths.userName" [templateRef]="nameTemplate">
+      <ng-template #nameTemplate let-userName="userName">
+        <span class="cell-text">{{ userName }}</span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="emailColumn" [width]="columnWidths.email"></iu-grid-column>
+
+    <iu-grid-column [model]="memberColumn" [width]="columnWidths.member" [templateRef]="memberTemplate">
+      <ng-template #memberTemplate let-isMember="isMember">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.member - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="contributorColumn" [width]="columnWidths.contributor" [templateRef]="contributorTemplate">
+      <ng-template #contributorTemplate let-isContributor="isContributor">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.contributor - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="managerColumn" [width]="columnWidths.manager" [templateRef]="managerTemplate">
+      <ng-template #managerTemplate let-isManager="isManager">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.manager - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="voterColumn" [width]="columnWidths.voter" [templateRef]="voterTemplate">
+      <ng-template #voterTemplate let-isVoter="isVoter">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.voter - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="voteTakerColumn" [width]="columnWidths.voteTaker" [templateRef]="voteTakerTemplate">
+      <ng-template #voteTakerTemplate let-isVoteTaker="isVoteTaker">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.voteTaker - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="minuteTakerColumn" [width]="columnWidths.minuteTaker" [templateRef]="minuteTakerTemplate">
+      <ng-template #minuteTakerTemplate let-isMinuteTaker="isMinuteTaker">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.minuteTaker - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+    <iu-grid-column [model]="attendanceTakerColumn" [width]="columnWidths.attendanceTaker" [templateRef]="attendanceTakerTemplate">
+      <ng-template #attendanceTakerTemplate let-isAttendanceTaker="isAttendanceTaker">
+        <span class="checkbox center" [style.padding-left.px]="(columnWidths.attendanceTaker - 44)/2"><md-checkbox></md-checkbox></span>
+      </ng-template>
+    </iu-grid-column>
+
+  </iu-grid>
+</div>

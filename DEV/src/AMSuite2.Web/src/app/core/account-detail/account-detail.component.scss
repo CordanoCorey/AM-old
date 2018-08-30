@@ -1,0 +1,36 @@
+@import '~@angular/material/_theming';
+.main-content {
+    width: 60%;
+}
+
+am-account-description {
+    float: left;
+}
+
+am-account-logo {
+    float: right;
+    width: 36%;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.col1-static {
+    width: 100%;
+}
+
+#top-pane {
+    background-color: #e9f0f8;
+    overflow-y: auto;
+}
+
+#home-page {
+    padding: 1em;
+}
+
+img {
+    @include mat-elevation(4);
+    float: left;
+    border: 10px solid #fff;
+    margin: 10px 30px;
+    max-width: 30%;
+}

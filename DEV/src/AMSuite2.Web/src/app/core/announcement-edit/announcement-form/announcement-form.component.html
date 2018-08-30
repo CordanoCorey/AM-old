@@ -1,0 +1,71 @@
+<fieldset id="account-info" class="form has-help">
+
+  <form [formGroup]="form" iuForm>
+
+    <mat-card class="form-group">
+      <div class="control type-control">
+        <label class="control-label">Announcement Type:</label>
+        <mat-radio-group formControlName="announcementTypeId">
+          <mat-radio-button [value]="2">Account Announcement</mat-radio-button>
+          <mat-radio-button [value]="3">Group Announcement</mat-radio-button>
+          <mat-radio-button [value]="0">System Announcement</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="control group-control">
+        <label for="ddlGroups" class="control-label">
+          Group:<span id="rfvGroup" class="required">*</span>
+        </label>
+        <mat-select placeholder="Select Group..." formControlName="groupId">
+          <mat-option *ngFor="let group of groups" [value]="group.id">{{ group.name }}</mat-option>
+        </mat-select>
+        <span class="note">(Groups you are a group administrator or manager of)</span>
+      </div>
+
+      <div class="control subject-control">
+        <mat-input-container>
+          <input matInput placeholder="Subject" value="" maxlength="199" formControlName="subject">
+        </mat-input-container>
+      </div>
+    </mat-card>
+
+    <div id="description-container" class="editor-control">
+      <label for="AccountDescription" class="control-label">
+          Announcement:<span class="required">*</span>
+        </label>
+      <div class="editor-wrapper">
+        <iu-editor elementId="editor1" formControlName="description" height="200"></iu-editor>
+      </div>
+    </div>
+
+    <div class="editor-control" [@toggle]="toggle">
+      <label for="editor2" *ngIf="toggle === 'show'" class="control-label">Signature:</label>
+      <div class="signature-wrapper">
+        <iu-editor elementId="editor2" type="basic" formControlName="signature" height="100" class="basic-editor"></iu-editor>
+      </div>
+    </div>
+
+    <mat-card class="form-group">
+      <div class="control">
+        <iu-daterange formControlName="dateRange" [inline]="true"></iu-daterange>
+      </div>
+
+      <div *ngIf="showAttachments" class="control">
+        <div class="notAttachmentControl">
+        </div>
+        <label class="control-label" for="files">Attachments:</label>
+        <iu-file-upload [multiple]="true" formControlName="attachments"></iu-file-upload>
+      </div>
+    </mat-card>
+
+    <div class="actions">
+      <a id="btnPreview" mat-raised-button color="primary" (click)="onPreview()">Preview</a>
+      <button class="btn-save" (click)="onSubmit($event)" mat-raised-button color="accent">Save</button>
+      <span class="or">or</span>
+      <a class="btn-cancel" [routerLink]="cancelLink">Cancel</a>
+    </div>
+
+    <div id="message" class="required"></div>
+  </form>
+
+</fieldset>

@@ -1,0 +1,13 @@
+<am-widget>
+  <span class="widget-header">
+    Announcements<span id="announcement-count"></span>
+  </span>
+  <span class="widget-content">
+    <div id="announcement-content" class="scrollable">
+      <div id="announcement-message" *ngIf="empty$ | async">NO ANNOUNCEMENTS</div>
+      <div class="list-wrapper" *ngIf="!(empty$ | async)">
+        <am-announcement-preview *ngFor="let announcement of announcements$ | async" [announcement]="announcement" (click)="open(announcement)"></am-announcement-preview>
+      </div>
+    </div>
+  </span>
+</am-widget>

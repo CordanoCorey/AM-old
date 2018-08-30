@@ -1,0 +1,35 @@
+@import '../../../../common';
+.meetings-grid {
+    width: 100%;
+    margin: 0;
+    min-width: 980px;
+    td {
+        padding: 8px;
+        line-height: 1.2em;
+    }
+    .meeting-link {
+        color: mat-color($material-primary-color, 500) !important;
+    }
+    .meeting-link:hover {
+        font-weight: bold;
+    }
+    .iCalendarLink {
+        float: right;
+    }
+    .agenda-cell {
+        display: list-item;
+        margin-left: 15px;
+        margin-bottom: 4px;
+    }
+    .agenda-link {
+        position: relative;
+        left: -4px;
+        a:hover {
+            color: mat-color($material-primary-color, 500);
+        }
+    }
+    iu-grid.widget .grid .k-grid-header-wrap {
+        background-color: #fff !important;
+        color: $primary-color !important;
+    }
+}

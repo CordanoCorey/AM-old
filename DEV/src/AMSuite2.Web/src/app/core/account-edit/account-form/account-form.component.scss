@@ -1,0 +1,37 @@
+label {
+    width: 100%;
+}
+
+.url {
+    float: left;
+    padding: 24px;
+    padding-left: 0;
+    font-weight: bold;
+}
+
+#account-name .mat-input-container {
+    width: 80%;
+}
+
+.mat-radio-button {
+    margin-right: 16px;
+}
+
+#account-status {
+    float: left;
+    clear: both;
+    margin: 20px 0 0 20px;
+}
+
+.url-control {
+    height: 100px;
+    margin-top: 20px;
+    .mat-input-container {
+        float: left;
+        width: 50%;
+    }
+}
+
+.status-control {
+    height: 80px;
+}

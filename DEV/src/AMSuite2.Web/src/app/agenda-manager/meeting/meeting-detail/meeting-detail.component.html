@@ -1,0 +1,24 @@
+<div class="meeting-detail">
+  <div class="normal-view">
+    <a id="btnEditMeeting" class="icon-yellow" mat-raised-button>
+        <mat-icon>edit</mat-icon>
+        <div class="btn-label">Edit Meeting</div>
+    </a>
+    <a id="btnEmailGroup" class="icon-yellow" mat-raised-button>
+      <mat-icon>email</mat-icon>
+        <div class="btn-label">Email Group</div>
+    </a>
+    <button id="btnSendEmail" class="icon-yellow" (click)="onSendEmail($event)" mat-raised-button>
+      <mat-icon>send</mat-icon>
+        <div class="btn-label">Send</div>
+    </button>
+  </div>
+  <div>
+    <!-- <div class="meeting-time">
+      <span class="meeting-date">{{ meetingDate | date:'shortDate'}}   </span>
+      <span class="meeting-time">[{{ meetingStartTime | date: 'shortTime' }} - {{ meetingEndTime | date: 'shortTime' }}]</span>
+      <span class="meeting-location" *ngIf="meetingLocation"> @ {{ meetingLocation }} </span>
+    </div> -->
+    <div id="meeting-info"></div>
+  </div>
+</div>

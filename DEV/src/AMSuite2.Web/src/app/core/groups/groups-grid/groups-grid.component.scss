@@ -1,0 +1,14 @@
+@import '../../../../common';
+
+.group-link {
+    color: mat-color($material-primary-color, 900) !important;
+}
+
+.group-link:hover {
+    font-weight: bold;
+}
+
+.member-count {
+    width: 100%;
+    text-align: center;
+}

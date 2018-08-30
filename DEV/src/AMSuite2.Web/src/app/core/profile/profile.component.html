@@ -1,0 +1,17 @@
+<div id="Stage">
+    <div class="view-header">
+        <h2>Edit My Profile</h2>
+        <span class="access-message">
+            <span id="account-name"></span>
+        </span>
+    </div>
+    <div class="main-content">
+        <am-profile-form [account]="account$ | async" [dateRanges]="lookupDateRanges$ | async" [profile]="profile$ | async" [userGroups]="userGroups$ | async"
+            (save)="updateProfile($event)"></am-profile-form>
+    </div>
+    <div class="right-content">
+        <am-account-groups [userGroups]="userGroups$ | async" [account]="account$ | async"></am-account-groups>
+        <am-user-accounts [accounts]="accounts$ | async" [user]="user$ | async" (joinAccount)="addAccountRequest($event)"></am-user-accounts>
+        <am-audit-info></am-audit-info>
+    </div>
+</div>

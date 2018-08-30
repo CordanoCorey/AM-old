@@ -1,0 +1,33 @@
+#Stage {
+    min-width: 1400px;
+}
+
+.main-content {
+    float: left;
+    width: 66%;
+    min-width: 675px;
+    height: 100%;
+}
+
+.right-content {
+    float: right;
+    margin-top: 16px;
+    min-width: 400px;
+    max-width: 33%;
+    overflow: hidden;
+    .preview-row {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
+
+.join-account {
+    margin-bottom: 14px;
+    margin-left: 14px;
+    font-size: 12px;
+}
+
+.note {
+    font-size: 12px;
+    line-height: 1.3;
+}

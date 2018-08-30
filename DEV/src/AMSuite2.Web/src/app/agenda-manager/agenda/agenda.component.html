@@ -1,0 +1,33 @@
+<div [class.main-content]="agendaActive$ | async">
+    <!-- <div *ngIf="agendaActive$ | async">
+        <div class="gallery scrollable">
+            <div class="tree" *ngFor="let items of (subtreeItems$ | async);">
+                <div class="parent accordion-trigger" (click)="toggle(items[0].order)">
+                    <span class="border-left"></span>
+                    <span class="parent-order">{{ items[0]?.order }}.</span>
+                    <a><span class="parent-title">{{ items[0]?.item.name }}</span></a>
+                    <mat-icon *ngIf="showArrow$ | async" [@rotate]="isOpened(items[0].order) ? 'show' : 'hide'">expand_more</mat-icon>
+                </div>
+                <div class="accordion-content pager" [@toggle]="isOpened(items[0].order) ? 'show' : 'hide'">
+                    <mat-card class="pager-before">
+                        <mat-icon>navigate_before</mat-icon>
+                    </mat-card>
+                    <div class="pager-content">
+                        <a class="item-wrapper" *ngFor="let treeItem of items">
+                            <mat-card *ngIf="treeItem.hasParent" class="child">
+                                <mat-card-title-group>
+                                    <mat-card-title>{{ treeItem.order }}</mat-card-title>
+                                </mat-card-title-group>
+                                <div class="item-title">{{ treeItem?.item?.name }}</div>
+                            </mat-card>
+                        </a>
+                    </div>
+                    <mat-card class="pager-next">
+                        <mat-icon>navigate_next</mat-icon>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+</div>

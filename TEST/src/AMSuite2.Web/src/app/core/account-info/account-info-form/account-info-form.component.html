@@ -1,0 +1,56 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" iuForm>
+
+  <md-card id="account-info">
+
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="Account Name" value="" maxlength="75" formControlName="accountName">
+      </md-input-container>
+    </div>
+
+  </md-card>
+
+  <div class="editor-control" id="description-container">
+    <label class="control-label" for="editor1">Description:</label>
+    <iu-editor elementId="editor1" formControlName="description" height="200"></iu-editor>
+  </div>
+
+  <div class="editor-control signature-control" id="signature-container">
+    <label class="control-label" for="editor2">Default Announcement Signature:</label>
+    <div class="note-wrapper">
+      <span class="note">Default signature for account announcements.</span>
+    </div>
+    <div class="signature-wrapper">
+      <iu-editor elementId="editor2" class="basic-editor" type="basic" formControlName="signature" height="100"></iu-editor>
+    </div>
+  </div>
+
+
+  <md-card>
+
+    <div class="control" id="logo-upload">
+      <label for="logo" class="control-label">Logo:</label>
+      <span class="note">
+        <strong>Note:</strong> Allowed file types are <strong>.gif</strong>, <strong>.jpeg</strong>, and <strong>.png</strong>;
+        Images larger than 250 x 250 pixels will be scaled to fit.
+        <strong>*</strong>If you would like to <strong>replace</strong> an existing file simply pick a new image
+        and click Save.
+      </span>
+      <iu-file-upload id="logo" formControlName="logo"></iu-file-upload>
+    </div>
+
+    <div class="control account-request-control">
+      <md-checkbox formControlName="allowAccountRequests">Allow Account Requests</md-checkbox>
+      <span class="note">Checking this box allows current Agendamanager users that are not part of this account, request to Join this account.</span>
+    </div>
+
+  </md-card>
+
+  <div class="actions">
+    <button class="btn-save" (click)="onSubmit($event)" md-raised-button color="accent">Save</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="cancelLink">Cancel</a>
+    <div id="message" class="required"></div>
+  </div>
+
+</form>

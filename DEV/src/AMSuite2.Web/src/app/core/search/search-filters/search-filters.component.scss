@@ -1,0 +1,44 @@
+@import '../../../../common';
+.search-filters {
+    padding: 5px;
+}
+
+.widget-content2 {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: solid 2px $primary-color;
+    border-right: solid 2px $primary-color;
+}
+
+.start-date {
+    margin-right: 18px;
+}
+
+iu-datepicker {
+    margin-bottom: 10px;
+    .mat-input-element {
+        width: 195px !important;
+        border: 2px inset #eeeeee;
+    }
+}
+
+.group-filters {
+    padding: 10px 0 20px 40px;
+    margin-top: 10px;
+    height: 40px;
+    .mat-button-wrapper {
+        color: #fff;
+    }
+}
+
+.group-filter-title {
+    float: left;
+}
+
+#btnSelectAll {
+    margin: 0px 6px 0 18px;
+}
+
+#btnClear {
+    margin: 0px 0 0 8px;
+}

@@ -1,0 +1,10 @@
+<div id="view-mode" class="view-mode">
+  <div id="drop-menu">
+    <span class="modes-trigger" (mouseover)="onEnterTrigger()" (mouseleave)="onLeaveTrigger()">View Mode</span>
+    <ul *ngIf="showModes" (mouseover)="onEnterMenu()" (mouseleave)="onLeaveMenu()">
+      <li [class.selected]="inNormalMode" (click)="onChangeViewMode('Normal')">Normal</li>
+      <li [class.selected]="inProjectorMode" (click)="onChangeViewMode('Projector')">Projector</li>
+      <li [class.selected]="inSlideshowMode" class="last" (click)="onChangeViewMode('Slideshow')">SlideShow</li>
+    </ul>
+  </div>
+</div>

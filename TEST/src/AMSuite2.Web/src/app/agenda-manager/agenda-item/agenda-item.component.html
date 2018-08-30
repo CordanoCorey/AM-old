@@ -1,0 +1,10 @@
+<div class="agenda-item">
+    <h2 class="item-header">{{ agendaItemName$ | async }}</h2>
+    <div class="editor-style" [innerHTML]="agendaItemDescription$ | async"></div>
+<!-- <am-votes *ngIf="showVotes$ | async"></am-votes>
+    <am-attachments *ngIf="showAttachments$ | async"></am-attachments> -->
+</div>
+
+<!-- <div id="bottom-pane" *ngIf="showBottomPane$ | async">
+    <am-notes></am-notes>
+</div> -->

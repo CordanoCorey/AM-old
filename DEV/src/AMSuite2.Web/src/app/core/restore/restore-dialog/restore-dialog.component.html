@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{ dialog.title }}</h2>
+<mat-dialog-content>
+  <p class='delete-message'>
+    You are about to
+    <strong>restore</strong> the selected
+    <strong>Meeting and/or Agenda</strong>, any <strong>Sub-Items</strong> beneath this Item will be restored with it. Any
+    <strong>attachments, minutes or notes</strong> will also be restored.
+    <br/><br />Continue with restore?
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close="no">No</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button mat-button mat-dialog-close="yes">Yes</button>
+</mat-dialog-actions>

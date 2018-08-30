@@ -1,0 +1,86 @@
+<script type="text/javascript">
+   $(document).ready(function () {
+   
+       Support(GetUserInfo());
+   
+   });
+   function Support(myUserInfo) {
+       //setup user fields
+       $("#support-user").text(myUserInfo.FullName);
+       $("#support-email").text(myUserInfo.EmailAddress);
+       //make textarea resizeable
+       $('textarea.resizable:not(.processed)').TextAreaResizer();
+   
+       $("#btnSubmit").click(function () {
+   
+           //collect form info
+           var email = myUserInfo.EmailAddress;
+           var fullname = myUserInfo.FullName;
+           var sendcopy = $("#userSendCC").prop("checked");
+           var subject = $("#userTicketSubject").val();
+           var message = $("#userTicketBody").val();
+   
+           var valid = true;
+           if (subject == '') {
+               SetMessageText("#ValidateSubject", 0, "Required; this will improve our ability to assist you", true, false);
+               valid = false;
+           } else if (message == '') {
+               SetMessageText("#ValidateMessage", 0, "Required", true, false);
+               valid = false;
+           }
+   
+           if (valid) {
+               //send message
+               alert("sending message");
+           }
+   
+       });
+   }
+   
+</script>
+<div id="wrapper">
+   <div id="top">
+   </div>
+   <div id="container">
+      <span id="support"></span>
+      <div id="Stage">
+         <div class="view-header">
+            <h2>Contact the AgendaManager Support Team</h2>
+         </div>
+         <am-about-help></am-about-help>
+         <fieldset class="form has-help">
+            <p>Contact the support team with any questions, suggestions or general feedback that you have regarding your
+               AgendaManager experience.
+            </p>
+            <ul>
+               <li class="checkbox-item">
+                  <span class="faux-label">From: </span>
+                  <span id="support-user"></span>&nbsp; &lt;<span id="support-email"></span>&gt;
+                  <br>
+                  <input id="userSendCC" type="checkbox" name="userSendCC">
+                  <label for="userSendCC" style="font-size:0.75em;vertical-align:baseline;font-style:italic;font-weight:normal">Send a copy of my message to this email address.</label>
+               </li>
+               <li>
+                  <label for="userTicketSubject">
+                  Subject:
+                  <span id="ValidateSubject" class="validate"></span>
+                  </label>
+                  <input name="userTicketSubject" type="text" id="userTicketSubject" class="field">
+               </li>
+               <li>
+                  <label for="userTicketBody">
+                  Message:
+                  <span id="ValidateMessage" class="validate"></span>
+                  </label>
+                  <textarea name="userTicketBody" rows="7" cols="20" id="userTicketBody" class="resizable field" style="opacity: 1; height: 134px;"></textarea>
+               </li>
+            </ul>
+            <p class="submit-item">
+               <input id="btnSubmit" type="submit" value="Submit Your Message" class="submission ">
+            </p>
+         </fieldset>
+      </div>
+   </div>
+   <div id="bottom">
+   </div>
+</div>

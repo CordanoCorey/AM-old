@@ -1,0 +1,31 @@
+<div class="join-account" [@toggle]="toggle">
+  <form [formGroup]="form" ngSubmit="onSubmit" iuForm>
+    <strong>Request to join another account:</strong>
+    <div class="join-account-directions">
+      1. Find an account by typing the account name.
+      <br /> 2. Select the desired account from the list.
+      <br /> 3. Click the send request button.
+      <div class="join-account-note">
+        Note: A request to join along with your profile information will be sent to the administrators of the selected account.
+      </div>
+    </div>
+    <mat-input-container>
+      <input matInput id="account-input" placeholder="Search Accounts..." #accountName type="text" class="account-input" formControlName="accountName"
+        (keyup)="onAccountNameChange(accountName.value)" (focus)="onAccountNameFocus()" />
+    </mat-input-container>
+
+    <br />
+    <select id="selectAccountList" size="4" class="select-account-list">
+      <option *ngFor="let account of filteredAccounts" value="account.id" (click)="selectAccount(account)">{{ account.name }}</option>
+    </select>
+    <div class="join-account-reason">Reason you would like to join:</div>
+    <mat-input-container>
+      <textarea matInput #reason class="join-account-reason-text" [value]="value.reason" (change)="onReasonChange(reason.value)" formControlName="reason"></textarea>
+    </mat-input-container>
+    <br />
+    <button type="submit" id="btnSendRequest" (click)="onSubmit()" mat-raised-button color="primary">Send Request</button>
+    <div id="sidemessage" class="side-message" class="required">
+      <!--{{ sideMessage }}-->
+    </div>
+  </form>
+</div>

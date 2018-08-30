@@ -1,0 +1,43 @@
+.agendas {
+    clear: both;
+    float: left;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.mat-tab-nav-bar {
+    width: calc(100% - 212px);
+}
+
+.mat-tab-group {
+    width: calc(100% - 212px);
+}
+
+.agenda-options {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    z-index: 1;
+    width: 200px;
+}
+
+.btn-sm.mat-raised-button {
+    margin-right: 2px;
+}
+
+.btn-sm.mat-raised-button.btn-edit {
+    .mat-icon {
+        margin-left: -8px;
+    }
+}
+
+.agendaview {
+    display: block;
+}
+
+a.agenda-link {
+    text-decoration: none;
+    color: #000;
+}

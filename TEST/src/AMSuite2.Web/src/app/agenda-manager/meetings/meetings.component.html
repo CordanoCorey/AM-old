@@ -1,0 +1,18 @@
+<div id="Stage2">
+  <div class="colfull">
+
+    <div class="view-header">
+      <h2>Meetings</h2>
+      <a md-raised-button color="accent" id="btnAdd" class="btn-add" [routerLink]="newMeetingUrl$ | async" *ngIf="showAdd$ | async">
+        <md-icon>add</md-icon>
+        <span class="btn-label">New Meeting</span>
+      </a>
+    </div>
+    <am-meeting-filters [dateRanges]="dateRanges$ | async" [groups]="groups$ | async" (changes)="filter($event)" [search]="search"></am-meeting-filters>
+
+  </div>
+  <div class="grid-wrapper">
+    <am-meetings-grid [accountUrl]="accountUrl$ | async" [meetings]="meetings$ | async"></am-meetings-grid>
+  </div>
+
+</div>

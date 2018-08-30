@@ -1,0 +1,14 @@
+<div class="tab-menu-container">
+    <ul class="tabs" (mouseleave)="onExit()">
+        <li class="tab" *ngFor="let tab of tabs; let i = index; let isFirst = first; let isLast = last;" 
+            [ngClass]="{ 'tab-first': isFirst, 'tab-last': isLast, 'active': isActive(tab), 'before-hover': isBeforeHover(i), 'after-hover': isAfterHover(i) }"
+            (mouseenter)="onEnter(i)">
+            <a [routerLink]="tab.href" routerLinkActive="active-tab">{{ tab.label }}</a>
+        </li>
+    </ul>
+    <ul class="sub-menu">
+        <li *ngFor="let item of submenu; let i = index; let isLast = last;" [ngClass]="{ 'last': isLast }">
+            <a [routerLink]="item.href" routerLinkActive="active-link">{{ item.label }}</a>
+        </li>
+    </ul>
+</div>

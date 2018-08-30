@@ -1,0 +1,21 @@
+<div id="user-groups">
+  <am-panel-blue>
+    <am-panel-blue-header>
+      <div id="user-groups-header">
+        <span class="title"> User Groups</span>
+        <a class="header-link" [routerLink]="'/' + accountUrl + '/groups'">Manage Groups</a>
+        <mat-input-container>
+          <input matInput placeholder="Search Groups..." id="txtGroupContains" class="header-input" type="text" [(ngModel)]="term"/>
+        </mat-input-container>
+      </div>
+    </am-panel-blue-header>
+    <am-panel-blue-content>
+      <div id="group-message" class="required"></div>
+      <div id="groups-list" *ngFor="let group of filteredGroups; index as i;">
+        <mat-checkbox class="group" [formControl]="findFormControl(group.id)">
+          {{ group.name }}
+        </mat-checkbox>
+      </div>
+    </am-panel-blue-content>
+  </am-panel-blue>
+</div>

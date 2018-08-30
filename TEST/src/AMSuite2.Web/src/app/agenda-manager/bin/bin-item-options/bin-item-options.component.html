@@ -1,0 +1,38 @@
+<form [formGroup]="form">
+  <div class="binItemOptions">
+    <am-panel-blue-mini heading="Select Bin Item Options:">
+      <div class="checkboxes-left">
+        <ul>
+          <li id="liBinDescription">
+            <md-checkbox formControlName="copyDescription">Copy Description</md-checkbox>
+          </li>
+          <li id="liBinSubItems">
+            <md-checkbox formControlName="copySubitems">Copy Sub Items</md-checkbox>
+          </li>
+          <li id="liBinAttachments">
+            <md-checkbox formControlName="copyAttachments">Copy Attachments</md-checkbox>
+          </li>
+          <li id="liBinNotes">
+            <md-checkbox formControlName="copyNotes">Copy Notes</md-checkbox>
+          </li>
+        </ul>
+      </div>
+      <div class="checkboxes-right">
+        <ul>
+          <li id="liBinMinutes">
+            <md-checkbox formControlName="copyMinutes">Copy Minutes</md-checkbox>
+          </li>
+          <li id="liBinAlwaysPrivate">
+            <md-checkbox formControlName="alwaysPrivate">Always Private</md-checkbox>
+          </li>
+          <li id="liBinIsVotable">
+            <md-checkbox formControlName="isVotable">Is Votable</md-checkbox>
+          </li>
+          <li id="liBinRemoveAfterCopy">
+            <md-checkbox formControlName="removeAfterCopy">Remove After Copy</md-checkbox>
+          </li>
+        </ul>
+      </div>
+    </am-panel-blue-mini>
+  </div>
+</form>

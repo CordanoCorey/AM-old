@@ -1,0 +1,109 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)" iuForm>
+  <md-card class="form short controls-wrapper">
+
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="First Name" type="text" maxlength="50" formControlName="firstName">
+        <md-error>
+          <div *ngIf="firstName?.errors?.required">
+            First name is required.
+          </div>
+          <div *ngIf="firstName?.errors?.maxlength">
+            First name must be less than 50 characters long.
+          </div>
+        </md-error>
+      </md-input-container>
+    </div>
+
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="Last Name" type="text" maxlength="50" formControlName="lastName">
+        <md-error>
+          <div *ngIf="lastName?.errors?.required">
+            Last name is required.
+          </div>
+          <div *ngIf="lastName?.errors?.maxlength">
+            Last name must be less than 50 characters long.
+          </div>
+        </md-error>
+      </md-input-container>
+    </div>
+
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="Email/Username" type="text" maxlength="150" formControlName="emailAddress">
+        <md-error>
+          <div *ngIf="emailAddress?.errors?.required">
+            Email address is required.
+          </div>
+          <div *ngIf="emailAddress?.errors?.maxlength">
+            Email address must be less than 150 characters long.
+          </div>
+        </md-error>
+      </md-input-container>
+    </div>
+
+    <div class="control">
+      <md-input-container>
+        <input mdInput placeholder="Title" type="text" maxlength="100" formControlName="userTitle">
+      </md-input-container>
+    </div>
+  </md-card>
+
+  <div id="GeneralInfo" class="editor-control">
+    <label for="editor1" class="control-label">General Information:</label>
+    <iu-editor elementId="editor1" formControlName="generalInfo" type="basic" height="100" class="basic-editor"></iu-editor>
+  </div>
+
+  <div *ngIf="showGreeting" id="greeting" class="editor-control">
+    <label for="editor2" class="control-label">Customize your greeting for this new member:</label>
+    <iu-editor elementId="editor2" formControlName="greeting" type="basic" height="100" class="basic-editor">
+      You have received this email because a new AgendaManager member account has been created on your behalf.
+    </iu-editor>
+  </div>
+
+  <md-card class="manage-account controls-wrapper">
+    <div class="control" *ngIf="isLockedOut">
+      <label id="unlock-label" for="chkUnlockAccount">
+          This user is locked out due to 5 incorrect login attempts
+        </label>
+      <md-checkbox formControlName="unlockAccount">Unlock Account?</md-checkbox>
+    </div>
+
+    <div class="control deactivate-control">
+      <md-checkbox formControlName="deactivateAccount">De-Activate This Account?</md-checkbox>
+      <span class="note">If you deactivate, this user will no longer be able to login to this account.</span>
+    </div>
+
+    <div class="control">
+      <md-checkbox formControlName="resetPassword">Reset this user's password?</md-checkbox>
+      <span class="note">An email with a new password will be sent to this member's email address on file.</span>
+    </div>
+  </md-card>
+
+  <md-card class="actions account-request-action" *ngIf="hasAccountRequest">
+    <span class="control-label request-label">
+      <md-icon color="warn">priority_high</md-icon>
+      <span class="action-text">User has requested to be added to this account:</span>
+    </span>
+    <button id="btnAccept" md-raised-button color="primary" (click)="onAcceptMember()">Accept Member</button>
+    <span class="or">or</span>
+    <button class="accordion-trigger" id="btnReject" md-raised-button color="warn" (click)="onRejectMember()">Reject Member</button>
+    <span class="note">NOTE: The user role and account groups selected in the right pane will be applied to this user's account if accepted.</span>
+  </md-card>
+
+  <div class="control accordion-content" *ngIf="hasAccountRequest">
+    <label for="editor3" class="control-label">
+      Reject Reason:
+    <span class="note reject-reason-note">Only applies to user's request being rejected.</span>
+    </label>
+    <iu-editor elementId="editor3" formControlName="rejectReason" type="basic" height="100" class="basic-editor"></iu-editor>
+  </div>
+
+  <div class="actions">
+    <button class="btn-save" md-raised-button color="accent" (click)="onSubmit($event)">{{ submitText }}</button>
+    <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="membersLink">Cancel</a>
+    <div id="message" class="required"></div>
+  </div>
+</form>

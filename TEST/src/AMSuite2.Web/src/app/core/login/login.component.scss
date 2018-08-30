@@ -1,0 +1,34 @@
+#btnLogin {
+    float: right;
+}
+
+#forgotpassword {
+    margin: 0.8em 0em;
+}
+
+#forgot-password-loading {
+    padding: 1em 0 0 1em;
+}
+
+.login-message {
+    margin-top: 9px;
+    display: block;
+    color: red;
+    float: left;
+    margin-left: 1em;
+    line-height: 1em;
+}
+
+.required {
+    position: relative;
+    color: red;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.textbox-label {
+    float: left;
+    margin-right: 10px;
+}

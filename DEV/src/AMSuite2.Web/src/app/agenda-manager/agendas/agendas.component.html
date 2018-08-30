@@ -1,0 +1,30 @@
+<div class="agendas" [@toggle]="(showDetails$ | async) ? 'show' : 'hide'">
+  <div class="agenda-options">
+    <a class="btn-sm btn-edit" mat-raised-button color="primary" *ngIf="showEdit$ | async" [routerLink]="editLink">
+      <mat-icon>edit</mat-icon>
+      <span class="btn-label">Edit</span>
+    </a>
+    <button class="btn-sm" mat-raised-button color="primary" *ngIf="showAddTemplate$ | async" (click)="clickTemplate()">
+      <mat-icon>layers</mat-icon>
+      <span class="btn-label">Template</span>
+    </button>
+    <span id="agenda-message"></span>
+  </div>
+  <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+    <mat-tab-group [selectedIndex]="activeIndex">
+      <mat-tab *ngFor="let agenda of agendas">
+        <ng-template mat-tab-label>
+          <a [routerLink]="getAgendaLink(agenda.id)" class="agenda-link">{{ agenda.name }}</a>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+    <div class="agendaview k-content k-state-active">
+      <div class="access-message agendaview-padding">
+        This Agenda belongs to members of the <strong>{{ groupName }}</strong> Group and is visible to <strong>{{ visibility }}</strong>.
+        <div class="agenda-description" [innerHTML]="agenda.description"></div>
+      </div>
+      <div class="agendaview-description"></div>
+    </div>
+  </div>
+</div>
+<router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>

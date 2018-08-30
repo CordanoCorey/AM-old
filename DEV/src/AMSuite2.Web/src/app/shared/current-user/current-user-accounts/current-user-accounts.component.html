@@ -1,0 +1,8 @@
+<div id="account-list" class="menu-account text">
+  <select (change)="onAccountChange(selectAccount.options[selectAccount.selectedIndex].value)" *ngIf="hasAccounts"
+    #selectAccount>
+    <option *ngFor="let account of accounts" [value]="account.id" [selected]="account.id === activeId">
+      {{ account.name }}
+    </option>
+  </select>
+</div>

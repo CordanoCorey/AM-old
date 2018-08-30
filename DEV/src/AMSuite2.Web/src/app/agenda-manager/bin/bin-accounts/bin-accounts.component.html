@@ -1,0 +1,6 @@
+<am-panel-blue-mini heading="Select an Account:">
+  <select id="bin-accounts"  [formControl]="control">
+    <option value= "0">Select Copied From Account...</option>
+    <option *ngFor="let account of accounts" [value]="account.id">{{ account.name }}</option>
+  </select>
+</am-panel-blue-mini>

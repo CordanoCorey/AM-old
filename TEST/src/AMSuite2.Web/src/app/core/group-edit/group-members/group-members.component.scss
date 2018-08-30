@@ -1,0 +1,108 @@
+@import '../../../../common';
+#group-members {
+    .members-label {
+        overflow: hidden;
+        margin-bottom: 0.2em;
+    }
+    .members-label label {
+        float: left;
+        margin-top: 0.5em;
+        width: 200px;
+    }
+    .members-label .note:first {
+        margin-top: 0.4em;
+    }
+    .members-search {
+        float: right;
+    }
+    .members-search .note {
+        margin-top: 0.2em;
+    }
+    .members-header {
+        color: #fff;
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        padding: 0.5em 0;
+        width: 100%;
+    }
+    tr.header-row th :nth-child(7) {
+        min-width: 60px;
+    }
+    tr.header-row th :nth-child(8) {
+        min-width: 74px;
+    }
+    tr.header-row th :nth-child(9) {
+        min-width: 98px;
+    }
+    tr.header-row th :nth-child(10) {
+        width: 8px;
+    }
+    .memberlist-header .user-info {
+        min-width: 120px;
+        text-align: left;
+    }
+    .members-grid {
+        height: 240px;
+        overflow-y: scroll;
+        border: 1px solid $primary-color;
+        background-color: #fff;
+    }
+    .loading {
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
+    }
+    .member-click {
+        text-decoration: underline;
+    }
+    .row.spacer td:nth-child(1) {
+        width: 20%;
+    }
+    .row.spacer td:nth-child(2) {
+        width: 10%;
+    }
+    .row.spacer td:nth-child(3) {
+        width: 11%;
+    }
+    .row.spacer td:nth-child(4) {
+        width: 10%;
+    }
+    .row.spacer td:nth-child(5) {
+        width: 6%;
+    }
+    .row.spacer td:nth-child(6) {
+        width: 12%;
+    }
+    .row.spacer td:nth-child(7) {
+        width: 13%;
+    }
+    .row.spacer td:nth-child(8) {
+        width: 18%;
+    }
+    .mat-input-container {
+        padding-bottom: 10px;
+    }
+    .mat-checkbox {
+        text-align: center;
+        vertical-align: middle;
+    }
+    .checkbox {
+        position: relative;
+        height: 18px;
+        width: 20px;
+        padding: 4px 0px 0 0px;
+        display: table-cell;
+    }
+    iu-grid .grid th a {
+        font-size: 12px !important;
+        padding: 2px 6px !important;
+    }
+    .cell-text {
+        font-size: 12px;
+    }
+    .members-note {
+        position: absolute;
+        top: 36px;
+        left: 16px;
+    }
+}

@@ -1,0 +1,33 @@
+<am-panel-blue id="user-roles">
+
+  <am-panel-blue-header>
+    User Roles
+  </am-panel-blue-header>
+
+  <am-panel-blue-content>
+    <ul id="account-roles" class="read-list">
+      <mat-radio-group [formControl]="control">
+        <li class="sysadmin radio-control" *ngIf="sysAdmin">
+          <mat-radio-button id="radSystemAdministrator" value="1"> System Administrator</mat-radio-button>
+        </li>
+        <li class="italic-message sysadmin" *ngIf="sysAdmin">This User Has Super Powers</li>
+
+        <li class="radio-control">
+          <mat-radio-button id="radAdministrator" value="2">Administrator</mat-radio-button>
+        </li>
+        <li class="italic-message">Can manage this account, users, groups, meetings and agendas.</li>
+
+        <li class="radio-control">
+          <mat-radio-button id="radGroupAdministrator" value="3">Group Administrator</mat-radio-button>
+        </li>
+        <li class="italic-message">Can create and manage their own groups. Can manage meetings for the groups they create.</li>
+
+        <li class="radio-control">
+          <mat-radio-button id="radMember" value="4">Member</mat-radio-button>
+        </li>
+        <li class="italic-message">Can view ungrouped meetings and meetings within the groups they are added to.</li>
+      </mat-radio-group>
+    </ul>
+  </am-panel-blue-content>
+
+</am-panel-blue>

@@ -1,0 +1,38 @@
+<div id="edit-bar">
+
+  <div class="actions">
+    <span *ngIf="editing">
+      <button class="btn-save" mat-raised-button color="accent">Save</button>
+      <span class="or">or</span>
+    <a class="btn-cancel" [routerLink]="editLink">Exit Edit Mode</a>
+    </span>
+    <span *ngIf="showSuggestions" class="suggestionbuttons">
+      <input type="button" value="Reject" class="button fat btnreject">
+    </span>
+  </div>
+
+  <div *ngIf="showRight" class="normal-view">
+    <a mat-raised-button color="primary" class="btn-sm" *ngIf="showCopyFromBin" [routerLink]="binLink">
+      <mat-icon>collections_bookmark</mat-icon>
+      <span class="btn-label">Paste From Bin</span>
+    </a>
+    <a mat-raised-button color="primary" class="btn-sm" *ngIf="showEdit" routerLink="edit">
+      <mat-icon>edit</mat-icon>
+      <span class="btn-label">Edit Mode</span>
+    </a>
+    <button mat-raised-button color="primary" class="btn-sm" *ngIf="showCopyToBin" (click)="onCopyToBin()">
+        <mat-icon>add_to_photos</mat-icon>
+      <span class="btn-label">Copy To Bin</span>
+    </button>
+    <a mat-raised-button color="primary" class="btn-sm btn-email" *ngIf="showEmail" [routerLink]="emailLink">
+      <mat-icon>mail</mat-icon>
+      <span class="btn-label">Email</span>
+    </a>
+    <button mat-raised-button color="primary" class="btn-sm btn-delete" *ngIf="showDelete" (click)="onDelete()">
+        <mat-icon>delete</mat-icon>
+      <span class="btn-label">Delete</span>
+    </button>
+  </div>
+
+  <span id="edit-bar-status"></span>
+</div>

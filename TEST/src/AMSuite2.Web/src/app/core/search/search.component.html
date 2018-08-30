@@ -1,0 +1,49 @@
+<div id="search">
+
+  <div class="view-header">
+    <md-input-container>
+      <input mdInput placeholder="Enter Search Term">
+    </md-input-container>
+    <button md-raised-button color="accent" class="btn-search">Search</button>
+  </div>
+
+  <!-- SEARCH FILTERS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <md-toolbar color="primary" class="accordion-trigger">
+        <md-icon>expand_more</md-icon>
+        <span class="toolbar-title">Show/Hide Filters</span>
+      </md-toolbar>
+      <md-card class="accordion-content">
+        <am-search-filters></am-search-filters>
+      </md-card>
+    </iu-accordion>
+  </div>
+
+  <!-- SEARCH TIPS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <md-toolbar color="primary" class="accordion-trigger">
+        <md-icon>expand_more</md-icon>
+        <span class="toolbar-title">Show/Hide Tips</span>
+      </md-toolbar>
+      <md-card class="accordion-content">
+        <am-search-tips></am-search-tips>
+      </md-card>
+    </iu-accordion>
+  </div>
+
+  <!-- SEARCH RESULTS -->
+  <div class="accordion-wrapper">
+    <iu-accordion [opened]="false">
+      <md-toolbar color="primary" class="accordion-trigger">
+        <md-icon>expand_more</md-icon>
+        <span class="toolbar-title">Show/Hide Results</span>
+      </md-toolbar>
+      <md-card class="accordion-content">
+        <am-search-results></am-search-results>
+      </md-card>
+    </iu-accordion>
+  </div>
+
+</div>

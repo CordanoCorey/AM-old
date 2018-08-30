@@ -1,0 +1,113 @@
+#print-agenda h1 {
+    font-size: 2em;
+    margin: .67em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h3 {
+    font-size: 1.16em;
+    margin: 1em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h5 {
+    font-size: .83em;
+    margin: 1.67em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h6 {
+    font-size: .7em;
+    margin: 2.33em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda p {
+    margin: 0.5em 0;
+    padding: 0.2em 0
+}
+
+#print-agenda ul,
+#print-agenda ol {
+    padding-left: 2.5em;
+    margin: 1em 0;
+}
+
+#print-agenda ul {
+    list-style: disc;
+}
+
+#print-agenda ol {
+    list-style: decimal;
+}
+
+#print-agenda span {
+    -ms-high-contrast-adjust: none;
+}
+
+#print-agenda a {
+    color: #00a;
+}
+
+#print-agenda code {
+    font-size: 1.23em;
+}
+
+#print-agenda table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin: 0 0 1em;
+}
+
+#print-agenda table td {
+    min-width: 1px;
+    padding: .2em .3em;
+}
+
+#print-agenda table p {
+    margin: 0;
+    padding: 0;
+}
+
+#print-agenda em,
+.editor-style em {
+    font-style: italic;
+}
+
+#print-agenda sup,
+.editor-style sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+#print-agenda sub,
+.editor-style sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+#print-agenda ol,
+#print-agenda ul,
+.minutes ul,
+.minutes ol {
+    margin-left: 1.5em;
+}

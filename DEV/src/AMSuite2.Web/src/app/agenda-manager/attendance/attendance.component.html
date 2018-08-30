@@ -1,0 +1,21 @@
+<div class="attendance-container">
+  <h2 class="view-subtitle">
+    <span id="attendance-table-header"></span>
+    <span class="access-message"></span>
+  </h2>
+  <div class="view-section">
+    <am-roll-call 
+      *ngIf="showRollCall$ | async"
+      [attendance]="attendance$ | async"
+      ></am-roll-call>
+    <am-attendance-change 
+      *ngIf="showAttendanceChange$ | async"
+      [attendance]="attendance$ | async"
+      (depart)="onDepart($event)"
+      (join)="onJoin($event)"
+      (writeIn)="onWriteIn($event)"></am-attendance-change>
+    <am-attendance-log 
+      *ngIf="showAttendanceLog$ | async"
+      [attendance]="attendance$ | async"></am-attendance-log>
+  </div>
+</div>

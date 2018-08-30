@@ -1,0 +1,167 @@
+@import '../../../../common';
+#meeting-form {
+    .groups-control {
+        overflow: hidden;
+        .mat-select-trigger {
+            min-width: 420px;
+        }
+    }
+    .roles-control {
+        margin-top: 0px;
+    }
+    #loading {
+        margin-left: 4em;
+        margin-top: 1em;
+    }
+    #takers select,
+    .groups-control select {
+        min-width: 160px;
+    }
+    .message-bottom {
+        margin: 0.5em 1em;
+        width: 100%;
+    }
+    .form-actions {
+        margin-left: 1em;
+    }
+    .mat-input-container label {
+        font-weight: bold;
+    }
+    .mat-input,
+    .mat-radio-button {
+        float: left;
+    }
+    #takers {
+        margin-top: 0;
+        .taker {
+            position: relative;
+            width: 100%;
+            clear: both;
+            margin: 24px 0;
+            padding: 12px;
+            overflow: visible;
+            min-height: 32px;
+        }
+        .mat-select {
+            position: absolute;
+            top: 3px;
+            left: 160px;
+            width: 50%;
+            margin-top: 10px;
+        }
+        .mat-select-trigger {
+            min-width: 50%;
+        }
+        .mat-input-container {
+            position: absolute;
+            left: 160px;
+            top: 10px;
+            width: 50%;
+        }
+        .users {
+            width: 20%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            .search-result {
+                cursor: pointer;
+                color: $primary-color;
+            }
+            .search-result:hover {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+    .date-control {
+        display: flex;
+        padding: 0px 0 10px 20px;
+        margin: 0;
+        line-height: 24px;
+    }
+    .lbl-date {
+        width: 100px;
+        display: inline-block;
+        font-size: 14px;
+    }
+    #start-time,
+    #duration {
+        position: absolute;
+        top: 0px;
+        left: 128px;
+        display: inline-flex;
+        float: left;
+    }
+    #start-time .mat-select,
+    #duration .mat-select {
+        margin: 0 6px;
+    }
+    .time-control .control-label,
+    .duration-control .control-label {
+        margin-bottom: 12px;
+        padding-left: 8px !important;
+    }
+    .time-control,
+    .duration-control {
+        display: inline-flex;
+        position: relative;
+        margin: 6px 0;
+        padding-left: 48px !important;
+    }
+    .duration-control {
+        margin-top: 16px;
+    }
+    .duration-results {
+        position: absolute;
+        top: 0;
+        left: 400px;
+        .note {
+            font-size: 14px;
+        }
+    }
+    .location-control {
+        margin: 0;
+    }
+    .groups-control {
+        margin: 8px 0;
+        padding: 16px 0 0 20px;
+        .control-label {
+            width: 64px !important;
+        }
+    }
+    .security-control {
+        margin-top: 0px;
+        .note {
+            top: 0;
+            margin-left: 20px;
+        }
+    }
+    .actions {
+        padding: 0 20px 0 0;
+    }
+    .inline {
+        padding: 8px 0 0 0;
+        font-weight: bold;
+    }
+    textarea {
+        margin-left: 24px;
+    }
+    .mat-radio-button {
+        width: 140px;
+        font-weight: bold;
+    }
+    .info-control {
+        label {
+            margin: 16px 0;
+        }
+        iu-editor {
+            margin-bottom: 24px;
+        }
+    }
+    .mat-input-placeholder {
+        padding: 2px;
+    }
+    .mat-select {
+        padding-top: 0;
+    }
+}

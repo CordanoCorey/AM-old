@@ -1,0 +1,996 @@
+@import '../../theme';
+strong {
+    font-weight: bold;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* END CSS RESET */
+
+body {
+    padding-bottom: 20px;
+}
+
+#no-logo,
+#logo-filename {
+    float: left;
+    margin: -1px 0 0 0.5em;
+}
+
+.icon {
+    position: absolute;
+    height: 14px;
+    width: 15px;
+    top: 0;
+    left: 1px;
+    background-image: url(/assets/images/site/ui-icons_212E38_256x240.png);
+    background-repeat: no-repeat;
+}
+
+.ui-icon {
+    width: 14px;
+    height: 15px;
+    background-image: url(/assets/images/site/ui-icons_212E38_256x240.png);
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.tiny-text {
+    padding-left: 17px;
+}
+
+.tiny-icon {
+    position: absolute;
+    height: 14px;
+    width: 15px;
+    top: 0;
+    left: 1px;
+    background-image: url(/assets/images/site/ui-icons_212E38_256x240.png);
+    background-repeat: no-repeat;
+}
+
+.button.thinicon {
+    padding: 2px 8px 1px 0;
+    font-size: 12px;
+}
+
+.button.tinyicon,
+.button.tinyiconup {
+    padding: 1px 4px 0 2px;
+    margin-right: 2px;
+}
+
+.tinyicon .ui-icon.ui-icon-plusthick {
+    background-position: -34px -127px;
+}
+
+.thinicon .ui-icon-plushthick {
+    background-position: -34px -129px;
+}
+
+.ui-icon-folder-closed {
+    background-position: -17px -98px;
+}
+
+.ui-icon-expand {
+    background-position: -18px -82px;
+}
+
+.ui-icon-print {
+    background-position: -162px -98px;
+}
+
+.tinyicon .ui-icon-print {
+    background-position: -163px -98px;
+}
+
+.ui-icon-paperclip {
+    background-position: -192px -143px;
+}
+
+.ui-icon-private {
+    background-position: -192px -97px;
+}
+
+.ui-icon-pencil {
+    background-position: -66px -114px;
+}
+
+.button.tinyicon .ui-icon-pencil {
+    background-position: -67px -114px;
+}
+
+.ui-icon-copy {
+    background-position: -51px -81px;
+}
+
+.ui-icon-mail-closed {
+    background-position: -83px -98px;
+}
+
+.tinyicon .ui-icon-save {
+    background-position: -99px -114px;
+}
+
+.tinyiconup .ui-icon-save {
+    background-position: -98px -114px;
+}
+
+.ui-icon-checkmark {
+    background-position: -66px -146px;
+}
+
+.ui-icon-vote {
+    background-position: -64px -144px;
+}
+
+.ui-icon-delete {
+    background-position: -179px -98px;
+}
+
+.ui-icon-notes {
+    background-position: -176px -143px;
+}
+
+.ui-icon-members {
+    background-position: -146px -99px;
+}
+
+.ui-icon-script {
+    background-position: -242px -130px;
+}
+
+.ui-icon-minusthick {
+    background-position: -65px -130px;
+}
+
+.ui-icon-window {
+    background-position: -179px -130px;
+}
+
+.ui-icon-mail-open {
+    background-position: -99px -98px;
+}
+
+.ui-icon-backarrow {
+    background-position: -98px -50px;
+}
+
+.ui-icon-quickadd {
+    font-size: inherit;
+    background-position: -32px -129px;
+    vertical-align: inherit!important;
+}
+
+.ui-icon-x {
+    font-size: inherit;
+    background-position: -97px -129px;
+    vertical-align: inherit!important;
+}
+
+.attachments {
+    background: transparent url(/assets/images/site/icon-sprite.png) no-repeat;
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    text-indent: -9999px;
+    vertical-align: text-top;
+    margin-left: 5px;
+}
+
+.attachments.default,
+.attachment-sprite.default {
+    background-position: -202px 2px;
+}
+
+.attachments.pdf,
+.pdfbutton.pdf,
+.attachment-sprite.pdf {
+    background-position: -200px -46px;
+}
+
+.attachments.doc,
+.attachments.docx,
+.file.docx,
+.wordbutton.doc,
+.attachment-sprite.doc,
+.attachment-sprite.docx {
+    background-position: -200px -92px;
+}
+
+.attachments.ppt,
+.attachments.pptx,
+.file.pptx,
+.attachment-sprite.pptx,
+.attachment-sprite.ppt {
+    background-position: -200px -136px;
+}
+
+.attachments.xls,
+.attachments.xlsx,
+.file.xlsx,
+.attachment-sprite.xlsx,
+.attachment-sprite.xls {
+    background-position: -200px -182px;
+}
+
+.account-profile {
+    width: 50%;
+}
+
+#AccountName {
+    float: right;
+    padding: 0.2em 0.4em 0em 0em;
+}
+
+#AccountInfo {
+    float: right;
+    clear: right;
+}
+
+.AccountInfo-Section {
+    overflow: hidden;
+    padding: 1em 3% 1em 3%;
+    width: 94%;
+}
+
+.AccountInfo-Section-bottom {
+    overflow: hidden;
+    padding: 1em 3% 1em 3%;
+    width: 93%;
+}
+
+.menu-left {
+    color: #000;
+    float: left;
+    text-align: left;
+    width: 72%;
+}
+
+.menu-left .text {
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+.menu-user {
+    font-weight: bold;
+}
+
+.system-admin-flag {
+    color: red;
+    white-space: nowrap;
+}
+
+.group-admin-flag {
+    color: $accent-color;
+    white-space: nowrap;
+}
+
+.account-admin-flag {
+    color: #954600;
+    white-space: nowrap;
+}
+
+.account-background {
+    background-color: #954600;
+}
+
+.group-background {
+    background-color: $accent-color;
+}
+
+.system-background {
+    background-color: #c13e3e;
+}
+
+.resolved-flag {
+    color: #000;
+    white-space: nowrap;
+}
+
+.firstrow-padding {
+    padding-left: 1%;
+}
+
+.has-help,
+.grid.has-help {
+    width: 100%;
+}
+
+.ical {
+    background: transparent url(/assets/images/site/calendar.png) no-repeat 0 1px;
+    display: inline-block;
+    height: 18px;
+    width: 23px;
+    text-indent: -9999px;
+    vertical-align: text-top;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.at-side {
+    font-size: .8em;
+    line-height: 1.4;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.at-side p {
+    margin: 0.5em;
+}
+
+.notification,
+.deleted {
+    background-color: #FAF8D8;
+    border: 1px solid #c5cbcd;
+    color: #000;
+}
+
+.agendalevel0 {
+    width: 91%;
+    margin-left: 2%;
+    color: #000;
+    border-top: 1px solid #c5cbcd;
+    background-color: #fff;
+    font-size: .8em;
+    padding: 0.6em 0em 0.4em 7%;
+}
+
+.agendalevel1 {
+    width: 84%;
+    margin-left: 2%;
+    color: #000;
+    background-color: #fff;
+    font-size: .8em;
+    padding: 0.2em 0em 0.2em 14%;
+}
+
+.agendalevel1 strong,
+.agendalevel0 strong {
+    padding-right: 0.4em;
+}
+
+.system-header,
+.group-header,
+.account-header {
+    margin-left: 2%;
+    width: 98%;
+    text-align: center;
+    background-color: #fff;
+    padding: .5em 0 1em 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.system-header,
+.system-announcement {
+    color: red;
+}
+
+.account-header,
+.account-announcement {
+    color: #954600;
+}
+
+.group-header,
+.group-announcement {
+    color: $accent-color;
+}
+
+.preview-row {
+    margin-left: 2%;
+    width: 98%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.preview-text {
+    width: 85%;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.5em;
+}
+
+.announcement-from {
+    padding: .8em 0em .8em 1.2em;
+    font-size: .8em;
+    font-style: italic;
+}
+
+.col1-static {
+    float: left;
+    width: 66%;
+    height: 100%; // background-color: #e9f0f8;
+}
+
+.col2-normal .treeview-container {
+    overflow-y: hidden;
+}
+
+.col1-small {
+    float: left;
+    width: 60.5%;
+    padding-top: .5em;
+    height: 100%;
+}
+
+.group-note {
+    background-color: #faf8d8;
+    font-size: .7em;
+    padding: 0.2em .5em;
+}
+
+.audit {
+    font-size: .7em;
+    padding: .8em 0;
+    font-style: italic;
+}
+
+#agendaitem-controls {
+    overflow: hidden;
+    width: 100%;
+    padding: .2em 0 .2em 0%;
+    background-color: $primary-color;
+}
+
+#item-nav li,
+#item-nav2 li {
+    border: 0;
+}
+
+#item-nav,
+#item-nav2 {
+    float: right;
+    margin: 3px 4px 1px .2em;
+    border-bottom: 1px solid #e9f0f8;
+    border-top: 1px solid #e9f0f8;
+}
+
+#item-nav2 {
+    margin: 0 4px 0 5px;
+}
+
+#item-nav .first,
+#item-nav2 .first {
+    margin-left: -1px;
+}
+
+#item-nav .last,
+#item-nav2 .last {
+    border-right: 1px solid #cbc4ad;
+    margin-right: -1px;
+}
+
+#item-nav .first a:hover,
+#item-nav2 .first a:hover {
+    background-position: -31px -510px;
+    background-color: $accent-color;
+}
+
+#item-nav .last a:hover,
+#item-nav2 .last a:hover {
+    background-position: -31px -460px;
+    background-color: $accent-color;
+}
+
+#item-nav a span,
+#item-nav2 a span {
+    display: none;
+}
+
+#item-nav a:link,
+#item-nav a:visited,
+#item-nav .disabled-button,
+#item-nav .arrowbutton,
+#item-nav2 a:link,
+#item-nav2 a:visited,
+#item-nav2 .disabled-button,
+#item-nav2 .arrowbutton {
+    background: url(/assets/images/site/icon-sprite.png) no-repeat scroll 5px -510px transparent;
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    width: 20px;
+    padding: 1px 5px;
+    display: block;
+}
+
+#item-nav li,
+#item-nav2 li {
+    background: #e2e8f5 url(/assets/images/site/notes-border_e2e8f5_4x8.gif) repeat-x 0 -1px;
+    border-left: 1px solid #e9f0f8;
+    float: left;
+}
+
+#item-nav .last a,
+#item-nav .last .disabled-button,
+#item-nav2 .last a,
+#item-nav2 .last .disabled-button {
+    background-position: 5px -460px;
+}
+
+.quickcontrol {
+    float: left;
+}
+
+.invisText {
+    padding: 0.2em 0em;
+}
+
+#bottomcontent {
+    background-color: #eef1f9;
+    width: 100%;
+    font-size: .8em;
+    position: relative;
+}
+
+.k-tabstrip>.k-content {
+    padding: 0 0 0 0 !important;
+}
+
+.agendaview-description {
+    font-size: .9em;
+    width: 94%;
+    padding: 1em 0 2em 3%;
+}
+
+.agendaview-padding {
+    width: 97%;
+    padding: 0.5em 0 0.5em 3%;
+}
+
+.float-text-down {
+    position: relative;
+    top: 4px;
+    padding-left: 0.2em;
+    padding-right: 0.5em;
+    float: left;
+}
+
+.float-text-up {
+    position: relative;
+    top: -3px;
+    margin: 0 0.3em;
+    float: left;
+}
+
+.padding {
+    padding: 0.5em 0 0.5em 5%;
+    width: 95%;
+}
+
+#accountsgrid a:hover {
+    text-decoration: none;
+}
+
+.header-link {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin: 0 0 0 1em;
+    padding: 1px;
+    color: #fff;
+}
+
+a.header-link:hover {
+    color: #fff;
+}
+
+.disabled,
+.disabled:hover {
+    background: none #E6E6E6 !important;
+    color: #9A9A9A !important;
+    border-color: #C4C4C4 !important;
+    cursor: text !important;
+}
+
+.disabled .icon {
+    background-image: url(/assets/images/site/ui-icons_212E38_256x240.png) !important;
+}
+
+.attachment-sprite {
+    background: transparent url(/assets/images/site/icon-sprite.png) no-repeat;
+}
+
+.disabledbutton {
+    background: none #e6e6e6!important;
+    color: #9a9a9a!important;
+    border-color: #c4c4c4!important;
+    cursor: text!important;
+}
+
+.k-panelbar>.k-item>.k-link {
+    border-color: $primary-color;
+}
+
+.k-panelbar>.k-item.k-state-highlight.k-state-active>.k-header {
+    background-color: $accent-color;
+}
+
+.k-dropdown-wrap .k-input {
+    line-height: 1.4em !important;
+    height: 1.4em !important;
+}
+
+.k-button.k-state-hover {
+    border-color: $primary-color !important;
+    background-color: $primary-color !important;
+}
+
+.slide-frame {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-width: 614px;
+}
+
+#slide-list {
+    left: 0%;
+    position: absolute;
+    width: 100%;
+}
+
+#slide-form {
+    left: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.slide-left {
+    left: -100% !important;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
+}
+
+.slide-center {
+    left: 0% !important;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
+}
+
+.slide-right {
+    left: 100% !important;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
+    -o-transition: left 0.5s;
+    transition: left 0.5s;
+}
+
+.memberlist-header {
+    font-weight: bold;
+    font-size: .7em;
+    text-align: center;
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.5em 0;
+    text-indent: 0.3em
+}
+
+.meetinglist-header {
+    font-weight: bold;
+    font-size: .7em;
+    text-align: left;
+}
+
+.memberlist-name,
+.meetinglist-name {
+    font-size: .8em;
+    text-indent: 0.3em
+}
+
+#groupmembers {
+    width: 100%;
+}
+
+#groupmembers tr {
+    width: 100%;
+    line-height: 1.4em;
+}
+
+#groupmembers input[type="checkbox"] {
+    float: none;
+}
+
+.center {
+    text-align: center;
+    padding-top: 3px
+}
+
+#notetabstrip-tabs {
+    border-left: 1px solid $primary-color;
+    border-right: 1px solid $primary-color;
+}
+
+.check-option {
+    margin: .2em 0;
+}
+
+.check-option label {
+    font-weight: normal;
+}
+
+#fileList {
+    font-size: 0.9em;
+}
+
+#fileList a {
+    position: relative;
+    top: 3px;
+}
+
+#fileList a:hover {
+    color: $accent-color;
+}
+
+.selected-button {
+    background: $accent-color !important;
+    color: #fff !important;
+}
+
+.ui-icon-arrow-right {
+    width: 16px;
+    height: 12px;
+    background-image: url(/assets/images/site/ui-icons_ffffff_256x240.png);
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: -32px -17px;
+    cursor: pointer;
+}
+
+.ui-icon-arrow-down {
+    width: 16px;
+    height: 12px;
+    background-image: url(/assets/images/site/ui-icons_ffffff_256x240.png);
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: -64px -17px;
+    cursor: pointer;
+}
+
+#bottomControls .button {
+    float: left;
+    position: relative;
+    top: 3px;
+}
+
+.editor-style {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    line-height: 1.2em;
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    padding-top: 1px;
+    margin-top: -1px;
+    word-wrap: break-word;
+    -webkit-nbsp-mode: space;
+    -webkit-line-break: after-white-space;
+}
+
+#gridMeetings td,
+#meetingstable td {
+    padding: 8px;
+    line-height: 1.2em;
+}
+
+.inline-icon-private {
+    float: left;
+    margin-left: 5px;
+}
+
+#fileList>li {
+    clear: both;
+}
+
+#print-agenda h1,
+.editor-style h1 {
+    font-size: 2em;
+    margin: .67em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h2,
+.editor-style h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h3,
+.editor-style h3 {
+    font-size: 1.16em;
+    margin: 1em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h4,
+.editor-style h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h5,
+.editor-style h5 {
+    font-size: .83em;
+    margin: 1.67em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda h6,
+.editor-style h6 {
+    font-size: .7em;
+    margin: 2.33em 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#print-agenda p,
+.editor-style p {
+    margin: 0.5em 0;
+    padding: 0.2em 0
+}
+
+.editor-style .k-marker {
+    display: none;
+}
+
+.editor-style .k-paste-container,
+.editor-style .Apple-style-span {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#print-agenda ul,
+#print-agenda ol,
+.editor-style ul,
+.editor-style ol {
+    padding-left: 2.5em;
+    margin: 1em 0;
+}
+
+#print-agenda ul,
+.editor-style ul {
+    list-style: disc;
+}
+
+#print-agenda ol,
+.editor-style ol {
+    list-style: decimal;
+}
+
+#print-agenda span,
+.editor-style span {
+    -ms-high-contrast-adjust: none;
+}
+
+#print-agenda a,
+.editor-style a {
+    color: #00a;
+}
+
+#print-agenda code,
+.editor-style code {
+    font-size: 1.23em;
+}
+
+#print-agenda .k-table {
+    margin: 0 0 1em;
+}
+
+.editor-style telerik\3Ascript {
+    display: none;
+}
+
+.editor-style table {
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    margin: 0 0 1em;
+}
+
+.editor-style table td {
+    min-width: 1px;
+    padding: .2em .3em;
+}
+
+.editor-style table,
+.editor-style table td {
+    outline: 0;
+    border: 1px dotted #ccc;
+}
+
+.editor-style table p {
+    margin: 0;
+    padding: 0;
+}
+
+#print-agenda em,
+.editor-style em {
+    font-style: italic;
+}
+
+#print-agenda sup,
+.editor-style sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+#print-agenda sub,
+.editor-style sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+#print-agenda ol,
+#print-agenda ul,
+.minutes ul,
+.minutes ol {
+    margin-left: 1.5em;
+}

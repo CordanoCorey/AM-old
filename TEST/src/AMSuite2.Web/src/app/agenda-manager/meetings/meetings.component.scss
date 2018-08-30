@@ -1,0 +1,15 @@
+@import '../../../common';
+.k-pager-numbers .k-link {
+    background-color: $primary-color;
+}
+
+#btnAdd {
+    color: #fff;
+    padding: 0 12px 0 8px;
+    margin: 0 12px 6px 0;
+}
+
+am-meetings-grid {
+    display: block;
+    width: 99%;
+}

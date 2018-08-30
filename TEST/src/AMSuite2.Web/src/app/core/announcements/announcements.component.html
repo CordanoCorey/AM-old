@@ -1,0 +1,26 @@
+<div id="Stage">
+    <div class="view-header">
+        <h2>
+            <span id="announcement-header">Announcements</span>
+            <span id="announcement-count-wrapper">
+                (<span id="announcement-count">{{ count$ | async }}</span>)
+            </span>
+        </h2>
+        <a md-raised-button color="accent" class="btn-add" [routerLink]="newAnnouncementLink$ | async" *ngIf="!(editing$ | async)">
+            <md-icon>add</md-icon>
+            <span class="button-text">New Announcement</span>
+        </a>
+        <a class="btn-back" [routerLink]="announcementsLink$ | async" *ngIf="editing$ | async" md-raised-button color="primary">
+            <md-icon>arrow_back</md-icon>
+            <span class="icon-text">Back</span>
+        </a>
+    </div>
+    <div class="main-content grid-wrapper">
+        <am-announcements-grid *ngIf="!(editing$ | async)" [accountUrl]="accountUrl$ | async" [announcements]="announcements$ | async"></am-announcements-grid>
+        <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($event)"></router-outlet>
+    </div>
+    <div class="right-content">
+        <am-about-announcements></am-about-announcements>
+        <am-audit-info></am-audit-info>
+    </div>
+</div>

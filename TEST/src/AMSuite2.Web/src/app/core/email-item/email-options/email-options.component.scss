@@ -1,0 +1,24 @@
+#email-options {
+    font-size: 1.1em;
+    overflow: hidden;
+}
+
+#show-email-preview {
+    font-size: .8em;
+    line-height: 2.5em;
+    margin-left: 0.5em;
+}
+
+#convert-attachments {
+    font-size: 0.8em;
+}
+
+#convert-attachments input {
+    float: left;
+}
+
+#convert-attachments .label {
+    margin-top: -1px;
+    float: left;
+    display: inline-block;
+}

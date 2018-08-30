@@ -1,0 +1,30 @@
+<md-card class="notes-container">
+  <iu-accordion [active]="false">
+    <div class="accordion-content">
+      <div class="editor-wrapper" [style.display]="editorDisplay">
+        <am-notes-form (changes)="onChanges()"></am-notes-form>
+      </div>
+    </div>
+    <div class="accordion-trigger" (click)="toggle()">
+      <span class="border-left"></span>
+      <div class="toolbar">
+        <button md-button class="trigger-label" [class.active-link]="openedNotes" (click)="onClickNotes($event)">My Notes</button>
+        <button md-button class="trigger-label" [class.active-link]="openedMinutes" (click)="onClickMinutes($event)">My Minutes</button>
+        <span class="arrows-wrapper">
+          <am-arrows-up-down></am-arrows-up-down>
+        </span>
+        <div class="buttons">
+          <button md-raised-button color="accent">
+            <md-icon>save</md-icon>
+            <span class="icon-text">Save</span>
+          </button>
+          <button md-raised-button color="accent">
+            <md-icon>delete</md-icon>
+            <span class="icon-text">Delete</span>
+          </button>
+        </div>
+      </div>
+      <md-icon [@toggle]="opened ? 'hide' : 'show'" (@toggle.start)="onStart($event)" (@toggle.done)="onDone($event)">expand_less</md-icon>
+    </div>
+  </iu-accordion>
+</md-card>

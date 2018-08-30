@@ -1,0 +1,8 @@
+<!-- <div id="email-options">
+  <button id="show-email-preview" class="hyperlink" (click)="togglePreview()">{{ previewLinkText }}</button>
+  <div id="convert-attachments">
+    <input type="checkbox" (change)="changeConvertAttachments(convertToPdf.value)" #convertToPdf/>
+    <div class="label">Convert attachments to pdf when possible (Otherwise attachments are embedded in original format)</div>
+  </div>
+</div> -->
+<am-print-options [export]="false"></am-print-options>

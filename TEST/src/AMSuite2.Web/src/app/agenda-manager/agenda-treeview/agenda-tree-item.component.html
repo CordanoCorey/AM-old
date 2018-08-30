@@ -1,0 +1,22 @@
+<div class="agenda-tree-item">
+  <a [routerLink]="agendaItemLink" routerLinkActive="active-link" 
+    [ngClass]="{ odd: odd, even: even, parent: isParent, child: isChild, suggestion: isSuggestion }">
+    <span class="order">{{ order }}.</span>
+    <span class="label">{{ label }}</span>
+    <span class="icons">
+      <md-icon *ngIf="hasNotes">description</md-icon>
+      <md-icon *ngIf="hasAttachments">attach_file</md-icon>
+      <md-icon *ngIf="isSuggestion" title="Suggested Item!">check</md-icon>
+      <md-icon *ngIf="isPrivate" title="Private Item!">lock</md-icon>
+    </span>
+  </a>
+</div>
+  <div *ngIf="last" class="last-item">
+    <button class="btn-sm btn-add" md-raised-button color="primary">
+      <md-icon>add</md-icon>
+      <span class="btn-label">Sub-item</span>
+    </button>
+    <button class="btn-sm btn-quick" md-raised-button color="primary">
+      <span class="btn-label">Q</span>
+    </button>
+  </div>

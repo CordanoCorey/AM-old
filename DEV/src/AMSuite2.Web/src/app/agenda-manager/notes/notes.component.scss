@@ -1,0 +1,118 @@
+@import '../../../common';
+@import '~@angular/material/_theming';
+.notes-container.mat-card {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    @include mat-elevation(12);
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: $primary-color;
+    margin-left: 1%;
+    width: 68%;
+    padding: 0;
+    z-index: 1;
+}
+
+.mat-icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    height: 32px;
+    width: 32px;
+    right: 12px;
+    top: 10px;
+}
+
+.accordion-trigger {
+    display: block;
+    height: 48px;
+    padding: 0 16px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    @include mat-elevation(16);
+    .border-left {
+        @include light-green-gradient();
+        float: left;
+        width: 16px;
+        height: 100%;
+    }
+}
+
+.accordion-content {
+    min-height: 240px;
+}
+
+.editor-wrapper {
+    width: 96%;
+    padding: 0px 2%;
+}
+
+.active-link {
+    background-color: mat-color($material-primary-color, 900);
+}
+
+.toolbar {
+    padding: 0;
+    margin: 0;
+    .trigger-label {
+        float: left;
+        padding: 16px;
+        line-height: 16px;
+        font-size: 16px;
+    }
+    .trigger-label:hover {
+        @extend .active-link;
+    }
+    .buttons {
+        float: left;
+        position: relative;
+        height: 32px;
+        padding: 8px;
+    }
+}
+
+button.mat-raised-button.mat-accent {
+    display: inline-flex;
+    border-radius: 3px;
+    padding: 0 8px;
+    height: 32px;
+    line-height: 14px;
+    margin-right: 8px;
+    .mat-icon {
+        font-size: 18px;
+        line-height: 24px;
+        position: relative;
+        top: 4px;
+        left: 0;
+        float: left;
+        color: $primary-color;
+    }
+    .icon-text {
+        float: left;
+        position: relative;
+        top: 10px;
+        padding-right: 8px;
+        font-size: 16px;
+    }
+}
+
+button.mat-raised-button.mat-accent:hover {
+    .mat-icon {
+        color: #fff;
+    }
+    .icon-text {
+        font-weight: normal;
+        color: $primary-color;
+    }
+}
+
+.arrows-wrapper {
+    float: left;
+    margin-left: 32px;
+}

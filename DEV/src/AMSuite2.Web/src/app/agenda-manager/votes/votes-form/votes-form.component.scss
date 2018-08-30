@@ -1,0 +1,119 @@
+#vote-table {
+    margin: 1em 0;
+}
+
+#votes {
+    width: 100%;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+}
+
+#votes th {
+    vertical-align: middle;
+    text-align: left;
+}
+
+#votes tbody th {
+    text-indent: 0.5em;
+}
+
+#votes td {
+    padding: 0.2em 0;
+}
+
+#votes a {
+    color: #000;
+    font-size: 0.9em;
+}
+
+#votes tbody th,
+#votes tbody td {
+    border-bottom: 1px dotted #000;
+}
+
+#votes input {
+    margin: 0 0.5em;
+}
+
+#votes input,
+#votes label {
+    vertical-align: middle;
+}
+
+#votes label {
+    font-weight: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+#votes thead th {
+    font-size: 0.9em;
+    background-color: transparent;
+    border-bottom-width: 0;
+    padding-bottom: 6px;
+}
+
+#votes thead a {
+    padding: 0 0 4px 2.3em;
+    font-weight: normal;
+    background: url(/assets/images/site/icon-sprite.png) no-repeat 0.8em -93px;
+    white-space: nowrap;
+}
+
+#votes .tally td {
+    padding: 0 0 0 0.65em;
+    width: 15%;
+}
+
+#votes .tally td,
+#votes .tally th {
+    font-size: 1.25em;
+    vertical-align: middle;
+    background-color: #EFF3FF;
+    border-bottom-width: 0;
+}
+
+#votes tbody tr:hover {
+    background-color: #fff;
+}
+
+#votes tbody td,
+#votes tbody th {
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.view-section {
+    margin-bottom: 1em;
+}
+
+#divVoteControl {
+    border: solid 1px #cdcdcd;
+    background-color: #e9f0f8;
+    padding: .5em 1em 1.5em 1em;
+    width: 90%;
+    float: left;
+    clear: both;
+    margin-top: 0.5em;
+    overflow: hidden;
+}
+
+.all-abstain {
+    min-width: 72px;
+}
+
+.all-notcast {
+    min-width: 80px;
+}
+
+#btnSaveVotes {
+    float: left;
+}
+
+#voteTableMessage {
+    margin-left: 1em;
+}
+
+.vote-form td:last-child {
+    min-width: 82px;
+}
